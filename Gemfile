@@ -38,3 +38,4 @@ gem 'capistrano'
 # gem 'debugger'
 
 gem 'google-api-client'
+gem 'haml-rails'
