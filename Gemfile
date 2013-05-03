@@ -39,3 +39,4 @@ gem 'capistrano'
 
 gem 'google-api-client'
 gem 'haml-rails'
+gem 'twitter-bootstrap-rails'
