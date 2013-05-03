@@ -7,6 +7,8 @@ gem 'capistrano'
 gem 'google-api-client'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
+gem 'yettings'
+gem 'will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
