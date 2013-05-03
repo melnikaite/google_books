@@ -36,3 +36,5 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'google-api-client'
