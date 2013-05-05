@@ -1,0 +1,2165 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/discovery/v1/apis/books/v1/rest?key=AIzaSyBz_mQZSHuKOrni54iGJvyJIT6Jb3oS1cA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - ruby on rails/1.0.0 google-api-ruby-client/0.6.3 Mac OS X/10.7.5
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 05 May 2013 17:08:48 GMT
+      Date:
+      - Sun, 05 May 2013 17:03:48 GMT
+      Etag:
+      - ! '"DsY8aw3zSOMYNAy_X4JnK21hrvA/YGuTt7-cIsEjtiWFLKZcV41rRhE"'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Cache-Control:
+      - public, max-age=300, must-revalidate, no-transform
+      Age:
+      - '101'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n \"kind\": \"discovery#restDescription\",\n \"etag\": \"\\\"DsY8aw3zSOMYNAy_X4JnK21hrvA/YGuTt7-cIsEjtiWFLKZcV41rRhE\\\"\",\n
+        \"discoveryVersion\": \"v1\",\n \"id\": \"books:v1\",\n \"name\": \"books\",\n
+        \"version\": \"v1\",\n \"revision\": \"20130409\",\n \"title\": \"Books API\",\n
+        \"description\": \"Lets you search for books and manage your Google Books
+        library.\",\n \"ownerDomain\": \"google.com\",\n \"ownerName\": \"Google\",\n
+        \"icons\": {\n  \"x16\": \"http://www.google.com/images/icons/product/ebooks-16.png\",\n
+        \ \"x32\": \"http://www.google.com/images/icons/product/ebooks-32.png\"\n
+        },\n \"documentationLink\": \"https://developers.google.com/books/docs/v1/getting_started\",\n
+        \"protocol\": \"rest\",\n \"baseUrl\": \"https://www.googleapis.com/books/v1/\",\n
+        \"basePath\": \"/books/v1/\",\n \"rootUrl\": \"https://www.googleapis.com/\",\n
+        \"servicePath\": \"books/v1/\",\n \"batchPath\": \"batch\",\n \"parameters\":
+        {\n  \"alt\": {\n   \"type\": \"string\",\n   \"description\": \"Data format
+        for the response.\",\n   \"default\": \"json\",\n   \"enum\": [\n    \"json\"\n
+        \  ],\n   \"enumDescriptions\": [\n    \"Responses with Content-Type of application/json\"\n
+        \  ],\n   \"location\": \"query\"\n  },\n  \"fields\": {\n   \"type\": \"string\",\n
+        \  \"description\": \"Selector specifying which fields to include in a partial
+        response.\",\n   \"location\": \"query\"\n  },\n  \"key\": {\n   \"type\":
+        \"string\",\n   \"description\": \"API key. Your API key identifies your project
+        and provides you with API access, quota, and reports. Required unless you
+        provide an OAuth 2.0 token.\",\n   \"location\": \"query\"\n  },\n  \"oauth_token\":
+        {\n   \"type\": \"string\",\n   \"description\": \"OAuth 2.0 token for the
+        current user.\",\n   \"location\": \"query\"\n  },\n  \"prettyPrint\": {\n
+        \  \"type\": \"boolean\",\n   \"description\": \"Returns response with indentations
+        and line breaks.\",\n   \"default\": \"true\",\n   \"location\": \"query\"\n
+        \ },\n  \"quotaUser\": {\n   \"type\": \"string\",\n   \"description\": \"Available
+        to use for quota purposes for server-side applications. Can be any arbitrary
+        string assigned to a user, but should not exceed 40 characters. Overrides
+        userIp if both are provided.\",\n   \"location\": \"query\"\n  },\n  \"userIp\":
+        {\n   \"type\": \"string\",\n   \"description\": \"IP address of the site
+        where the request originates. Use this if you want to enforce per-user limits.\",\n
+        \  \"location\": \"query\"\n  }\n },\n \"auth\": {\n  \"oauth2\": {\n   \"scopes\":
+        {\n    \"https://www.googleapis.com/auth/books\": {\n     \"description\":
+        \"Manage your books\"\n    }\n   }\n  }\n },\n \"schemas\": {\n  \"Annotation\":
+        {\n   \"id\": \"Annotation\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"afterSelectedText\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Anchor text after excerpt. For requests, if the user bookmarked a screen
+        that has no flowing text on it, then this field should be empty.\"\n    },\n
+        \   \"beforeSelectedText\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Anchor text before excerpt. For requests, if the user bookmarked a screen
+        that has no flowing text on it, then this field should be empty.\"\n    },\n
+        \   \"clientVersionRanges\": {\n     \"type\": \"object\",\n     \"description\":
+        \"Selection ranges sent from the client.\",\n     \"properties\": {\n      \"cfiRange\":
+        {\n       \"$ref\": \"BooksAnnotationsRange\",\n       \"description\": \"Range
+        in CFI format for this annotation sent by client.\"\n      },\n      \"contentVersion\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Content version
+        the client sent in.\"\n      },\n      \"gbImageRange\": {\n       \"$ref\":
+        \"BooksAnnotationsRange\",\n       \"description\": \"Range in GB image format
+        for this annotation sent by client.\"\n      },\n      \"gbTextRange\": {\n
+        \      \"$ref\": \"BooksAnnotationsRange\",\n       \"description\": \"Range
+        in GB text format for this annotation sent by client.\"\n      },\n      \"imageCfiRange\":
+        {\n       \"$ref\": \"BooksAnnotationsRange\",\n       \"description\": \"Range
+        in image CFI format for this annotation sent by client.\"\n      }\n     }\n
+        \   },\n    \"created\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Timestamp for the created time of this annotation.\",\n     \"format\":
+        \"date-time\"\n    },\n    \"currentVersionRanges\": {\n     \"type\": \"object\",\n
+        \    \"description\": \"Selection ranges for the most recent content version.\",\n
+        \    \"properties\": {\n      \"cfiRange\": {\n       \"$ref\": \"BooksAnnotationsRange\",\n
+        \      \"description\": \"Range in CFI format for this annotation for version
+        above.\"\n      },\n      \"contentVersion\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"Content version applicable to ranges below.\"\n
+        \     },\n      \"gbImageRange\": {\n       \"$ref\": \"BooksAnnotationsRange\",\n
+        \      \"description\": \"Range in GB image format for this annotation for
+        version above.\"\n      },\n      \"gbTextRange\": {\n       \"$ref\": \"BooksAnnotationsRange\",\n
+        \      \"description\": \"Range in GB text format for this annotation for
+        version above.\"\n      },\n      \"imageCfiRange\": {\n       \"$ref\": \"BooksAnnotationsRange\",\n
+        \      \"description\": \"Range in image CFI format for this annotation for
+        version above.\"\n      }\n     }\n    },\n    \"data\": {\n     \"type\":
+        \"string\",\n     \"description\": \"User-created data for this annotation.\"\n
+        \   },\n    \"deleted\": {\n     \"type\": \"boolean\",\n     \"description\":
+        \"Indicates that this annotation is deleted.\"\n    },\n    \"highlightStyle\":
+        {\n     \"type\": \"string\",\n     \"description\": \"The highlight style
+        for this annotation.\"\n    },\n    \"id\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Id of this annotation, in the form of a GUID.\"\n
+        \   },\n    \"kind\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Resource type.\",\n     \"default\": \"books#annotation\"\n    },\n    \"layerId\":
+        {\n     \"type\": \"string\",\n     \"description\": \"The layer this annotation
+        is for.\"\n    },\n    \"pageIds\": {\n     \"type\": \"array\",\n     \"description\":
+        \"Pages that this annotation spans.\",\n     \"items\": {\n      \"type\":
+        \"string\"\n     }\n    },\n    \"selectedText\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Excerpt from the volume.\"\n    },\n    \"selfLink\":
+        {\n     \"type\": \"string\",\n     \"description\": \"URL to this resource.\"\n
+        \   },\n    \"updated\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Timestamp for the last time this annotation was modified.\",\n     \"format\":
+        \"date-time\"\n    },\n    \"volumeId\": {\n     \"type\": \"string\",\n     \"description\":
+        \"The volume that this annotation belongs to.\"\n    }\n   }\n  },\n  \"Annotationdata\":
+        {\n   \"id\": \"Annotationdata\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"annotationType\": {\n     \"type\": \"string\",\n     \"description\":
+        \"The type of annotation this data is for.\"\n    },\n    \"data\": {\n     \"type\":
+        \"any\"\n    },\n    \"encoded_data\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Base64 encoded data for this annotation data.\",\n     \"format\": \"byte\"\n
+        \   },\n    \"id\": {\n     \"type\": \"string\",\n     \"description\": \"Unique
+        id for this annotation data.\"\n    },\n    \"kind\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Resource Type\",\n     \"default\": \"books#annotationdata\"\n
+        \   },\n    \"layerId\": {\n     \"type\": \"string\",\n     \"description\":
+        \"The Layer id for this data. *\"\n    },\n    \"selfLink\": {\n     \"type\":
+        \"string\",\n     \"description\": \"URL for this resource. *\"\n    },\n
+        \   \"updated\": {\n     \"type\": \"string\",\n     \"description\": \"Timestamp
+        for the last time this data was updated. (RFC 3339 UTC date-time format).\",\n
+        \    \"format\": \"date-time\"\n    },\n    \"volumeId\": {\n     \"type\":
+        \"string\",\n     \"description\": \"The volume id for this data. *\"\n    }\n
+        \  }\n  },\n  \"Annotations\": {\n   \"id\": \"Annotations\",\n   \"type\":
+        \"object\",\n   \"properties\": {\n    \"items\": {\n     \"type\": \"array\",\n
+        \    \"description\": \"A list of annotations.\",\n     \"items\": {\n      \"$ref\":
+        \"Annotation\"\n     }\n    },\n    \"kind\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Resource type.\",\n     \"default\": \"books#annotations\"\n
+        \   },\n    \"nextPageToken\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Token to pass in for pagination for the next page. This will not be present
+        if this request does not have more results.\"\n    },\n    \"totalItems\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"Total number of annotations
+        found. This may be greater than the number of notes returned in this response
+        if results have been paginated.\",\n     \"format\": \"int32\"\n    }\n   }\n
+        \ },\n  \"Annotationsdata\": {\n   \"id\": \"Annotationsdata\",\n   \"type\":
+        \"object\",\n   \"properties\": {\n    \"items\": {\n     \"type\": \"array\",\n
+        \    \"description\": \"A list of Annotation Data.\",\n     \"items\": {\n
+        \     \"$ref\": \"Annotationdata\"\n     }\n    },\n    \"kind\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Resource type\",\n     \"default\": \"books#annotationsdata\"\n
+        \   },\n    \"nextPageToken\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Token to pass in for pagination for the next page. This will not be present
+        if this request does not have more results.\"\n    },\n    \"totalItems\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"The total number of
+        volume annotations found.\",\n     \"format\": \"int32\"\n    }\n   }\n  },\n
+        \ \"BooksAnnotationsRange\": {\n   \"id\": \"BooksAnnotationsRange\",\n   \"type\":
+        \"object\",\n   \"properties\": {\n    \"endOffset\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"The offset from the ending position.\"\n    },\n    \"endPosition\":
+        {\n     \"type\": \"string\",\n     \"description\": \"The ending position
+        for the range.\"\n    },\n    \"startOffset\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"The offset from the starting position.\"\n    },\n
+        \   \"startPosition\": {\n     \"type\": \"string\",\n     \"description\":
+        \"The starting position for the range.\"\n    }\n   }\n  },\n  \"BooksCloudloadingResource\":
+        {\n   \"id\": \"BooksCloudloadingResource\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"author\": {\n     \"type\": \"string\"\n    },\n    \"processingState\":
+        {\n     \"type\": \"string\"\n    },\n    \"title\": {\n     \"type\": \"string\"\n
+        \   },\n    \"volumeId\": {\n     \"type\": \"string\"\n    }\n   }\n  },\n
+        \ \"BooksLayerDictData\": {\n   \"id\": \"BooksLayerDictData\",\n   \"type\":
+        \"object\",\n   \"properties\": {\n    \"common\": {\n     \"type\": \"object\",\n
+        \    \"properties\": {\n      \"title\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"The display title and localized canonical name to
+        use when searching for this entity on Google search.\"\n      }\n     }\n
+        \   },\n    \"dict\": {\n     \"type\": \"object\",\n     \"properties\":
+        {\n      \"source\": {\n       \"type\": \"object\",\n       \"description\":
+        \"The source, url and attribution for this dictionary data.\",\n       \"properties\":
+        {\n        \"attribution\": {\n         \"type\": \"string\"\n        },\n
+        \       \"url\": {\n         \"type\": \"string\"\n        }\n       }\n      },\n
+        \     \"words\": {\n       \"type\": \"array\",\n       \"items\": {\n        \"type\":
+        \"object\",\n        \"properties\": {\n         \"derivatives\": {\n          \"type\":
+        \"array\",\n          \"items\": {\n           \"type\": \"object\",\n           \"properties\":
+        {\n            \"source\": {\n             \"type\": \"object\",\n             \"properties\":
+        {\n              \"attribution\": {\n               \"type\": \"string\"\n
+        \             },\n              \"url\": {\n               \"type\": \"string\"\n
+        \             }\n             }\n            },\n            \"text\": {\n
+        \            \"type\": \"string\"\n            }\n           }\n          }\n
+        \        },\n         \"examples\": {\n          \"type\": \"array\",\n          \"items\":
+        {\n           \"type\": \"object\",\n           \"properties\": {\n            \"source\":
+        {\n             \"type\": \"object\",\n             \"properties\": {\n              \"attribution\":
+        {\n               \"type\": \"string\"\n              },\n              \"url\":
+        {\n               \"type\": \"string\"\n              }\n             }\n
+        \           },\n            \"text\": {\n             \"type\": \"string\"\n
+        \           }\n           }\n          }\n         },\n         \"senses\":
+        {\n          \"type\": \"array\",\n          \"items\": {\n           \"type\":
+        \"object\",\n           \"properties\": {\n            \"conjugations\": {\n
+        \            \"type\": \"array\",\n             \"items\": {\n              \"type\":
+        \"object\",\n              \"properties\": {\n               \"type\": {\n
+        \               \"type\": \"string\"\n               },\n               \"value\":
+        {\n                \"type\": \"string\"\n               }\n              }\n
+        \            }\n            },\n            \"definitions\": {\n             \"type\":
+        \"array\",\n             \"items\": {\n              \"type\": \"object\",\n
+        \             \"properties\": {\n               \"definition\": {\n                \"type\":
+        \"string\"\n               },\n               \"examples\": {\n                \"type\":
+        \"array\",\n                \"items\": {\n                 \"type\": \"object\",\n
+        \                \"properties\": {\n                  \"source\": {\n                   \"type\":
+        \"object\",\n                   \"properties\": {\n                    \"attribution\":
+        {\n                     \"type\": \"string\"\n                    },\n                    \"url\":
+        {\n                     \"type\": \"string\"\n                    }\n                   }\n
+        \                 },\n                  \"text\": {\n                   \"type\":
+        \"string\"\n                  }\n                 }\n                }\n               }\n
+        \             }\n             }\n            },\n            \"partOfSpeech\":
+        {\n             \"type\": \"string\"\n            },\n            \"pronunciation\":
+        {\n             \"type\": \"string\"\n            },\n            \"pronunciationUrl\":
+        {\n             \"type\": \"string\"\n            },\n            \"source\":
+        {\n             \"type\": \"object\",\n             \"properties\": {\n              \"attribution\":
+        {\n               \"type\": \"string\"\n              },\n              \"url\":
+        {\n               \"type\": \"string\"\n              }\n             }\n
+        \           },\n            \"syllabification\": {\n             \"type\":
+        \"string\"\n            },\n            \"synonyms\": {\n             \"type\":
+        \"array\",\n             \"items\": {\n              \"type\": \"object\",\n
+        \             \"properties\": {\n               \"source\": {\n                \"type\":
+        \"object\",\n                \"properties\": {\n                 \"attribution\":
+        {\n                  \"type\": \"string\"\n                 },\n                 \"url\":
+        {\n                  \"type\": \"string\"\n                 }\n                }\n
+        \              },\n               \"text\": {\n                \"type\": \"string\"\n
+        \              }\n              }\n             }\n            }\n           }\n
+        \         }\n         },\n         \"source\": {\n          \"type\": \"object\",\n
+        \         \"description\": \"The words with different meanings but not related
+        words, e.g. \\\"go\\\" (game) and \\\"go\\\" (verb).\",\n          \"properties\":
+        {\n           \"attribution\": {\n            \"type\": \"string\"\n           },\n
+        \          \"url\": {\n            \"type\": \"string\"\n           }\n          }\n
+        \        }\n        }\n       }\n      }\n     }\n    }\n   }\n  },\n  \"BooksLayerGeoData\":
+        {\n   \"id\": \"BooksLayerGeoData\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"common\": {\n     \"type\": \"object\",\n     \"properties\": {\n
+        \     \"lang\": {\n       \"type\": \"string\",\n       \"description\": \"The
+        language of the information url and description.\"\n      },\n      \"previewImageUrl\":
+        {\n       \"type\": \"string\",\n       \"description\": \"The URL for the
+        preview image information.\"\n      },\n      \"snippet\": {\n       \"type\":
+        \"string\",\n       \"description\": \"The description for this location.\"\n
+        \     },\n      \"snippetUrl\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The URL for information for this location. Ex: wikipedia link.\"\n      },\n
+        \     \"title\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The display title and localized canonical name to use when searching for
+        this entity on Google search.\"\n      }\n     }\n    },\n    \"geo\": {\n
+        \    \"type\": \"object\",\n     \"properties\": {\n      \"boundary\": {\n
+        \      \"type\": \"array\",\n       \"description\": \"The boundary of the
+        location as a set of loops containing pairs of latitude, longitude coordinates.\",\n
+        \      \"items\": {\n        \"type\": \"array\",\n        \"items\": {\n
+        \        \"type\": \"object\",\n         \"properties\": {\n          \"latitude\":
+        {\n           \"type\": \"integer\",\n           \"format\": \"uint32\"\n
+        \         },\n          \"longitude\": {\n           \"type\": \"integer\",\n
+        \          \"format\": \"uint32\"\n          }\n         }\n        }\n       }\n
+        \     },\n      \"cachePolicy\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The cache policy active for this data. EX: UNRESTRICTED, RESTRICTED, NEVER\"\n
+        \     },\n      \"countryCode\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The country code of the location.\"\n      },\n      \"latitude\": {\n       \"type\":
+        \"number\",\n       \"description\": \"The latitude of the location.\",\n
+        \      \"format\": \"double\"\n      },\n      \"longitude\": {\n       \"type\":
+        \"number\",\n       \"description\": \"The longitude of the location.\",\n
+        \      \"format\": \"double\"\n      },\n      \"mapType\": {\n       \"type\":
+        \"string\",\n       \"description\": \"The type of map that should be used
+        for this location. EX: HYBRID, ROADMAP, SATELLITE, TERRAIN\"\n      },\n      \"viewport\":
+        {\n       \"type\": \"object\",\n       \"description\": \"The viewport for
+        showing this location. This is a latitude, longitude rectangle.\",\n       \"properties\":
+        {\n        \"hi\": {\n         \"type\": \"object\",\n         \"properties\":
+        {\n          \"latitude\": {\n           \"type\": \"number\",\n           \"format\":
+        \"double\"\n          },\n          \"longitude\": {\n           \"type\":
+        \"number\",\n           \"format\": \"double\"\n          }\n         }\n
+        \       },\n        \"lo\": {\n         \"type\": \"object\",\n         \"properties\":
+        {\n          \"latitude\": {\n           \"type\": \"number\",\n           \"format\":
+        \"double\"\n          },\n          \"longitude\": {\n           \"type\":
+        \"number\",\n           \"format\": \"double\"\n          }\n         }\n
+        \       }\n       }\n      },\n      \"zoom\": {\n       \"type\": \"integer\",\n
+        \      \"description\": \"The Zoom level to use for the map. Zoom levels between
+        0 (the lowest zoom level, in which the entire world can be seen on one map)
+        to 21+ (down to individual buildings). See: https://developers.google.com/maps/documentation/staticmaps/#Zoomlevels\",\n
+        \      \"format\": \"int32\"\n      }\n     }\n    }\n   }\n  },\n  \"Bookshelf\":
+        {\n   \"id\": \"Bookshelf\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"access\": {\n     \"type\": \"string\",\n     \"description\": \"Whether
+        this bookshelf is PUBLIC or PRIVATE.\"\n    },\n    \"created\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Created time for this bookshelf (formatted
+        UTC timestamp with millisecond resolution).\",\n     \"format\": \"date-time\"\n
+        \   },\n    \"description\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Description of this bookshelf.\"\n    },\n    \"id\": {\n     \"type\":
+        \"integer\",\n     \"description\": \"Id of this bookshelf, only unique by
+        user.\",\n     \"format\": \"int32\"\n    },\n    \"kind\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Resource type for bookshelf metadata.\",\n
+        \    \"default\": \"books#bookshelf\"\n    },\n    \"selfLink\": {\n     \"type\":
+        \"string\",\n     \"description\": \"URL to this resource.\"\n    },\n    \"title\":
+        {\n     \"type\": \"string\",\n     \"description\": \"Title of this bookshelf.\"\n
+        \   },\n    \"updated\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Last modified time of this bookshelf (formatted UTC timestamp with millisecond
+        resolution).\",\n     \"format\": \"date-time\"\n    },\n    \"volumeCount\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"Number of volumes
+        in this bookshelf.\",\n     \"format\": \"int32\"\n    },\n    \"volumesLastUpdated\":
+        {\n     \"type\": \"string\",\n     \"description\": \"Last time a volume
+        was added or removed from this bookshelf (formatted UTC timestamp with millisecond
+        resolution).\",\n     \"format\": \"date-time\"\n    }\n   }\n  },\n  \"Bookshelves\":
+        {\n   \"id\": \"Bookshelves\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"items\": {\n     \"type\": \"array\",\n     \"description\": \"A
+        list of bookshelves.\",\n     \"items\": {\n      \"$ref\": \"Bookshelf\"\n
+        \    }\n    },\n    \"kind\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Resource type.\",\n     \"default\": \"books#bookshelves\"\n    }\n   }\n
+        \ },\n  \"ConcurrentAccessRestriction\": {\n   \"id\": \"ConcurrentAccessRestriction\",\n
+        \  \"type\": \"object\",\n   \"properties\": {\n    \"deviceAllowed\": {\n
+        \    \"type\": \"boolean\",\n     \"description\": \"Whether access is granted
+        for this (user, device, volume).\"\n    },\n    \"kind\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Resource type.\",\n     \"default\":
+        \"books#concurrentAccessRestriction\"\n    },\n    \"maxConcurrentDevices\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"The maximum number
+        of concurrent access licenses for this volume.\",\n     \"format\": \"int32\"\n
+        \   },\n    \"message\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Error/warning message.\"\n    },\n    \"nonce\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Client nonce for verification. Download access and
+        client-validation only.\"\n    },\n    \"reasonCode\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Error/warning reason code.\"\n    },\n    \"restricted\":
+        {\n     \"type\": \"boolean\",\n     \"description\": \"Whether this volume
+        has any concurrent access restrictions.\"\n    },\n    \"signature\": {\n
+        \    \"type\": \"string\",\n     \"description\": \"Response signature.\"\n
+        \   },\n    \"source\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Client app identifier for verification. Download access and client-validation
+        only.\"\n    },\n    \"timeWindowSeconds\": {\n     \"type\": \"integer\",\n
+        \    \"description\": \"Time in seconds for license auto-expiration.\",\n
+        \    \"format\": \"int32\"\n    },\n    \"volumeId\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Identifies the volume for which this entry applies.\"\n
+        \   }\n   }\n  },\n  \"DownloadAccessRestriction\": {\n   \"id\": \"DownloadAccessRestriction\",\n
+        \  \"type\": \"object\",\n   \"properties\": {\n    \"deviceAllowed\": {\n
+        \    \"type\": \"boolean\",\n     \"description\": \"If restricted, whether
+        access is granted for this (user, device, volume).\"\n    },\n    \"downloadsAcquired\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"If restricted, the
+        number of content download licenses already acquired (including the requesting
+        client, if licensed).\",\n     \"format\": \"int32\"\n    },\n    \"justAcquired\":
+        {\n     \"type\": \"boolean\",\n     \"description\": \"If deviceAllowed,
+        whether access was just acquired with this request.\"\n    },\n    \"kind\":
+        {\n     \"type\": \"string\",\n     \"description\": \"Resource type.\",\n
+        \    \"default\": \"books#downloadAccessRestriction\"\n    },\n    \"maxDownloadDevices\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"If restricted, the
+        maximum number of content download licenses for this volume.\",\n     \"format\":
+        \"int32\"\n    },\n    \"message\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Error/warning message.\"\n    },\n    \"nonce\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Client nonce for verification. Download access and
+        client-validation only.\"\n    },\n    \"reasonCode\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Error/warning reason code. Additional codes may be
+        added in the future. 0 OK 100 ACCESS_DENIED_PUBLISHER_LIMIT 101 ACCESS_DENIED_LIMIT
+        200 WARNING_USED_LAST_ACCESS\"\n    },\n    \"restricted\": {\n     \"type\":
+        \"boolean\",\n     \"description\": \"Whether this volume has any download
+        access restrictions.\"\n    },\n    \"signature\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Response signature.\"\n    },\n    \"source\": {\n
+        \    \"type\": \"string\",\n     \"description\": \"Client app identifier
+        for verification. Download access and client-validation only.\"\n    },\n
+        \   \"volumeId\": {\n     \"type\": \"string\",\n     \"description\": \"Identifies
+        the volume for which this entry applies.\"\n    }\n   }\n  },\n  \"DownloadAccesses\":
+        {\n   \"id\": \"DownloadAccesses\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"downloadAccessList\": {\n     \"type\": \"array\",\n     \"description\":
+        \"A list of download access responses.\",\n     \"items\": {\n      \"$ref\":
+        \"DownloadAccessRestriction\"\n     }\n    },\n    \"kind\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Resource type.\",\n     \"default\":
+        \"books#downloadAccesses\"\n    }\n   }\n  },\n  \"Layersummaries\": {\n   \"id\":
+        \"Layersummaries\",\n   \"type\": \"object\",\n   \"properties\": {\n    \"items\":
+        {\n     \"type\": \"array\",\n     \"description\": \"A list of layer summary
+        items.\",\n     \"items\": {\n      \"$ref\": \"Layersummary\"\n     }\n    },\n
+        \   \"kind\": {\n     \"type\": \"string\",\n     \"description\": \"Resource
+        type.\",\n     \"default\": \"books#layersummaries\"\n    },\n    \"totalItems\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"The total number of
+        layer summaries found.\",\n     \"format\": \"int32\"\n    }\n   }\n  },\n
+        \ \"Layersummary\": {\n   \"id\": \"Layersummary\",\n   \"type\": \"object\",\n
+        \  \"properties\": {\n    \"annotationCount\": {\n     \"type\": \"integer\",\n
+        \    \"description\": \"The number of annotations for this layer.\",\n     \"format\":
+        \"int32\"\n    },\n    \"annotationTypes\": {\n     \"type\": \"array\",\n
+        \    \"description\": \"The list of annotation types contained for this layer.\",\n
+        \    \"items\": {\n      \"type\": \"string\"\n     }\n    },\n    \"annotationsDataLink\":
+        {\n     \"type\": \"string\",\n     \"description\": \"Link to get data for
+        this annotation.\"\n    },\n    \"annotationsLink\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"The link to get the annotations for this layer.\"\n
+        \   },\n    \"contentVersion\": {\n     \"type\": \"string\",\n     \"description\":
+        \"The content version this resource is for.\"\n    },\n    \"dataCount\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"The number of data
+        items for this layer.\",\n     \"format\": \"int32\"\n    },\n    \"id\":
+        {\n     \"type\": \"string\",\n     \"description\": \"Unique id of this layer
+        summary.\"\n    },\n    \"kind\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Resource Type\",\n     \"default\": \"books#layersummary\"\n    },\n    \"layerId\":
+        {\n     \"type\": \"string\",\n     \"description\": \"The layer id for this
+        summary.\"\n    },\n    \"selfLink\": {\n     \"type\": \"string\",\n     \"description\":
+        \"URL to this resource.\"\n    },\n    \"updated\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Timestamp for the last time an item in this layer
+        was updated. (RFC 3339 UTC date-time format).\",\n     \"format\": \"date-time\"\n
+        \   },\n    \"volumeAnnotationsVersion\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"The current version of this layer's volume annotations.
+        Note that this version applies only to the data in the books.layers.volumeAnnotations.*
+        responses. The actual annotation data is versioned separately.\"\n    },\n
+        \   \"volumeId\": {\n     \"type\": \"string\",\n     \"description\": \"The
+        volume id this resource is for.\"\n    }\n   }\n  },\n  \"ReadingPosition\":
+        {\n   \"id\": \"ReadingPosition\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"epubCfiPosition\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Position in an EPUB as a CFI.\"\n    },\n    \"gbImagePosition\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Position in a volume for image-based
+        content.\"\n    },\n    \"gbTextPosition\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Position in a volume for text-based content.\"\n    },\n
+        \   \"kind\": {\n     \"type\": \"string\",\n     \"description\": \"Resource
+        type for a reading position.\",\n     \"default\": \"books#readingPosition\"\n
+        \   },\n    \"pdfPosition\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Position in a PDF file.\"\n    },\n    \"updated\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Timestamp when this reading position was last updated
+        (formatted UTC timestamp with millisecond resolution).\",\n     \"format\":
+        \"date-time\"\n    },\n    \"volumeId\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Volume id associated with this reading position.\"\n    }\n   }\n  },\n
+        \ \"RequestAccess\": {\n   \"id\": \"RequestAccess\",\n   \"type\": \"object\",\n
+        \  \"properties\": {\n    \"concurrentAccess\": {\n     \"$ref\": \"ConcurrentAccessRestriction\",\n
+        \    \"description\": \"A concurrent access response.\"\n    },\n    \"downloadAccess\":
+        {\n     \"$ref\": \"DownloadAccessRestriction\",\n     \"description\": \"A
+        download access response.\"\n    },\n    \"kind\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Resource type.\",\n     \"default\": \"books#requestAccess\"\n
+        \   }\n   }\n  },\n  \"Review\": {\n   \"id\": \"Review\",\n   \"type\": \"object\",\n
+        \  \"properties\": {\n    \"author\": {\n     \"type\": \"object\",\n     \"description\":
+        \"Author of this review.\",\n     \"properties\": {\n      \"displayName\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Name of this person.\"\n
+        \     }\n     }\n    },\n    \"content\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Review text.\"\n    },\n    \"date\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Date of this review.\"\n    },\n    \"fullTextUrl\":
+        {\n     \"type\": \"string\",\n     \"description\": \"URL for the full review
+        text, for reviews gathered from the web.\"\n    },\n    \"kind\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Resource type for a review.\",\n     \"default\":
+        \"books#review\"\n    },\n    \"rating\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Star rating for this review. Possible values are ONE,
+        TWO, THREE, FOUR, FIVE or NOT_RATED.\"\n    },\n    \"source\": {\n     \"type\":
+        \"object\",\n     \"description\": \"Information regarding the source of this
+        review, when the review is not from a Google Books user.\",\n     \"properties\":
+        {\n      \"description\": {\n       \"type\": \"string\",\n       \"description\":
+        \"Name of the source.\"\n      },\n      \"extraDescription\": {\n       \"type\":
+        \"string\",\n       \"description\": \"Extra text about the source of the
+        review.\"\n      },\n      \"url\": {\n       \"type\": \"string\",\n       \"description\":
+        \"URL of the source of the review.\"\n      }\n     }\n    },\n    \"title\":
+        {\n     \"type\": \"string\",\n     \"description\": \"Title for this review.\"\n
+        \   },\n    \"type\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Source type for this review. Possible values are EDITORIAL, WEB_USER or
+        GOOGLE_USER.\"\n    },\n    \"volumeId\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Volume that this review is for.\"\n    }\n   }\n  },\n
+        \ \"Volume\": {\n   \"id\": \"Volume\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"accessInfo\": {\n     \"type\": \"object\",\n     \"description\":
+        \"Any information about a volume related to reading or obtaining that volume
+        text. This information can depend on country (books may be public domain in
+        one country but not in another, e.g.).\",\n     \"properties\": {\n      \"accessViewStatus\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Combines the access
+        and viewability of this volume into a single status field for this user. Values
+        can be FULL_PURCHASED, FULL_PUBLIC_DOMAIN, SAMPLE or NONE. (In LITE projection.)\"\n
+        \     },\n      \"country\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The two-letter ISO_3166-1 country code for which this access information
+        is valid. (In LITE projection.)\"\n      },\n      \"downloadAccess\": {\n
+        \      \"$ref\": \"DownloadAccessRestriction\",\n       \"description\": \"Information
+        about a volume's download license access restrictions.\"\n      },\n      \"embeddable\":
+        {\n       \"type\": \"boolean\",\n       \"description\": \"Whether this volume
+        can be embedded in a viewport using the Embedded Viewer API.\"\n      },\n
+        \     \"epub\": {\n       \"type\": \"object\",\n       \"description\": \"Information
+        about epub content. (In LITE projection.)\",\n       \"properties\": {\n        \"acsTokenLink\":
+        {\n         \"type\": \"string\",\n         \"description\": \"URL to retrieve
+        ACS token for epub download. (In LITE projection.)\"\n        },\n        \"downloadLink\":
+        {\n         \"type\": \"string\",\n         \"description\": \"URL to download
+        epub. (In LITE projection.)\"\n        },\n        \"isAvailable\": {\n         \"type\":
+        \"boolean\",\n         \"description\": \"Is a flowing text epub available
+        either as public domain or for purchase. (In LITE projection.)\"\n        }\n
+        \      }\n      },\n      \"pdf\": {\n       \"type\": \"object\",\n       \"description\":
+        \"Information about pdf content. (In LITE projection.)\",\n       \"properties\":
+        {\n        \"acsTokenLink\": {\n         \"type\": \"string\",\n         \"description\":
+        \"URL to retrieve ACS token for pdf download. (In LITE projection.)\"\n        },\n
+        \       \"downloadLink\": {\n         \"type\": \"string\",\n         \"description\":
+        \"URL to download pdf. (In LITE projection.)\"\n        },\n        \"isAvailable\":
+        {\n         \"type\": \"boolean\",\n         \"description\": \"Is a scanned
+        image pdf available either as public domain or for purchase. (In LITE projection.)\"\n
+        \       }\n       }\n      },\n      \"publicDomain\": {\n       \"type\":
+        \"boolean\",\n       \"description\": \"Whether or not this book is public
+        domain in the country listed above.\"\n      },\n      \"textToSpeechPermission\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Whether text-to-speech
+        is permitted for this volume. Values can be ALLOWED, ALLOWED_FOR_ACCESSIBILITY,
+        or NOT_ALLOWED.\"\n      },\n      \"viewOrderUrl\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"For ordered but not yet processed orders, we give
+        a URL that can be used to go to the appropriate Google Wallet page.\"\n      },\n
+        \     \"viewability\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The read access of a volume. Possible values are PARTIAL, ALL_PAGES, NO_PAGES
+        or UNKNOWN. This value depends on the country listed above. A value of PARTIAL
+        means that the publisher has allowed some portion of the volume to be viewed
+        publicly, without purchase. This can apply to eBooks as well as non-eBooks.
+        Public domain books will always have a value of ALL_PAGES.\"\n      },\n      \"webReaderLink\":
+        {\n       \"type\": \"string\",\n       \"description\": \"URL to read this
+        volume on the Google Books site. Link will not allow users to read non-viewable
+        volumes.\"\n      }\n     }\n    },\n    \"etag\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Opaque identifier for a specific version of a volume
+        resource. (In LITE projection)\"\n    },\n    \"id\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Unique identifier for a volume. (In LITE projection.)\"\n
+        \   },\n    \"kind\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Resource type for a volume. (In LITE projection.)\",\n     \"default\":
+        \"books#volume\"\n    },\n    \"layerInfo\": {\n     \"type\": \"object\",\n
+        \    \"description\": \"What layers exist in this volume and high level information
+        about them.\",\n     \"properties\": {\n      \"layers\": {\n       \"type\":
+        \"array\",\n       \"description\": \"A layer should appear here if and only
+        if the layer exists for this book.\",\n       \"items\": {\n        \"type\":
+        \"object\",\n        \"properties\": {\n         \"layerId\": {\n          \"type\":
+        \"string\",\n          \"description\": \"The layer id of this layer (e.g.
+        \\\"geo\\\").\"\n         },\n         \"volumeAnnotationsVersion\": {\n          \"type\":
+        \"string\",\n          \"description\": \"The current version of this layer's
+        volume annotations. Note that this version applies only to the data in the
+        books.layers.volumeAnnotations.* responses. The actual annotation data is
+        versioned separately.\"\n         }\n        }\n       }\n      }\n     }\n
+        \   },\n    \"recommendedInfo\": {\n     \"type\": \"object\",\n     \"description\":
+        \"Recommendation related information for this volume.\",\n     \"properties\":
+        {\n      \"explanation\": {\n       \"type\": \"string\",\n       \"description\":
+        \"A text explaining why this volume is recommended.\"\n      }\n     }\n    },\n
+        \   \"saleInfo\": {\n     \"type\": \"object\",\n     \"description\": \"Any
+        information about a volume related to the eBookstore and/or purchaseability.
+        This information can depend on the country where the request originates from
+        (i.e. books may not be for sale in certain countries).\",\n     \"properties\":
+        {\n      \"buyLink\": {\n       \"type\": \"string\",\n       \"description\":
+        \"URL to purchase this volume on the Google Books site. (In LITE projection)\"\n
+        \     },\n      \"country\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The two-letter ISO_3166-1 country code for which this sale information is
+        valid. (In LITE projection.)\"\n      },\n      \"isEbook\": {\n       \"type\":
+        \"boolean\",\n       \"description\": \"Whether or not this volume is an eBook
+        (can be added to the My eBooks shelf).\"\n      },\n      \"listPrice\": {\n
+        \      \"type\": \"object\",\n       \"description\": \"Suggested retail price.
+        (In LITE projection.)\",\n       \"properties\": {\n        \"amount\": {\n
+        \        \"type\": \"number\",\n         \"description\": \"Amount in the
+        currency listed below. (In LITE projection.)\",\n         \"format\": \"double\"\n
+        \       },\n        \"currencyCode\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"An ISO 4217, three-letter currency code. (In LITE
+        projection.)\"\n        }\n       }\n      },\n      \"onSaleDate\": {\n       \"type\":
+        \"string\",\n       \"description\": \"The date on which this book is available
+        for sale.\",\n       \"format\": \"date-time\"\n      },\n      \"retailPrice\":
+        {\n       \"type\": \"object\",\n       \"description\": \"The actual selling
+        price of the book. This is the same as the suggested retail or list price
+        unless there are offers or discounts on this volume. (In LITE projection.)\",\n
+        \      \"properties\": {\n        \"amount\": {\n         \"type\": \"number\",\n
+        \        \"description\": \"Amount in the currency listed below. (In LITE
+        projection.)\",\n         \"format\": \"double\"\n        },\n        \"currencyCode\":
+        {\n         \"type\": \"string\",\n         \"description\": \"An ISO 4217,
+        three-letter currency code. (In LITE projection.)\"\n        }\n       }\n
+        \     },\n      \"saleability\": {\n       \"type\": \"string\",\n       \"description\":
+        \"Whether or not this book is available for sale or offered for free in the
+        Google eBookstore for the country listed above. Possible values are FOR_SALE,
+        FREE, NOT_FOR_SALE, or FOR_PREORDER.\"\n      }\n     }\n    },\n    \"searchInfo\":
+        {\n     \"type\": \"object\",\n     \"description\": \"Search result information
+        related to this volume.\",\n     \"properties\": {\n      \"textSnippet\":
+        {\n       \"type\": \"string\",\n       \"description\": \"A text snippet
+        containing the search query.\"\n      }\n     }\n    },\n    \"selfLink\":
+        {\n     \"type\": \"string\",\n     \"description\": \"URL to this resource.
+        (In LITE projection.)\"\n    },\n    \"userInfo\": {\n     \"type\": \"object\",\n
+        \    \"description\": \"User specific information related to this volume.
+        (e.g. page this user last read or whether they purchased this book)\",\n     \"properties\":
+        {\n      \"isInMyBooks\": {\n       \"type\": \"boolean\",\n       \"description\":
+        \"Whether or not this volume is currently in \\\"my books.\\\"\"\n      },\n
+        \     \"isPreordered\": {\n       \"type\": \"boolean\",\n       \"description\":
+        \"Whether or not this volume was pre-ordered by the authenticated user making
+        the request. (In LITE projection.)\"\n      },\n      \"isPurchased\": {\n
+        \      \"type\": \"boolean\",\n       \"description\": \"Whether or not this
+        volume was purchased by the authenticated user making the request. (In LITE
+        projection.)\"\n      },\n      \"isUploaded\": {\n       \"type\": \"boolean\",\n
+        \      \"description\": \"Whether or not this volume was user uploaded.\"\n
+        \     },\n      \"readingPosition\": {\n       \"$ref\": \"ReadingPosition\",\n
+        \      \"description\": \"The user's current reading position in the volume,
+        if one is available. (In LITE projection.)\"\n      },\n      \"review\":
+        {\n       \"$ref\": \"Review\",\n       \"description\": \"This user's review
+        of this volume, if one exists.\"\n      },\n      \"updated\": {\n       \"type\":
+        \"string\",\n       \"description\": \"Timestamp when this volume was last
+        modified by a user action, such as a reading position update, volume purchase
+        or writing a review. (RFC 3339 UTC date-time format).\",\n       \"format\":
+        \"date-time\"\n      },\n      \"userUploadedVolumeInfo\": {\n       \"type\":
+        \"object\",\n       \"properties\": {\n        \"processingState\": {\n         \"type\":
+        \"string\"\n        }\n       }\n      }\n     }\n    },\n    \"volumeInfo\":
+        {\n     \"type\": \"object\",\n     \"description\": \"General volume information.\",\n
+        \    \"properties\": {\n      \"authors\": {\n       \"type\": \"array\",\n
+        \      \"description\": \"The names of the authors and/or editors for this
+        volume. (In LITE projection)\",\n       \"items\": {\n        \"type\": \"string\"\n
+        \      }\n      },\n      \"averageRating\": {\n       \"type\": \"number\",\n
+        \      \"description\": \"The mean review rating for this volume. (min = 1.0,
+        max = 5.0)\",\n       \"format\": \"double\"\n      },\n      \"canonicalVolumeLink\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Canonical URL for
+        a volume. (In LITE projection.)\"\n      },\n      \"categories\": {\n       \"type\":
+        \"array\",\n       \"description\": \"A list of subject categories, such as
+        \\\"Fiction\\\", \\\"Suspense\\\", etc.\",\n       \"items\": {\n        \"type\":
+        \"string\"\n       }\n      },\n      \"contentVersion\": {\n       \"type\":
+        \"string\",\n       \"description\": \"An identifier for the version of the
+        volume content (text & images). (In LITE projection)\"\n      },\n      \"description\":
+        {\n       \"type\": \"string\",\n       \"description\": \"A synopsis of the
+        volume. The text of the description is formatted in HTML and includes simple
+        formatting elements, such as b, i, and br tags. (In LITE projection.)\"\n
+        \     },\n      \"dimensions\": {\n       \"type\": \"object\",\n       \"description\":
+        \"Physical dimensions of this volume.\",\n       \"properties\": {\n        \"height\":
+        {\n         \"type\": \"string\",\n         \"description\": \"Height or length
+        of this volume (in cm).\"\n        },\n        \"thickness\": {\n         \"type\":
+        \"string\",\n         \"description\": \"Thickness of this volume (in cm).\"\n
+        \       },\n        \"width\": {\n         \"type\": \"string\",\n         \"description\":
+        \"Width of this volume (in cm).\"\n        }\n       }\n      },\n      \"imageLinks\":
+        {\n       \"type\": \"object\",\n       \"description\": \"A list of image
+        links for all the sizes that are available. (In LITE projection.)\",\n       \"properties\":
+        {\n        \"extraLarge\": {\n         \"type\": \"string\",\n         \"description\":
+        \"Image link for extra large size (width of ~1280 pixels). (In LITE projection)\"\n
+        \       },\n        \"large\": {\n         \"type\": \"string\",\n         \"description\":
+        \"Image link for large size (width of ~800 pixels). (In LITE projection)\"\n
+        \       },\n        \"medium\": {\n         \"type\": \"string\",\n         \"description\":
+        \"Image link for medium size (width of ~575 pixels). (In LITE projection)\"\n
+        \       },\n        \"small\": {\n         \"type\": \"string\",\n         \"description\":
+        \"Image link for small size (width of ~300 pixels). (In LITE projection)\"\n
+        \       },\n        \"smallThumbnail\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"Image link for small thumbnail size (width of
+        ~80 pixels). (In LITE projection)\"\n        },\n        \"thumbnail\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"Image link for
+        thumbnail size (width of ~128 pixels). (In LITE projection)\"\n        }\n
+        \      }\n      },\n      \"industryIdentifiers\": {\n       \"type\": \"array\",\n
+        \      \"description\": \"Industry standard identifiers for this volume.\",\n
+        \      \"items\": {\n        \"type\": \"object\",\n        \"properties\":
+        {\n         \"identifier\": {\n          \"type\": \"string\",\n          \"description\":
+        \"Industry specific volume identifier.\"\n         },\n         \"type\":
+        {\n          \"type\": \"string\",\n          \"description\": \"Identifier
+        type. Possible values are ISBN_10, ISBN_13, ISSN and OTHER.\"\n         }\n
+        \       }\n       }\n      },\n      \"infoLink\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"URL to view information about this volume on the
+        Google Books site. (In LITE projection)\"\n      },\n      \"language\": {\n
+        \      \"type\": \"string\",\n       \"description\": \"Best language for
+        this volume (based on content). It is the two-letter ISO 639-1 code such as
+        'fr', 'en', etc.\"\n      },\n      \"mainCategory\": {\n       \"type\":
+        \"string\",\n       \"description\": \"The main category to which this volume
+        belongs. It will be the category from the categories list returned below that
+        has the highest weight.\"\n      },\n      \"pageCount\": {\n       \"type\":
+        \"integer\",\n       \"description\": \"Total number of pages.\",\n       \"format\":
+        \"int32\"\n      },\n      \"previewLink\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"URL to preview this volume on the Google Books site.\"\n
+        \     },\n      \"printType\": {\n       \"type\": \"string\",\n       \"description\":
+        \"Type of publication of this volume. Possible values are BOOK or MAGAZINE.\"\n
+        \     },\n      \"publishedDate\": {\n       \"type\": \"string\",\n       \"description\":
+        \"Date of publication. (In LITE projection.)\"\n      },\n      \"publisher\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Publisher of this
+        volume. (In LITE projection.)\"\n      },\n      \"ratingsCount\": {\n       \"type\":
+        \"integer\",\n       \"description\": \"The number of review ratings for this
+        volume.\",\n       \"format\": \"int32\"\n      },\n      \"subtitle\": {\n
+        \      \"type\": \"string\",\n       \"description\": \"Volume subtitle. (In
+        LITE projection.)\"\n      },\n      \"title\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"Volume title. (In LITE projection.)\"\n      }\n
+        \    }\n    }\n   }\n  },\n  \"Volumeannotation\": {\n   \"id\": \"Volumeannotation\",\n
+        \  \"type\": \"object\",\n   \"properties\": {\n    \"annotationDataId\":
+        {\n     \"type\": \"string\",\n     \"description\": \"The annotation data
+        id for this volume annotation.\"\n    },\n    \"annotationDataLink\": {\n
+        \    \"type\": \"string\",\n     \"description\": \"Link to get data for this
+        annotation.\"\n    },\n    \"annotationType\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"The type of annotation this is.\"\n    },\n    \"contentRanges\":
+        {\n     \"type\": \"object\",\n     \"description\": \"The content ranges
+        to identify the selected text.\",\n     \"properties\": {\n      \"cfiRange\":
+        {\n       \"$ref\": \"BooksAnnotationsRange\",\n       \"description\": \"Range
+        in CFI format for this annotation for version above.\"\n      },\n      \"contentVersion\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Content version
+        applicable to ranges below.\"\n      },\n      \"gbImageRange\": {\n       \"$ref\":
+        \"BooksAnnotationsRange\",\n       \"description\": \"Range in GB image format
+        for this annotation for version above.\"\n      },\n      \"gbTextRange\":
+        {\n       \"$ref\": \"BooksAnnotationsRange\",\n       \"description\": \"Range
+        in GB text format for this annotation for version above.\"\n      }\n     }\n
+        \   },\n    \"data\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Data for this annotation.\"\n    },\n    \"deleted\": {\n     \"type\":
+        \"boolean\",\n     \"description\": \"Indicates that this annotation is deleted.\"\n
+        \   },\n    \"id\": {\n     \"type\": \"string\",\n     \"description\": \"Unique
+        id of this volume annotation.\"\n    },\n    \"kind\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Resource Type\",\n     \"default\": \"books#volumeannotation\"\n
+        \   },\n    \"layerId\": {\n     \"type\": \"string\",\n     \"description\":
+        \"The Layer this annotation is for.\"\n    },\n    \"pageIds\": {\n     \"type\":
+        \"array\",\n     \"description\": \"Pages the annotation spans.\",\n     \"items\":
+        {\n      \"type\": \"string\"\n     }\n    },\n    \"selectedText\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Excerpt from the volume.\"\n    },\n
+        \   \"selfLink\": {\n     \"type\": \"string\",\n     \"description\": \"URL
+        to this resource.\"\n    },\n    \"updated\": {\n     \"type\": \"string\",\n
+        \    \"description\": \"Timestamp for the last time this anntoation was updated.
+        (RFC 3339 UTC date-time format).\",\n     \"format\": \"date-time\"\n    },\n
+        \   \"volumeId\": {\n     \"type\": \"string\",\n     \"description\": \"The
+        Volume this annotation is for.\"\n    }\n   }\n  },\n  \"Volumeannotations\":
+        {\n   \"id\": \"Volumeannotations\",\n   \"type\": \"object\",\n   \"properties\":
+        {\n    \"items\": {\n     \"type\": \"array\",\n     \"description\": \"A
+        list of volume annotations.\",\n     \"items\": {\n      \"$ref\": \"Volumeannotation\"\n
+        \    }\n    },\n    \"kind\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Resource type\",\n     \"default\": \"books#volumeannotations\"\n    },\n
+        \   \"nextPageToken\": {\n     \"type\": \"string\",\n     \"description\":
+        \"Token to pass in for pagination for the next page. This will not be present
+        if this request does not have more results.\"\n    },\n    \"totalItems\":
+        {\n     \"type\": \"integer\",\n     \"description\": \"The total number of
+        volume annotations found.\",\n     \"format\": \"int32\"\n    },\n    \"version\":
+        {\n     \"type\": \"string\",\n     \"description\": \"The version string
+        for all of the volume annotations in this layer (not just the ones in this
+        response). Note: the version string doesn't apply to the annotation data,
+        just the information in this response (e.g. the location of annotations in
+        the book).\"\n    }\n   }\n  },\n  \"Volumes\": {\n   \"id\": \"Volumes\",\n
+        \  \"type\": \"object\",\n   \"properties\": {\n    \"items\": {\n     \"type\":
+        \"array\",\n     \"description\": \"A list of volumes.\",\n     \"items\":
+        {\n      \"$ref\": \"Volume\"\n     }\n    },\n    \"kind\": {\n     \"type\":
+        \"string\",\n     \"description\": \"Resource type.\",\n     \"default\":
+        \"books#volumes\"\n    },\n    \"totalItems\": {\n     \"type\": \"integer\",\n
+        \    \"description\": \"Total number of volumes found. This might be greater
+        than the number of volumes returned in this response if results have been
+        paginated.\",\n     \"format\": \"int32\"\n    }\n   }\n  }\n },\n \"resources\":
+        {\n  \"bookshelves\": {\n   \"methods\": {\n    \"get\": {\n     \"id\": \"books.bookshelves.get\",\n
+        \    \"path\": \"users/{userId}/bookshelves/{shelf}\",\n     \"httpMethod\":
+        \"GET\",\n     \"description\": \"Retrieves metadata for a specific bookshelf
+        for the specified user.\",\n     \"parameters\": {\n      \"shelf\": {\n       \"type\":
+        \"string\",\n       \"description\": \"ID of bookshelf to retrieve.\",\n       \"required\":
+        true,\n       \"location\": \"path\"\n      },\n      \"source\": {\n       \"type\":
+        \"string\",\n       \"description\": \"String to identify the originator of
+        this request.\",\n       \"location\": \"query\"\n      },\n      \"userId\":
+        {\n       \"type\": \"string\",\n       \"description\": \"ID of user for
+        whom to retrieve bookshelves.\",\n       \"required\": true,\n       \"location\":
+        \"path\"\n      }\n     },\n     \"parameterOrder\": [\n      \"userId\",\n
+        \     \"shelf\"\n     ],\n     \"response\": {\n      \"$ref\": \"Bookshelf\"\n
+        \    },\n     \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n
+        \    ]\n    },\n    \"list\": {\n     \"id\": \"books.bookshelves.list\",\n
+        \    \"path\": \"users/{userId}/bookshelves\",\n     \"httpMethod\": \"GET\",\n
+        \    \"description\": \"Retrieves a list of public bookshelves for the specified
+        user.\",\n     \"parameters\": {\n      \"source\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"String to identify the originator of this request.\",\n
+        \      \"location\": \"query\"\n      },\n      \"userId\": {\n       \"type\":
+        \"string\",\n       \"description\": \"ID of user for whom to retrieve bookshelves.\",\n
+        \      \"required\": true,\n       \"location\": \"path\"\n      }\n     },\n
+        \    \"parameterOrder\": [\n      \"userId\"\n     ],\n     \"response\":
+        {\n      \"$ref\": \"Bookshelves\"\n     },\n     \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n
+        \    ]\n    }\n   },\n   \"resources\": {\n    \"volumes\": {\n     \"methods\":
+        {\n      \"list\": {\n       \"id\": \"books.bookshelves.volumes.list\",\n
+        \      \"path\": \"users/{userId}/bookshelves/{shelf}/volumes\",\n       \"httpMethod\":
+        \"GET\",\n       \"description\": \"Retrieves volumes in a specific bookshelf
+        for the specified user.\",\n       \"parameters\": {\n        \"maxResults\":
+        {\n         \"type\": \"integer\",\n         \"description\": \"Maximum number
+        of results to return\",\n         \"format\": \"uint32\",\n         \"minimum\":
+        \"0\",\n         \"location\": \"query\"\n        },\n        \"shelf\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"ID of bookshelf
+        to retrieve volumes.\",\n         \"required\": true,\n         \"location\":
+        \"path\"\n        },\n        \"showPreorders\": {\n         \"type\": \"boolean\",\n
+        \        \"description\": \"Set to true to show pre-ordered books. Defaults
+        to false.\",\n         \"location\": \"query\"\n        },\n        \"source\":
+        {\n         \"type\": \"string\",\n         \"description\": \"String to identify
+        the originator of this request.\",\n         \"location\": \"query\"\n        },\n
+        \       \"startIndex\": {\n         \"type\": \"integer\",\n         \"description\":
+        \"Index of the first element to return (starts at 0)\",\n         \"format\":
+        \"uint32\",\n         \"minimum\": \"0\",\n         \"location\": \"query\"\n
+        \       },\n        \"userId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"ID of user for whom to retrieve bookshelf volumes.\",\n         \"required\":
+        true,\n         \"location\": \"path\"\n        }\n       },\n       \"parameterOrder\":
+        [\n        \"userId\",\n        \"shelf\"\n       ],\n       \"response\":
+        {\n        \"$ref\": \"Volumes\"\n       },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      }\n     }\n    }\n   }\n  },\n  \"cloudloading\": {\n   \"methods\":
+        {\n    \"addBook\": {\n     \"id\": \"books.cloudloading.addBook\",\n     \"path\":
+        \"cloudloading/addBook\",\n     \"httpMethod\": \"POST\",\n     \"description\":
+        \"\",\n     \"parameters\": {\n      \"drive_document_id\": {\n       \"type\":
+        \"string\",\n       \"description\": \"A drive document id. The upload_client_token
+        must not be set.\",\n       \"location\": \"query\"\n      },\n      \"mime_type\":
+        {\n       \"type\": \"string\",\n       \"description\": \"The document MIME
+        type. It can be set only if the drive_document_id is set.\",\n       \"location\":
+        \"query\"\n      },\n      \"name\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The document name. It can be set only if the drive_document_id is set.\",\n
+        \      \"location\": \"query\"\n      },\n      \"upload_client_token\": {\n
+        \      \"type\": \"string\",\n       \"location\": \"query\"\n      }\n     },\n
+        \    \"response\": {\n      \"$ref\": \"BooksCloudloadingResource\"\n     },\n
+        \    \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n     ]\n
+        \   },\n    \"deleteBook\": {\n     \"id\": \"books.cloudloading.deleteBook\",\n
+        \    \"path\": \"cloudloading/deleteBook\",\n     \"httpMethod\": \"POST\",\n
+        \    \"description\": \"Remove the book and its contents\",\n     \"parameters\":
+        {\n      \"volumeId\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The id of the book to be removed.\",\n       \"required\": true,\n       \"location\":
+        \"query\"\n      }\n     },\n     \"parameterOrder\": [\n      \"volumeId\"\n
+        \    ],\n     \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n
+        \    ]\n    }\n   }\n  },\n  \"layers\": {\n   \"methods\": {\n    \"get\":
+        {\n     \"id\": \"books.layers.get\",\n     \"path\": \"volumes/{volumeId}/layersummary/{summaryId}\",\n
+        \    \"httpMethod\": \"GET\",\n     \"description\": \"Gets the layer summary
+        for a volume.\",\n     \"parameters\": {\n      \"contentVersion\": {\n       \"type\":
+        \"string\",\n       \"description\": \"The content version for the requested
+        volume.\",\n       \"location\": \"query\"\n      },\n      \"source\": {\n
+        \      \"type\": \"string\",\n       \"description\": \"String to identify
+        the originator of this request.\",\n       \"location\": \"query\"\n      },\n
+        \     \"summaryId\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The ID for the layer to get the summary for.\",\n       \"required\": true,\n
+        \      \"location\": \"path\"\n      },\n      \"volumeId\": {\n       \"type\":
+        \"string\",\n       \"description\": \"The volume to retrieve layers for.\",\n
+        \      \"required\": true,\n       \"location\": \"path\"\n      }\n     },\n
+        \    \"parameterOrder\": [\n      \"volumeId\",\n      \"summaryId\"\n     ],\n
+        \    \"response\": {\n      \"$ref\": \"Layersummary\"\n     },\n     \"scopes\":
+        [\n      \"https://www.googleapis.com/auth/books\"\n     ]\n    },\n    \"list\":
+        {\n     \"id\": \"books.layers.list\",\n     \"path\": \"volumes/{volumeId}/layersummary\",\n
+        \    \"httpMethod\": \"GET\",\n     \"description\": \"List the layer summaries
+        for a volume.\",\n     \"parameters\": {\n      \"contentVersion\": {\n       \"type\":
+        \"string\",\n       \"description\": \"The content version for the requested
+        volume.\",\n       \"location\": \"query\"\n      },\n      \"maxResults\":
+        {\n       \"type\": \"integer\",\n       \"description\": \"Maximum number
+        of results to return\",\n       \"format\": \"uint32\",\n       \"minimum\":
+        \"0\",\n       \"maximum\": \"200\",\n       \"location\": \"query\"\n      },\n
+        \     \"pageToken\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The value of the nextToken from the previous page.\",\n       \"location\":
+        \"query\"\n      },\n      \"source\": {\n       \"type\": \"string\",\n       \"description\":
+        \"String to identify the originator of this request.\",\n       \"location\":
+        \"query\"\n      },\n      \"volumeId\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"The volume to retrieve layers for.\",\n       \"required\":
+        true,\n       \"location\": \"path\"\n      }\n     },\n     \"parameterOrder\":
+        [\n      \"volumeId\"\n     ],\n     \"response\": {\n      \"$ref\": \"Layersummaries\"\n
+        \    },\n     \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n
+        \    ]\n    }\n   },\n   \"resources\": {\n    \"annotationData\": {\n     \"methods\":
+        {\n      \"get\": {\n       \"id\": \"books.layers.annotationData.get\",\n
+        \      \"path\": \"volumes/{volumeId}/layers/{layerId}/data/{annotationDataId}\",\n
+        \      \"httpMethod\": \"GET\",\n       \"description\": \"Gets the annotation
+        data.\",\n       \"parameters\": {\n        \"annotationDataId\": {\n         \"type\":
+        \"string\",\n         \"description\": \"The ID of the annotation data to
+        retrieve.\",\n         \"required\": true,\n         \"location\": \"path\"\n
+        \       },\n        \"contentVersion\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"The content version for the volume you are trying
+        to retrieve.\",\n         \"required\": true,\n         \"location\": \"query\"\n
+        \       },\n        \"h\": {\n         \"type\": \"integer\",\n         \"description\":
+        \"The requested pixel height for any images. If height is provided width must
+        also be provided.\",\n         \"format\": \"int32\",\n         \"location\":
+        \"query\"\n        },\n        \"layerId\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"The ID for the layer to get the annotations.\",\n
+        \        \"required\": true,\n         \"location\": \"path\"\n        },\n
+        \       \"locale\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The locale information for the data. ISO-639-1 language and ISO-3166-1 country
+        code. Ex: 'en_US'.\",\n         \"location\": \"query\"\n        },\n        \"scale\":
+        {\n         \"type\": \"integer\",\n         \"description\": \"The requested
+        scale for the image.\",\n         \"format\": \"int32\",\n         \"minimum\":
+        \"0\",\n         \"location\": \"query\"\n        },\n        \"source\":
+        {\n         \"type\": \"string\",\n         \"description\": \"String to identify
+        the originator of this request.\",\n         \"location\": \"query\"\n        },\n
+        \       \"volumeId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The volume to retrieve annotations for.\",\n         \"required\": true,\n
+        \        \"location\": \"path\"\n        },\n        \"w\": {\n         \"type\":
+        \"integer\",\n         \"description\": \"The requested pixel width for any
+        images. If width is provided height must also be provided.\",\n         \"format\":
+        \"int32\",\n         \"location\": \"query\"\n        }\n       },\n       \"parameterOrder\":
+        [\n        \"volumeId\",\n        \"layerId\",\n        \"annotationDataId\",\n
+        \       \"contentVersion\"\n       ],\n       \"response\": {\n        \"$ref\":
+        \"Annotationdata\"\n       },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"list\": {\n       \"id\": \"books.layers.annotationData.list\",\n
+        \      \"path\": \"volumes/{volumeId}/layers/{layerId}/data\",\n       \"httpMethod\":
+        \"GET\",\n       \"description\": \"Gets the annotation data for a volume
+        and layer.\",\n       \"parameters\": {\n        \"annotationDataId\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"The list of Annotation
+        Data Ids to retrieve. Pagination is ignored if this is set.\",\n         \"repeated\":
+        true,\n         \"location\": \"query\"\n        },\n        \"contentVersion\":
+        {\n         \"type\": \"string\",\n         \"description\": \"The content
+        version for the requested volume.\",\n         \"required\": true,\n         \"location\":
+        \"query\"\n        },\n        \"h\": {\n         \"type\": \"integer\",\n
+        \        \"description\": \"The requested pixel height for any images. If
+        height is provided width must also be provided.\",\n         \"format\": \"int32\",\n
+        \        \"location\": \"query\"\n        },\n        \"layerId\": {\n         \"type\":
+        \"string\",\n         \"description\": \"The ID for the layer to get the annotation
+        data.\",\n         \"required\": true,\n         \"location\": \"path\"\n
+        \       },\n        \"locale\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The locale information for the data. ISO-639-1 language and ISO-3166-1 country
+        code. Ex: 'en_US'.\",\n         \"location\": \"query\"\n        },\n        \"maxResults\":
+        {\n         \"type\": \"integer\",\n         \"description\": \"Maximum number
+        of results to return\",\n         \"format\": \"uint32\",\n         \"minimum\":
+        \"0\",\n         \"maximum\": \"200\",\n         \"location\": \"query\"\n
+        \       },\n        \"pageToken\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The value of the nextToken from the previous page.\",\n         \"location\":
+        \"query\"\n        },\n        \"scale\": {\n         \"type\": \"integer\",\n
+        \        \"description\": \"The requested scale for the image.\",\n         \"format\":
+        \"int32\",\n         \"minimum\": \"0\",\n         \"location\": \"query\"\n
+        \       },\n        \"source\": {\n         \"type\": \"string\",\n         \"description\":
+        \"String to identify the originator of this request.\",\n         \"location\":
+        \"query\"\n        },\n        \"updatedMax\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"RFC 3339 timestamp to restrict to items updated
+        prior to this timestamp (exclusive).\",\n         \"location\": \"query\"\n
+        \       },\n        \"updatedMin\": {\n         \"type\": \"string\",\n         \"description\":
+        \"RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).\",\n
+        \        \"location\": \"query\"\n        },\n        \"volumeId\": {\n         \"type\":
+        \"string\",\n         \"description\": \"The volume to retrieve annotation
+        data for.\",\n         \"required\": true,\n         \"location\": \"path\"\n
+        \       },\n        \"w\": {\n         \"type\": \"integer\",\n         \"description\":
+        \"The requested pixel width for any images. If width is provided height must
+        also be provided.\",\n         \"format\": \"int32\",\n         \"location\":
+        \"query\"\n        }\n       },\n       \"parameterOrder\": [\n        \"volumeId\",\n
+        \       \"layerId\",\n        \"contentVersion\"\n       ],\n       \"response\":
+        {\n        \"$ref\": \"Annotationsdata\"\n       },\n       \"scopes\": [\n
+        \       \"https://www.googleapis.com/auth/books\"\n       ]\n      }\n     }\n
+        \   },\n    \"volumeAnnotations\": {\n     \"methods\": {\n      \"get\":
+        {\n       \"id\": \"books.layers.volumeAnnotations.get\",\n       \"path\":
+        \"volumes/{volumeId}/layers/{layerId}/annotations/{annotationId}\",\n       \"httpMethod\":
+        \"GET\",\n       \"description\": \"Gets the volume annotation.\",\n       \"parameters\":
+        {\n        \"annotationId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The ID of the volume annotation to retrieve.\",\n         \"required\":
+        true,\n         \"location\": \"path\"\n        },\n        \"layerId\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"The ID for the
+        layer to get the annotations.\",\n         \"required\": true,\n         \"location\":
+        \"path\"\n        },\n        \"locale\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"The locale information for the data. ISO-639-1
+        language and ISO-3166-1 country code. Ex: 'en_US'.\",\n         \"location\":
+        \"query\"\n        },\n        \"source\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"String to identify the originator of this request.\",\n
+        \        \"location\": \"query\"\n        },\n        \"volumeId\": {\n         \"type\":
+        \"string\",\n         \"description\": \"The volume to retrieve annotations
+        for.\",\n         \"required\": true,\n         \"location\": \"path\"\n        }\n
+        \      },\n       \"parameterOrder\": [\n        \"volumeId\",\n        \"layerId\",\n
+        \       \"annotationId\"\n       ],\n       \"response\": {\n        \"$ref\":
+        \"Volumeannotation\"\n       },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"list\": {\n       \"id\": \"books.layers.volumeAnnotations.list\",\n
+        \      \"path\": \"volumes/{volumeId}/layers/{layerId}\",\n       \"httpMethod\":
+        \"GET\",\n       \"description\": \"Gets the volume annotations for a volume
+        and layer.\",\n       \"parameters\": {\n        \"contentVersion\": {\n         \"type\":
+        \"string\",\n         \"description\": \"The content version for the requested
+        volume.\",\n         \"required\": true,\n         \"location\": \"query\"\n
+        \       },\n        \"endOffset\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The end offset to end retrieving data from.\",\n         \"location\": \"query\"\n
+        \       },\n        \"endPosition\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The end position to end retrieving data from.\",\n         \"location\":
+        \"query\"\n        },\n        \"layerId\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"The ID for the layer to get the annotations.\",\n
+        \        \"required\": true,\n         \"location\": \"path\"\n        },\n
+        \       \"locale\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The locale information for the data. ISO-639-1 language and ISO-3166-1 country
+        code. Ex: 'en_US'.\",\n         \"location\": \"query\"\n        },\n        \"maxResults\":
+        {\n         \"type\": \"integer\",\n         \"description\": \"Maximum number
+        of results to return\",\n         \"format\": \"uint32\",\n         \"minimum\":
+        \"0\",\n         \"maximum\": \"200\",\n         \"location\": \"query\"\n
+        \       },\n        \"pageToken\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The value of the nextToken from the previous page.\",\n         \"location\":
+        \"query\"\n        },\n        \"showDeleted\": {\n         \"type\": \"boolean\",\n
+        \        \"description\": \"Set to true to return deleted annotations. updatedMin
+        must be in the request to use this. Defaults to false.\",\n         \"location\":
+        \"query\"\n        },\n        \"source\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"String to identify the originator of this request.\",\n
+        \        \"location\": \"query\"\n        },\n        \"startOffset\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"The start offset
+        to start retrieving data from.\",\n         \"location\": \"query\"\n        },\n
+        \       \"startPosition\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The start position to start retrieving data from.\",\n         \"location\":
+        \"query\"\n        },\n        \"updatedMax\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"RFC 3339 timestamp to restrict to items updated
+        prior to this timestamp (exclusive).\",\n         \"location\": \"query\"\n
+        \       },\n        \"updatedMin\": {\n         \"type\": \"string\",\n         \"description\":
+        \"RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).\",\n
+        \        \"location\": \"query\"\n        },\n        \"volumeAnnotationsVersion\":
+        {\n         \"type\": \"string\",\n         \"description\": \"The version
+        of the volume annotations that you are requesting.\",\n         \"location\":
+        \"query\"\n        },\n        \"volumeId\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"The volume to retrieve annotations for.\",\n         \"required\":
+        true,\n         \"location\": \"path\"\n        }\n       },\n       \"parameterOrder\":
+        [\n        \"volumeId\",\n        \"layerId\",\n        \"contentVersion\"\n
+        \      ],\n       \"response\": {\n        \"$ref\": \"Volumeannotations\"\n
+        \      },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      }\n     }\n    }\n   }\n  },\n  \"myconfig\": {\n   \"methods\":
+        {\n    \"releaseDownloadAccess\": {\n     \"id\": \"books.myconfig.releaseDownloadAccess\",\n
+        \    \"path\": \"myconfig/releaseDownloadAccess\",\n     \"httpMethod\": \"POST\",\n
+        \    \"description\": \"Release downloaded content access restriction.\",\n
+        \    \"parameters\": {\n      \"cpksver\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"The device/version ID from which to release the
+        restriction.\",\n       \"required\": true,\n       \"location\": \"query\"\n
+        \     },\n      \"locale\": {\n       \"type\": \"string\",\n       \"description\":
+        \"ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US.\",\n       \"location\":
+        \"query\"\n      },\n      \"source\": {\n       \"type\": \"string\",\n       \"description\":
+        \"String to identify the originator of this request.\",\n       \"location\":
+        \"query\"\n      },\n      \"volumeIds\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"The volume(s) to release restrictions for.\",\n
+        \      \"required\": true,\n       \"repeated\": true,\n       \"location\":
+        \"query\"\n      }\n     },\n     \"parameterOrder\": [\n      \"volumeIds\",\n
+        \     \"cpksver\"\n     ],\n     \"response\": {\n      \"$ref\": \"DownloadAccesses\"\n
+        \    },\n     \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n
+        \    ]\n    },\n    \"requestAccess\": {\n     \"id\": \"books.myconfig.requestAccess\",\n
+        \    \"path\": \"myconfig/requestAccess\",\n     \"httpMethod\": \"POST\",\n
+        \    \"description\": \"Request concurrent and download access restrictions.\",\n
+        \    \"parameters\": {\n      \"cpksver\": {\n       \"type\": \"string\",\n
+        \      \"description\": \"The device/version ID from which to request the
+        restrictions.\",\n       \"required\": true,\n       \"location\": \"query\"\n
+        \     },\n      \"locale\": {\n       \"type\": \"string\",\n       \"description\":
+        \"ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US.\",\n       \"location\":
+        \"query\"\n      },\n      \"nonce\": {\n       \"type\": \"string\",\n       \"description\":
+        \"The client nonce value.\",\n       \"required\": true,\n       \"location\":
+        \"query\"\n      },\n      \"source\": {\n       \"type\": \"string\",\n       \"description\":
+        \"String to identify the originator of this request.\",\n       \"required\":
+        true,\n       \"location\": \"query\"\n      },\n      \"volumeId\": {\n       \"type\":
+        \"string\",\n       \"description\": \"The volume to request concurrent/download
+        restrictions for.\",\n       \"required\": true,\n       \"location\": \"query\"\n
+        \     }\n     },\n     \"parameterOrder\": [\n      \"source\",\n      \"volumeId\",\n
+        \     \"nonce\",\n      \"cpksver\"\n     ],\n     \"response\": {\n      \"$ref\":
+        \"RequestAccess\"\n     },\n     \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n
+        \    ]\n    },\n    \"syncVolumeLicenses\": {\n     \"id\": \"books.myconfig.syncVolumeLicenses\",\n
+        \    \"path\": \"myconfig/syncVolumeLicenses\",\n     \"httpMethod\": \"POST\",\n
+        \    \"description\": \"Request downloaded content access for specified volumes
+        on the My eBooks shelf.\",\n     \"parameters\": {\n      \"cpksver\": {\n
+        \      \"type\": \"string\",\n       \"description\": \"The device/version
+        ID from which to release the restriction.\",\n       \"required\": true,\n
+        \      \"location\": \"query\"\n      },\n      \"locale\": {\n       \"type\":
+        \"string\",\n       \"description\": \"ISO-639-1, ISO-3166-1 codes for message
+        localization, i.e. en_US.\",\n       \"location\": \"query\"\n      },\n      \"nonce\":
+        {\n       \"type\": \"string\",\n       \"description\": \"The client nonce
+        value.\",\n       \"required\": true,\n       \"location\": \"query\"\n      },\n
+        \     \"showPreorders\": {\n       \"type\": \"boolean\",\n       \"description\":
+        \"Set to true to show pre-ordered books. Defaults to false.\",\n       \"location\":
+        \"query\"\n      },\n      \"source\": {\n       \"type\": \"string\",\n       \"description\":
+        \"String to identify the originator of this request.\",\n       \"required\":
+        true,\n       \"location\": \"query\"\n      },\n      \"volumeIds\": {\n
+        \      \"type\": \"string\",\n       \"description\": \"The volume(s) to request
+        download restrictions for.\",\n       \"repeated\": true,\n       \"location\":
+        \"query\"\n      }\n     },\n     \"parameterOrder\": [\n      \"source\",\n
+        \     \"nonce\",\n      \"cpksver\"\n     ],\n     \"response\": {\n      \"$ref\":
+        \"Volumes\"\n     },\n     \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n
+        \    ]\n    }\n   }\n  },\n  \"mylibrary\": {\n   \"resources\": {\n    \"annotations\":
+        {\n     \"methods\": {\n      \"delete\": {\n       \"id\": \"books.mylibrary.annotations.delete\",\n
+        \      \"path\": \"mylibrary/annotations/{annotationId}\",\n       \"httpMethod\":
+        \"DELETE\",\n       \"description\": \"Deletes an annotation.\",\n       \"parameters\":
+        {\n        \"annotationId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The ID for the annotation to delete.\",\n         \"required\": true,\n
+        \        \"location\": \"path\"\n        },\n        \"source\": {\n         \"type\":
+        \"string\",\n         \"description\": \"String to identify the originator
+        of this request.\",\n         \"location\": \"query\"\n        }\n       },\n
+        \      \"parameterOrder\": [\n        \"annotationId\"\n       ],\n       \"scopes\":
+        [\n        \"https://www.googleapis.com/auth/books\"\n       ]\n      },\n
+        \     \"get\": {\n       \"id\": \"books.mylibrary.annotations.get\",\n       \"path\":
+        \"mylibrary/annotations/{annotationId}\",\n       \"httpMethod\": \"GET\",\n
+        \      \"description\": \"Gets an annotation by its ID.\",\n       \"parameters\":
+        {\n        \"annotationId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The ID for the annotation to retrieve.\",\n         \"required\": true,\n
+        \        \"location\": \"path\"\n        },\n        \"source\": {\n         \"type\":
+        \"string\",\n         \"description\": \"String to identify the originator
+        of this request.\",\n         \"location\": \"query\"\n        }\n       },\n
+        \      \"parameterOrder\": [\n        \"annotationId\"\n       ],\n       \"response\":
+        {\n        \"$ref\": \"Annotation\"\n       },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"insert\": {\n       \"id\": \"books.mylibrary.annotations.insert\",\n
+        \      \"path\": \"mylibrary/annotations\",\n       \"httpMethod\": \"POST\",\n
+        \      \"description\": \"Inserts a new annotation.\",\n       \"parameters\":
+        {\n        \"source\": {\n         \"type\": \"string\",\n         \"description\":
+        \"String to identify the originator of this request.\",\n         \"location\":
+        \"query\"\n        }\n       },\n       \"request\": {\n        \"$ref\":
+        \"Annotation\"\n       },\n       \"response\": {\n        \"$ref\": \"Annotation\"\n
+        \      },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"list\": {\n       \"id\": \"books.mylibrary.annotations.list\",\n
+        \      \"path\": \"mylibrary/annotations\",\n       \"httpMethod\": \"GET\",\n
+        \      \"description\": \"Retrieves a list of annotations, possibly filtered.\",\n
+        \      \"parameters\": {\n        \"contentVersion\": {\n         \"type\":
+        \"string\",\n         \"description\": \"The content version for the requested
+        volume.\",\n         \"location\": \"query\"\n        },\n        \"layerId\":
+        {\n         \"type\": \"string\",\n         \"description\": \"The layer ID
+        to limit annotation by.\",\n         \"location\": \"query\"\n        },\n
+        \       \"maxResults\": {\n         \"type\": \"integer\",\n         \"description\":
+        \"Maximum number of results to return\",\n         \"format\": \"uint32\",\n
+        \        \"minimum\": \"0\",\n         \"maximum\": \"40\",\n         \"location\":
+        \"query\"\n        },\n        \"pageIds\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"The page ID(s) for the volume that is being queried.\",\n
+        \        \"repeated\": true,\n         \"location\": \"query\"\n        },\n
+        \       \"pageToken\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The value of the nextToken from the previous page.\",\n         \"location\":
+        \"query\"\n        },\n        \"showDeleted\": {\n         \"type\": \"boolean\",\n
+        \        \"description\": \"Set to true to return deleted annotations. updatedMin
+        must be in the request to use this. Defaults to false.\",\n         \"location\":
+        \"query\"\n        },\n        \"source\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"String to identify the originator of this request.\",\n
+        \        \"location\": \"query\"\n        },\n        \"updatedMax\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"RFC 3339 timestamp
+        to restrict to items updated prior to this timestamp (exclusive).\",\n         \"location\":
+        \"query\"\n        },\n        \"updatedMin\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"RFC 3339 timestamp to restrict to items updated
+        since this timestamp (inclusive).\",\n         \"location\": \"query\"\n        },\n
+        \       \"volumeId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The volume to restrict annotations to.\",\n         \"location\": \"query\"\n
+        \       }\n       },\n       \"response\": {\n        \"$ref\": \"Annotations\"\n
+        \      },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"update\": {\n       \"id\": \"books.mylibrary.annotations.update\",\n
+        \      \"path\": \"mylibrary/annotations/{annotationId}\",\n       \"httpMethod\":
+        \"PUT\",\n       \"description\": \"Updates an existing annotation.\",\n       \"parameters\":
+        {\n        \"annotationId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"The ID for the annotation to update.\",\n         \"required\": true,\n
+        \        \"location\": \"path\"\n        },\n        \"source\": {\n         \"type\":
+        \"string\",\n         \"description\": \"String to identify the originator
+        of this request.\",\n         \"location\": \"query\"\n        }\n       },\n
+        \      \"parameterOrder\": [\n        \"annotationId\"\n       ],\n       \"request\":
+        {\n        \"$ref\": \"Annotation\"\n       },\n       \"response\": {\n        \"$ref\":
+        \"Annotation\"\n       },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      }\n     }\n    },\n    \"bookshelves\": {\n     \"methods\":
+        {\n      \"addVolume\": {\n       \"id\": \"books.mylibrary.bookshelves.addVolume\",\n
+        \      \"path\": \"mylibrary/bookshelves/{shelf}/addVolume\",\n       \"httpMethod\":
+        \"POST\",\n       \"description\": \"Adds a volume to a bookshelf.\",\n       \"parameters\":
+        {\n        \"shelf\": {\n         \"type\": \"string\",\n         \"description\":
+        \"ID of bookshelf to which to add a volume.\",\n         \"required\": true,\n
+        \        \"location\": \"path\"\n        },\n        \"source\": {\n         \"type\":
+        \"string\",\n         \"description\": \"String to identify the originator
+        of this request.\",\n         \"location\": \"query\"\n        },\n        \"volumeId\":
+        {\n         \"type\": \"string\",\n         \"description\": \"ID of volume
+        to add.\",\n         \"required\": true,\n         \"location\": \"query\"\n
+        \       }\n       },\n       \"parameterOrder\": [\n        \"shelf\",\n        \"volumeId\"\n
+        \      ],\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"clearVolumes\": {\n       \"id\": \"books.mylibrary.bookshelves.clearVolumes\",\n
+        \      \"path\": \"mylibrary/bookshelves/{shelf}/clearVolumes\",\n       \"httpMethod\":
+        \"POST\",\n       \"description\": \"Clears all volumes from a bookshelf.\",\n
+        \      \"parameters\": {\n        \"shelf\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"ID of bookshelf from which to remove a volume.\",\n
+        \        \"required\": true,\n         \"location\": \"path\"\n        },\n
+        \       \"source\": {\n         \"type\": \"string\",\n         \"description\":
+        \"String to identify the originator of this request.\",\n         \"location\":
+        \"query\"\n        }\n       },\n       \"parameterOrder\": [\n        \"shelf\"\n
+        \      ],\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"get\": {\n       \"id\": \"books.mylibrary.bookshelves.get\",\n
+        \      \"path\": \"mylibrary/bookshelves/{shelf}\",\n       \"httpMethod\":
+        \"GET\",\n       \"description\": \"Retrieves metadata for a specific bookshelf
+        belonging to the authenticated user.\",\n       \"parameters\": {\n        \"shelf\":
+        {\n         \"type\": \"string\",\n         \"description\": \"ID of bookshelf
+        to retrieve.\",\n         \"required\": true,\n         \"location\": \"path\"\n
+        \       },\n        \"source\": {\n         \"type\": \"string\",\n         \"description\":
+        \"String to identify the originator of this request.\",\n         \"location\":
+        \"query\"\n        }\n       },\n       \"parameterOrder\": [\n        \"shelf\"\n
+        \      ],\n       \"response\": {\n        \"$ref\": \"Bookshelf\"\n       },\n
+        \      \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"list\": {\n       \"id\": \"books.mylibrary.bookshelves.list\",\n
+        \      \"path\": \"mylibrary/bookshelves\",\n       \"httpMethod\": \"GET\",\n
+        \      \"description\": \"Retrieves a list of bookshelves belonging to the
+        authenticated user.\",\n       \"parameters\": {\n        \"source\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"String to identify
+        the originator of this request.\",\n         \"location\": \"query\"\n        }\n
+        \      },\n       \"response\": {\n        \"$ref\": \"Bookshelves\"\n       },\n
+        \      \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"moveVolume\": {\n       \"id\": \"books.mylibrary.bookshelves.moveVolume\",\n
+        \      \"path\": \"mylibrary/bookshelves/{shelf}/moveVolume\",\n       \"httpMethod\":
+        \"POST\",\n       \"description\": \"Moves a volume within a bookshelf.\",\n
+        \      \"parameters\": {\n        \"shelf\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"ID of bookshelf with the volume.\",\n         \"required\":
+        true,\n         \"location\": \"path\"\n        },\n        \"source\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"String to identify
+        the originator of this request.\",\n         \"location\": \"query\"\n        },\n
+        \       \"volumeId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"ID of volume to move.\",\n         \"required\": true,\n         \"location\":
+        \"query\"\n        },\n        \"volumePosition\": {\n         \"type\": \"integer\",\n
+        \        \"description\": \"Position on shelf to move the item (0 puts the
+        item before the current first item, 1 puts it between the first and the second
+        and so on.)\",\n         \"required\": true,\n         \"format\": \"int32\",\n
+        \        \"location\": \"query\"\n        }\n       },\n       \"parameterOrder\":
+        [\n        \"shelf\",\n        \"volumeId\",\n        \"volumePosition\"\n
+        \      ],\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"removeVolume\": {\n       \"id\": \"books.mylibrary.bookshelves.removeVolume\",\n
+        \      \"path\": \"mylibrary/bookshelves/{shelf}/removeVolume\",\n       \"httpMethod\":
+        \"POST\",\n       \"description\": \"Removes a volume from a bookshelf.\",\n
+        \      \"parameters\": {\n        \"shelf\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"ID of bookshelf from which to remove a volume.\",\n
+        \        \"required\": true,\n         \"location\": \"path\"\n        },\n
+        \       \"source\": {\n         \"type\": \"string\",\n         \"description\":
+        \"String to identify the originator of this request.\",\n         \"location\":
+        \"query\"\n        },\n        \"volumeId\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"ID of volume to remove.\",\n         \"required\":
+        true,\n         \"location\": \"query\"\n        }\n       },\n       \"parameterOrder\":
+        [\n        \"shelf\",\n        \"volumeId\"\n       ],\n       \"scopes\":
+        [\n        \"https://www.googleapis.com/auth/books\"\n       ]\n      }\n
+        \    },\n     \"resources\": {\n      \"volumes\": {\n       \"methods\":
+        {\n        \"list\": {\n         \"id\": \"books.mylibrary.bookshelves.volumes.list\",\n
+        \        \"path\": \"mylibrary/bookshelves/{shelf}/volumes\",\n         \"httpMethod\":
+        \"GET\",\n         \"description\": \"Gets volume information for volumes
+        on a bookshelf.\",\n         \"parameters\": {\n          \"country\": {\n
+        \          \"type\": \"string\",\n           \"description\": \"ISO-3166-1
+        code to override the IP-based location.\",\n           \"location\": \"query\"\n
+        \         },\n          \"maxResults\": {\n           \"type\": \"integer\",\n
+        \          \"description\": \"Maximum number of results to return\",\n           \"format\":
+        \"uint32\",\n           \"minimum\": \"0\",\n           \"location\": \"query\"\n
+        \         },\n          \"projection\": {\n           \"type\": \"string\",\n
+        \          \"description\": \"Restrict information returned to a set of selected
+        fields.\",\n           \"enum\": [\n            \"full\",\n            \"lite\"\n
+        \          ],\n           \"enumDescriptions\": [\n            \"Includes
+        all volume data.\",\n            \"Includes a subset of fields in volumeInfo
+        and accessInfo.\"\n           ],\n           \"location\": \"query\"\n          },\n
+        \         \"q\": {\n           \"type\": \"string\",\n           \"description\":
+        \"Full-text search query string in this bookshelf.\",\n           \"location\":
+        \"query\"\n          },\n          \"shelf\": {\n           \"type\": \"string\",\n
+        \          \"description\": \"The bookshelf ID or name retrieve volumes for.\",\n
+        \          \"required\": true,\n           \"location\": \"path\"\n          },\n
+        \         \"showPreorders\": {\n           \"type\": \"boolean\",\n           \"description\":
+        \"Set to true to show pre-ordered books. Defaults to false.\",\n           \"location\":
+        \"query\"\n          },\n          \"source\": {\n           \"type\": \"string\",\n
+        \          \"description\": \"String to identify the originator of this request.\",\n
+        \          \"location\": \"query\"\n          },\n          \"startIndex\":
+        {\n           \"type\": \"integer\",\n           \"description\": \"Index
+        of the first element to return (starts at 0)\",\n           \"format\": \"uint32\",\n
+        \          \"minimum\": \"0\",\n           \"location\": \"query\"\n          }\n
+        \        },\n         \"parameterOrder\": [\n          \"shelf\"\n         ],\n
+        \        \"response\": {\n          \"$ref\": \"Volumes\"\n         },\n         \"scopes\":
+        [\n          \"https://www.googleapis.com/auth/books\"\n         ]\n        }\n
+        \      }\n      }\n     }\n    },\n    \"readingpositions\": {\n     \"methods\":
+        {\n      \"get\": {\n       \"id\": \"books.mylibrary.readingpositions.get\",\n
+        \      \"path\": \"mylibrary/readingpositions/{volumeId}\",\n       \"httpMethod\":
+        \"GET\",\n       \"description\": \"Retrieves my reading position information
+        for a volume.\",\n       \"parameters\": {\n        \"contentVersion\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"Volume content
+        version for which this reading position is requested.\",\n         \"location\":
+        \"query\"\n        },\n        \"source\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"String to identify the originator of this request.\",\n
+        \        \"location\": \"query\"\n        },\n        \"volumeId\": {\n         \"type\":
+        \"string\",\n         \"description\": \"ID of volume for which to retrieve
+        a reading position.\",\n         \"required\": true,\n         \"location\":
+        \"path\"\n        }\n       },\n       \"parameterOrder\": [\n        \"volumeId\"\n
+        \      ],\n       \"response\": {\n        \"$ref\": \"ReadingPosition\"\n
+        \      },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      },\n      \"setPosition\": {\n       \"id\": \"books.mylibrary.readingpositions.setPosition\",\n
+        \      \"path\": \"mylibrary/readingpositions/{volumeId}/setPosition\",\n
+        \      \"httpMethod\": \"POST\",\n       \"description\": \"Sets my reading
+        position information for a volume.\",\n       \"parameters\": {\n        \"action\":
+        {\n         \"type\": \"string\",\n         \"description\": \"Action that
+        caused this reading position to be set.\",\n         \"enum\": [\n          \"bookmark\",\n
+        \         \"chapter\",\n          \"next-page\",\n          \"prev-page\",\n
+        \         \"scroll\",\n          \"search\"\n         ],\n         \"enumDescriptions\":
+        [\n          \"User chose bookmark within volume.\",\n          \"User selected
+        chapter from list.\",\n          \"Next page event.\",\n          \"Previous
+        page event.\",\n          \"User navigated to page.\",\n          \"User chose
+        search results within volume.\"\n         ],\n         \"location\": \"query\"\n
+        \       },\n        \"contentVersion\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"Volume content version for which this reading
+        position applies.\",\n         \"location\": \"query\"\n        },\n        \"deviceCookie\":
+        {\n         \"type\": \"string\",\n         \"description\": \"Random persistent
+        device cookie optional on set position.\",\n         \"location\": \"query\"\n
+        \       },\n        \"position\": {\n         \"type\": \"string\",\n         \"description\":
+        \"Position string for the new volume reading position.\",\n         \"required\":
+        true,\n         \"location\": \"query\"\n        },\n        \"source\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"String to identify
+        the originator of this request.\",\n         \"location\": \"query\"\n        },\n
+        \       \"timestamp\": {\n         \"type\": \"string\",\n         \"description\":
+        \"RFC 3339 UTC format timestamp associated with this reading position.\",\n
+        \        \"required\": true,\n         \"location\": \"query\"\n        },\n
+        \       \"volumeId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"ID of volume for which to update the reading position.\",\n         \"required\":
+        true,\n         \"location\": \"path\"\n        }\n       },\n       \"parameterOrder\":
+        [\n        \"volumeId\",\n        \"timestamp\",\n        \"position\"\n       ],\n
+        \      \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      }\n     }\n    }\n   }\n  },\n  \"volumes\": {\n   \"methods\":
+        {\n    \"get\": {\n     \"id\": \"books.volumes.get\",\n     \"path\": \"volumes/{volumeId}\",\n
+        \    \"httpMethod\": \"GET\",\n     \"description\": \"Gets volume information
+        for a single volume.\",\n     \"parameters\": {\n      \"country\": {\n       \"type\":
+        \"string\",\n       \"description\": \"ISO-3166-1 code to override the IP-based
+        location.\",\n       \"location\": \"query\"\n      },\n      \"partner\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Brand results for
+        partner ID.\",\n       \"location\": \"query\"\n      },\n      \"projection\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Restrict information
+        returned to a set of selected fields.\",\n       \"enum\": [\n        \"full\",\n
+        \       \"lite\"\n       ],\n       \"enumDescriptions\": [\n        \"Includes
+        all volume data.\",\n        \"Includes a subset of fields in volumeInfo and
+        accessInfo.\"\n       ],\n       \"location\": \"query\"\n      },\n      \"source\":
+        {\n       \"type\": \"string\",\n       \"description\": \"String to identify
+        the originator of this request.\",\n       \"location\": \"query\"\n      },\n
+        \     \"volumeId\": {\n       \"type\": \"string\",\n       \"description\":
+        \"ID of volume to retrieve.\",\n       \"required\": true,\n       \"location\":
+        \"path\"\n      }\n     },\n     \"parameterOrder\": [\n      \"volumeId\"\n
+        \    ],\n     \"response\": {\n      \"$ref\": \"Volume\"\n     },\n     \"scopes\":
+        [\n      \"https://www.googleapis.com/auth/books\"\n     ]\n    },\n    \"list\":
+        {\n     \"id\": \"books.volumes.list\",\n     \"path\": \"volumes\",\n     \"httpMethod\":
+        \"GET\",\n     \"description\": \"Performs a book search.\",\n     \"parameters\":
+        {\n      \"download\": {\n       \"type\": \"string\",\n       \"description\":
+        \"Restrict to volumes by download availability.\",\n       \"enum\": [\n        \"epub\"\n
+        \      ],\n       \"enumDescriptions\": [\n        \"All volumes with epub.\"\n
+        \      ],\n       \"location\": \"query\"\n      },\n      \"filter\": {\n
+        \      \"type\": \"string\",\n       \"description\": \"Filter search results.\",\n
+        \      \"enum\": [\n        \"ebooks\",\n        \"free-ebooks\",\n        \"full\",\n
+        \       \"paid-ebooks\",\n        \"partial\"\n       ],\n       \"enumDescriptions\":
+        [\n        \"All Google eBooks.\",\n        \"Google eBook with full volume
+        text viewability.\",\n        \"Public can view entire volume text.\",\n        \"Google
+        eBook with a price.\",\n        \"Public able to see parts of text.\"\n       ],\n
+        \      \"location\": \"query\"\n      },\n      \"langRestrict\": {\n       \"type\":
+        \"string\",\n       \"description\": \"Restrict results to books with this
+        language code.\",\n       \"location\": \"query\"\n      },\n      \"libraryRestrict\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Restrict search
+        to this user's library.\",\n       \"enum\": [\n        \"my-library\",\n
+        \       \"no-restrict\"\n       ],\n       \"enumDescriptions\": [\n        \"Restrict
+        to the user's library, any shelf.\",\n        \"Do not restrict based on user's
+        library.\"\n       ],\n       \"location\": \"query\"\n      },\n      \"maxResults\":
+        {\n       \"type\": \"integer\",\n       \"description\": \"Maximum number
+        of results to return.\",\n       \"format\": \"uint32\",\n       \"minimum\":
+        \"0\",\n       \"maximum\": \"40\",\n       \"location\": \"query\"\n      },\n
+        \     \"orderBy\": {\n       \"type\": \"string\",\n       \"description\":
+        \"Sort search results.\",\n       \"enum\": [\n        \"newest\",\n        \"relevance\"\n
+        \      ],\n       \"enumDescriptions\": [\n        \"Most recently published.\",\n
+        \       \"Relevance to search terms.\"\n       ],\n       \"location\": \"query\"\n
+        \     },\n      \"partner\": {\n       \"type\": \"string\",\n       \"description\":
+        \"Restrict and brand results for partner ID.\",\n       \"location\": \"query\"\n
+        \     },\n      \"printType\": {\n       \"type\": \"string\",\n       \"description\":
+        \"Restrict to books or magazines.\",\n       \"enum\": [\n        \"all\",\n
+        \       \"books\",\n        \"magazines\"\n       ],\n       \"enumDescriptions\":
+        [\n        \"All volume content types.\",\n        \"Just books.\",\n        \"Just
+        magazines.\"\n       ],\n       \"location\": \"query\"\n      },\n      \"projection\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Restrict information
+        returned to a set of selected fields.\",\n       \"enum\": [\n        \"full\",\n
+        \       \"lite\"\n       ],\n       \"enumDescriptions\": [\n        \"Includes
+        all volume data.\",\n        \"Includes a subset of fields in volumeInfo and
+        accessInfo.\"\n       ],\n       \"location\": \"query\"\n      },\n      \"q\":
+        {\n       \"type\": \"string\",\n       \"description\": \"Full-text search
+        query string.\",\n       \"required\": true,\n       \"location\": \"query\"\n
+        \     },\n      \"showPreorders\": {\n       \"type\": \"boolean\",\n       \"description\":
+        \"Set to true to show books available for preorder. Defaults to false.\",\n
+        \      \"location\": \"query\"\n      },\n      \"source\": {\n       \"type\":
+        \"string\",\n       \"description\": \"String to identify the originator of
+        this request.\",\n       \"location\": \"query\"\n      },\n      \"startIndex\":
+        {\n       \"type\": \"integer\",\n       \"description\": \"Index of the first
+        result to return (starts at 0)\",\n       \"format\": \"uint32\",\n       \"minimum\":
+        \"0\",\n       \"location\": \"query\"\n      }\n     },\n     \"parameterOrder\":
+        [\n      \"q\"\n     ],\n     \"response\": {\n      \"$ref\": \"Volumes\"\n
+        \    },\n     \"scopes\": [\n      \"https://www.googleapis.com/auth/books\"\n
+        \    ]\n    }\n   },\n   \"resources\": {\n    \"associated\": {\n     \"methods\":
+        {\n      \"list\": {\n       \"id\": \"books.volumes.associated.list\",\n
+        \      \"path\": \"volumes/{volumeId}/associated\",\n       \"httpMethod\":
+        \"GET\",\n       \"description\": \"Return a list of associated books.\",\n
+        \      \"parameters\": {\n        \"association\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"Association type.\",\n         \"enum\": [\n          \"end-of-sample\",\n
+        \         \"end-of-volume\"\n         ],\n         \"enumDescriptions\": [\n
+        \         \"Recommendations for display end-of-sample.\",\n          \"Recommendations
+        for display end-of-volume.\"\n         ],\n         \"location\": \"query\"\n
+        \       },\n        \"locale\": {\n         \"type\": \"string\",\n         \"description\":
+        \"ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'. Used for generating
+        recommendations.\",\n         \"location\": \"query\"\n        },\n        \"source\":
+        {\n         \"type\": \"string\",\n         \"description\": \"String to identify
+        the originator of this request.\",\n         \"location\": \"query\"\n        },\n
+        \       \"volumeId\": {\n         \"type\": \"string\",\n         \"description\":
+        \"ID of the source volume.\",\n         \"required\": true,\n         \"location\":
+        \"path\"\n        }\n       },\n       \"parameterOrder\": [\n        \"volumeId\"\n
+        \      ],\n       \"response\": {\n        \"$ref\": \"Volumes\"\n       },\n
+        \      \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      }\n     }\n    },\n    \"mybooks\": {\n     \"methods\": {\n
+        \     \"list\": {\n       \"id\": \"books.volumes.mybooks.list\",\n       \"path\":
+        \"volumes/mybooks\",\n       \"httpMethod\": \"GET\",\n       \"description\":
+        \"Return a list of books in My Library.\",\n       \"parameters\": {\n        \"acquireMethod\":
+        {\n         \"type\": \"string\",\n         \"description\": \"How the book
+        was aquired\",\n         \"enum\": [\n          \"PREORDERED\",\n          \"PUBLIC_DOMAIN\",\n
+        \         \"PURCHASED\",\n          \"SAMPLE\",\n          \"UPLOADED\"\n
+        \        ],\n         \"enumDescriptions\": [\n          \"Preordered books
+        (not yet available)\",\n          \"Public domain books\",\n          \"Purchased
+        books\",\n          \"Sample books\",\n          \"User uploaded books\"\n
+        \        ],\n         \"repeated\": true,\n         \"location\": \"query\"\n
+        \       },\n        \"locale\": {\n         \"type\": \"string\",\n         \"description\":
+        \"ISO-639-1 language and ISO-3166-1 country code. Ex:'en_US'. Used for generating
+        recommendations.\",\n         \"location\": \"query\"\n        },\n        \"maxResults\":
+        {\n         \"type\": \"integer\",\n         \"description\": \"Maximum number
+        of results to return.\",\n         \"format\": \"uint32\",\n         \"minimum\":
+        \"0\",\n         \"maximum\": \"100\",\n         \"location\": \"query\"\n
+        \       },\n        \"source\": {\n         \"type\": \"string\",\n         \"description\":
+        \"String to identify the originator of this request.\",\n         \"location\":
+        \"query\"\n        },\n        \"startIndex\": {\n         \"type\": \"integer\",\n
+        \        \"description\": \"Index of the first result to return (starts at
+        0)\",\n         \"format\": \"uint32\",\n         \"minimum\": \"0\",\n         \"location\":
+        \"query\"\n        }\n       },\n       \"response\": {\n        \"$ref\":
+        \"Volumes\"\n       },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      }\n     }\n    },\n    \"recommended\": {\n     \"methods\":
+        {\n      \"list\": {\n       \"id\": \"books.volumes.recommended.list\",\n
+        \      \"path\": \"volumes/recommended\",\n       \"httpMethod\": \"GET\",\n
+        \      \"description\": \"Return a list of recommended books for the current
+        user.\",\n       \"parameters\": {\n        \"locale\": {\n         \"type\":
+        \"string\",\n         \"description\": \"ISO-639-1 language and ISO-3166-1
+        country code. Ex: 'en_US'. Used for generating recommendations.\",\n         \"location\":
+        \"query\"\n        },\n        \"source\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"String to identify the originator of this request.\",\n
+        \        \"location\": \"query\"\n        }\n       },\n       \"response\":
+        {\n        \"$ref\": \"Volumes\"\n       },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      }\n     }\n    },\n    \"useruploaded\": {\n     \"methods\":
+        {\n      \"list\": {\n       \"id\": \"books.volumes.useruploaded.list\",\n
+        \      \"path\": \"volumes/useruploaded\",\n       \"httpMethod\": \"GET\",\n
+        \      \"description\": \"Return a list of books uploaded by the current user.\",\n
+        \      \"parameters\": {\n        \"locale\": {\n         \"type\": \"string\",\n
+        \        \"description\": \"ISO-639-1 language and ISO-3166-1 country code.
+        Ex: 'en_US'. Used for generating recommendations.\",\n         \"location\":
+        \"query\"\n        },\n        \"maxResults\": {\n         \"type\": \"integer\",\n
+        \        \"description\": \"Maximum number of results to return.\",\n         \"format\":
+        \"uint32\",\n         \"minimum\": \"0\",\n         \"maximum\": \"40\",\n
+        \        \"location\": \"query\"\n        },\n        \"processingState\":
+        {\n         \"type\": \"string\",\n         \"description\": \"The processing
+        state of the user uploaded volumes to be returned.\",\n         \"enum\":
+        [\n          \"COMPLETED_FAILED\",\n          \"COMPLETED_SUCCESS\",\n          \"RUNNING\"\n
+        \        ],\n         \"enumDescriptions\": [\n          \"The volume processing
+        hase failed.\",\n          \"The volume processing was completed.\",\n          \"The
+        volume processing is not completed.\"\n         ],\n         \"repeated\":
+        true,\n         \"location\": \"query\"\n        },\n        \"source\": {\n
+        \        \"type\": \"string\",\n         \"description\": \"String to identify
+        the originator of this request.\",\n         \"location\": \"query\"\n        },\n
+        \       \"startIndex\": {\n         \"type\": \"integer\",\n         \"description\":
+        \"Index of the first result to return (starts at 0)\",\n         \"format\":
+        \"uint32\",\n         \"minimum\": \"0\",\n         \"location\": \"query\"\n
+        \       }\n       },\n       \"response\": {\n        \"$ref\": \"Volumes\"\n
+        \      },\n       \"scopes\": [\n        \"https://www.googleapis.com/auth/books\"\n
+        \      ]\n      }\n     }\n    }\n   }\n  }\n }\n}\n"
+    http_version: 
+  recorded_at: Sun, 05 May 2013 17:05:29 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?country=US&key=AIzaSyBz_mQZSHuKOrni54iGJvyJIT6Jb3oS1cA&maxResults=10&q=ruby%20on%20rails&startIndex=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - ruby on rails/1.0.0 google-api-ruby-client/0.6.3 Mac OS X/10.7.5
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 05 May 2013 17:05:29 GMT
+      Date:
+      - Sun, 05 May 2013 17:05:29 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - ! '"rNbqrGiPZkZossZyFS43srwvI1c/J818Jla5RJAUQyE_kml-EkV-U60"'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogImtpbmQiOiAiYm9va3Mjdm9sdW1lcyIsCiAidG90YWxJdGVtcyI6IDEx
+        NTYsCiAiaXRlbXMiOiBbCiAgewogICAia2luZCI6ICJib29rcyN2b2x1bWUi
+        LAogICAiaWQiOiAiak1DTzA5NnFsUnNDIiwKICAgImV0YWciOiAiSnRUZWVq
+        WUtKblkiLAogICAic2VsZkxpbmsiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBp
+        cy5jb20vYm9va3MvdjEvdm9sdW1lcy9qTUNPMDk2cWxSc0MiLAogICAidm9s
+        dW1lSW5mbyI6IHsKICAgICJ0aXRsZSI6ICJIZWFkIEZpcnN0IFJhaWxzIiwK
+        ICAgICJzdWJ0aXRsZSI6ICJBIExlYXJuZXIncyBDb21wYW5pb24gdG8gUnVi
+        eSBvbiBSYWlscyIsCiAgICAiYXV0aG9ycyI6IFsKICAgICAiRGF2aWQgR3Jp
+        ZmZpdGhzIgogICAgXSwKICAgICJwdWJsaXNoZXIiOiAiTydSZWlsbHkgTWVk
+        aWEsIEluYy4iLAogICAgInB1Ymxpc2hlZERhdGUiOiAiMjAwOC0xMi0yNiIs
+        CiAgICAiZGVzY3JpcHRpb24iOiAiV2l0aCB0aGUgYmVzdHNlbGxpbmcgSGVh
+        ZCBGaXJzdCBhcHByb2FjaCwgd2ViIGFwcGxpY2F0aW9uIGRldmVsb3BlcnMg
+        cXVpY2tseSBsZWFybiBob3cgdG8gYnVpbGQgZGF0YWJhc2UtY2VudHJpYyBh
+        cHBsaWNhdGlvbnMgdXNpbmcgdGhlIFJhaWxzIGZyYW1ld29yay4iLAogICAg
+        ImluZHVzdHJ5SWRlbnRpZmllcnMiOiBbCiAgICAgewogICAgICAidHlwZSI6
+        ICJJU0JOXzEwIiwKICAgICAgImlkZW50aWZpZXIiOiAiMDU5NjUxNTc3NCIK
+        ICAgICB9LAogICAgIHsKICAgICAgInR5cGUiOiAiSVNCTl8xMyIsCiAgICAg
+        ICJpZGVudGlmaWVyIjogIjk3ODA1OTY1MTU3NzUiCiAgICAgfQogICAgXSwK
+        ICAgICJwYWdlQ291bnQiOiA0MjksCiAgICAicHJpbnRUeXBlIjogIkJPT0si
+        LAogICAgImNhdGVnb3JpZXMiOiBbCiAgICAgIkNvbXB1dGVycyIKICAgIF0s
+        CiAgICAiYXZlcmFnZVJhdGluZyI6IDQuMCwKICAgICJyYXRpbmdzQ291bnQi
+        OiAyLAogICAgImNvbnRlbnRWZXJzaW9uIjogIjAuMi4wLjAucHJldmlldy4x
+        IiwKICAgICJpbWFnZUxpbmtzIjogewogICAgICJzbWFsbFRodW1ibmFpbCI6
+        ICJodHRwOi8vYmtzMy5ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPWpNQ08w
+        OTZxbFJzQyZwcmludHNlYz1mcm9udGNvdmVyJmltZz0xJnpvb209NSZlZGdl
+        PWN1cmwmc291cmNlPWdic19hcGkiLAogICAgICJ0aHVtYm5haWwiOiAiaHR0
+        cDovL2JrczMuYm9va3MuZ29vZ2xlLmNvbS9ib29rcz9pZD1qTUNPMDk2cWxS
+        c0MmcHJpbnRzZWM9ZnJvbnRjb3ZlciZpbWc9MSZ6b29tPTEmZWRnZT1jdXJs
+        JnNvdXJjZT1nYnNfYXBpIgogICAgfSwKICAgICJsYW5ndWFnZSI6ICJlbiIs
+        CiAgICAicHJldmlld0xpbmsiOiAiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20v
+        Ym9va3M/aWQ9ak1DTzA5NnFsUnNDJnByaW50c2VjPWZyb250Y292ZXImZHE9
+        cnVieStvbityYWlscyZobD0mY2Q9MSZzb3VyY2U9Z2JzX2FwaSIsCiAgICAi
+        aW5mb0xpbmsiOiAiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9
+        ak1DTzA5NnFsUnNDJmRxPXJ1Ynkrb24rcmFpbHMmaGw9JnNvdXJjZT1nYnNf
+        YXBpIiwKICAgICJjYW5vbmljYWxWb2x1bWVMaW5rIjogImh0dHA6Ly9ib29r
+        cy5nb29nbGUuY29tL2Jvb2tzL2Fib3V0L0hlYWRfRmlyc3RfUmFpbHMuaHRt
+        bD9obD0maWQ9ak1DTzA5NnFsUnNDIgogICB9LAogICAic2FsZUluZm8iOiB7
+        CiAgICAiY291bnRyeSI6ICJVUyIsCiAgICAic2FsZWFiaWxpdHkiOiAiTk9U
+        X0ZPUl9TQUxFIiwKICAgICJpc0Vib29rIjogZmFsc2UKICAgfSwKICAgImFj
+        Y2Vzc0luZm8iOiB7CiAgICAiY291bnRyeSI6ICJVUyIsCiAgICAidmlld2Fi
+        aWxpdHkiOiAiUEFSVElBTCIsCiAgICAiZW1iZWRkYWJsZSI6IHRydWUsCiAg
+        ICAicHVibGljRG9tYWluIjogZmFsc2UsCiAgICAidGV4dFRvU3BlZWNoUGVy
+        bWlzc2lvbiI6ICJBTExPV0VEIiwKICAgICJlcHViIjogewogICAgICJpc0F2
+        YWlsYWJsZSI6IGZhbHNlCiAgICB9LAogICAgInBkZiI6IHsKICAgICAiaXNB
+        dmFpbGFibGUiOiB0cnVlCiAgICB9LAogICAgIndlYlJlYWRlckxpbmsiOiAi
+        aHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3MvcmVhZGVyP2lkPWpNQ08w
+        OTZxbFJzQyZobD0mcHJpbnRzZWM9ZnJvbnRjb3ZlciZvdXRwdXQ9cmVhZGVy
+        JnNvdXJjZT1nYnNfYXBpIiwKICAgICJhY2Nlc3NWaWV3U3RhdHVzIjogIlNB
+        TVBMRSIKICAgfSwKICAgInNlYXJjaEluZm8iOiB7CiAgICAidGV4dFNuaXBw
+        ZXQiOiAiV2l0aCB0aGUgYmVzdHNlbGxpbmcgSGVhZCBGaXJzdCBhcHByb2Fj
+        aCwgd2ViIGFwcGxpY2F0aW9uIGRldmVsb3BlcnMgcXVpY2tseSBsZWFybiBo
+        b3cgdG8gYnVpbGQgZGF0YWJhc2UtY2VudHJpYyBhcHBsaWNhdGlvbnMgdXNp
+        bmcgdGhlIFJhaWxzIGZyYW1ld29yay4iCiAgIH0KICB9LAogIHsKICAgImtp
+        bmQiOiAiYm9va3Mjdm9sdW1lIiwKICAgImlkIjogImFCNEIxM3hHRXY0QyIs
+        CiAgICJldGFnIjogInN1Z0JhVW4zeUlNIiwKICAgInNlbGZMaW5rIjogImh0
+        dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2Jvb2tzL3YxL3ZvbHVtZXMvYUI0
+        QjEzeEdFdjRDIiwKICAgInZvbHVtZUluZm8iOiB7CiAgICAidGl0bGUiOiAi
+        UHJvZmVzc2lvbmFsIFJ1Ynkgb24gUmFpbHMiLAogICAgInB1Ymxpc2hlciI6
+        ICJXcm94IiwKICAgICJwdWJsaXNoZWREYXRlIjogIjIwMDgtMDMtMDQiLAog
+        ICAgImRlc2NyaXB0aW9uIjogIlByb3ZpZGVzIGluZm9ybWF0aW9uIG9uIHRo
+        ZSBjYXBhYmlsaXRpZXMgYW5kIHN1YnN5c3RlbXMgb2YgUnVieSBvbiBSYWls
+        cyBmb3IgdGhlIGRlc2lnbiBhbmQgZGV2ZWxvcG1lbnQgb2YgY29tcGxleCBX
+        ZWIgYXBwbGljYXRpb25zLiIsCiAgICAiaW5kdXN0cnlJZGVudGlmaWVycyI6
+        IFsKICAgICB7CiAgICAgICJ0eXBlIjogIklTQk5fMTAiLAogICAgICAiaWRl
+        bnRpZmllciI6ICIwNDcwMjIzODhYIgogICAgIH0sCiAgICAgewogICAgICAi
+        dHlwZSI6ICJJU0JOXzEzIiwKICAgICAgImlkZW50aWZpZXIiOiAiOTc4MDQ3
+        MDIyMzg4OCIKICAgICB9CiAgICBdLAogICAgInBhZ2VDb3VudCI6IDQ1NywK
+        ICAgICJwcmludFR5cGUiOiAiQk9PSyIsCiAgICAiY2F0ZWdvcmllcyI6IFsK
+        ICAgICAiQ29tcHV0ZXJzIgogICAgXSwKICAgICJhdmVyYWdlUmF0aW5nIjog
+        My41LAogICAgInJhdGluZ3NDb3VudCI6IDMsCiAgICAiY29udGVudFZlcnNp
+        b24iOiAicHJldmlldy0xLjAuMCIsCiAgICAiaW1hZ2VMaW5rcyI6IHsKICAg
+        ICAic21hbGxUaHVtYm5haWwiOiAiaHR0cDovL2JrczEuYm9va3MuZ29vZ2xl
+        LmNvbS9ib29rcz9pZD1hQjRCMTN4R0V2NEMmcHJpbnRzZWM9ZnJvbnRjb3Zl
+        ciZpbWc9MSZ6b29tPTUmZWRnZT1jdXJsJnNvdXJjZT1nYnNfYXBpIiwKICAg
+        ICAidGh1bWJuYWlsIjogImh0dHA6Ly9ia3MxLmJvb2tzLmdvb2dsZS5jb20v
+        Ym9va3M/aWQ9YUI0QjEzeEdFdjRDJnByaW50c2VjPWZyb250Y292ZXImaW1n
+        PTEmem9vbT0xJmVkZ2U9Y3VybCZzb3VyY2U9Z2JzX2FwaSIKICAgIH0sCiAg
+        ICAibGFuZ3VhZ2UiOiAiZW4iLAogICAgInByZXZpZXdMaW5rIjogImh0dHA6
+        Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPWFCNEIxM3hHRXY0QyZwcmlu
+        dHNlYz1mcm9udGNvdmVyJmRxPXJ1Ynkrb24rcmFpbHMmaGw9JmNkPTImc291
+        cmNlPWdic19hcGkiLAogICAgImluZm9MaW5rIjogImh0dHA6Ly9ib29rcy5n
+        b29nbGUuY29tL2Jvb2tzP2lkPWFCNEIxM3hHRXY0QyZkcT1ydWJ5K29uK3Jh
+        aWxzJmhsPSZzb3VyY2U9Z2JzX2FwaSIsCiAgICAiY2Fub25pY2FsVm9sdW1l
+        TGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9hYm91dC9Q
+        cm9mZXNzaW9uYWxfUnVieV9vbl9SYWlscy5odG1sP2hsPSZpZD1hQjRCMTN4
+        R0V2NEMiCiAgIH0sCiAgICJzYWxlSW5mbyI6IHsKICAgICJjb3VudHJ5Ijog
+        IlVTIiwKICAgICJzYWxlYWJpbGl0eSI6ICJOT1RfRk9SX1NBTEUiLAogICAg
+        ImlzRWJvb2siOiBmYWxzZQogICB9LAogICAiYWNjZXNzSW5mbyI6IHsKICAg
+        ICJjb3VudHJ5IjogIlVTIiwKICAgICJ2aWV3YWJpbGl0eSI6ICJQQVJUSUFM
+        IiwKICAgICJlbWJlZGRhYmxlIjogdHJ1ZSwKICAgICJwdWJsaWNEb21haW4i
+        OiBmYWxzZSwKICAgICJ0ZXh0VG9TcGVlY2hQZXJtaXNzaW9uIjogIkFMTE9X
+        RUQiLAogICAgImVwdWIiOiB7CiAgICAgImlzQXZhaWxhYmxlIjogZmFsc2UK
+        ICAgIH0sCiAgICAicGRmIjogewogICAgICJpc0F2YWlsYWJsZSI6IGZhbHNl
+        CiAgICB9LAogICAgIndlYlJlYWRlckxpbmsiOiAiaHR0cDovL2Jvb2tzLmdv
+        b2dsZS5jb20vYm9va3MvcmVhZGVyP2lkPWFCNEIxM3hHRXY0QyZobD0mcHJp
+        bnRzZWM9ZnJvbnRjb3ZlciZvdXRwdXQ9cmVhZGVyJnNvdXJjZT1nYnNfYXBp
+        IiwKICAgICJhY2Nlc3NWaWV3U3RhdHVzIjogIlNBTVBMRSIKICAgfSwKICAg
+        InNlYXJjaEluZm8iOiB7CiAgICAidGV4dFNuaXBwZXQiOiAiT3ZlciB0aGUg
+        eWVhcnMsIFJvUiBoYXMgdW5kZXJnb25lIG51bWVyb3VzIGludGVybmFsIGNo
+        YW5nZXMgd2hpbGUgcHJvZ3JhbW1pbmcgdGVjaG5pcXVlcyBoYXZlIGV2b2x2
+        ZWQuIFRoaXMgYm9vayBjYXB0dXJlcyB0aGUgY3VycmVudCBiZXN0IHByYWN0
+        aWNlcyB0byBzaG93IHlvdSB0aGUgbW9zdCBlZmZpY2llbnQgd2F5IHRvIGJ1
+        aWxkIGEgc3BlY3RhY3VsYXIgd2ViIGFwcGxpY2F0aW9uIHdpdGggUm9SLiIK
+        ICAgfQogIH0sCiAgewogICAia2luZCI6ICJib29rcyN2b2x1bWUiLAogICAi
+        aWQiOiAiOGJXOTVLUGFIVlVDIiwKICAgImV0YWciOiAiT0ZtaFlBakdzYnMi
+        LAogICAic2VsZkxpbmsiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v
+        Ym9va3MvdjEvdm9sdW1lcy84Ylc5NUtQYUhWVUMiLAogICAidm9sdW1lSW5m
+        byI6IHsKICAgICJ0aXRsZSI6ICJSdWJ5IG9uIFJhaWxzIEJpYmxlIiwKICAg
+        ICJhdXRob3JzIjogWwogICAgICJUaW1vdGh5IEZpc2hlciIKICAgIF0sCiAg
+        ICAicHVibGlzaGVyIjogIldpbGV5IiwKICAgICJwdWJsaXNoZWREYXRlIjog
+        IjIwMDktMDQtMjciLAogICAgImRlc2NyaXB0aW9uIjogIlRoYW5rcyB0byB0
+        aGUgZXhwbG9zaXZlIGdyb3d0aCBpbiBwb3B1bGFyaXR5IG9mIHRoZSBSYWls
+        cyBmcmFtZXdvcmssIHRoZSBlcXVhbGx5IHBvcHVsYXIgUnVieSBwcm9ncmFt
+        bWluZyBsYW5ndWFnZSBub3cgaGFzIGEgZ3JlYXQgcGxhY2UgdG8gaGFuZyBp
+        dHMgaGF0LiBUaGUgcG93ZXJmdWwgY29tYmluYXRpb24gb2YgdGhlIHR3byBw
+        cm92aWRlcyB0aGUgcGVyZmVjdCB0b29sc2V0IHRvIGNyZWF0ZSBXZWIgYXBw
+        bGljYXRpb25zIHRoYXQgZmVhdHVyZSBjb25jaXNlIGNvZGUsIGNsZWFuIHN5
+        bnRheCwgYW5kIGVhc3kgbWFpbnRlbmFuY2UuIFRoaXMgbXVzdC1oYXZlIGJv
+        b2sgaXMgeW91ciBiZXN0IGd1aWRlIG9uIGhvdyB0byBqdW1wIG9uIHRoZSBS
+        b1IgYmFuZHdhZ29u4oCUZnJvbSB0aGUgYmFzaWNzIG9mIFJ1YnkgcHJvZ3Jh
+        bW1pbmcgdG8gYWR2YW5jZWQgdGVjaG5pcXVlcyBmb3IgZXhwZXJpZW5jZWQg
+        UmFpbHMgZGV2ZWxvcGVycy4iLAogICAgImluZHVzdHJ5SWRlbnRpZmllcnMi
+        OiBbCiAgICAgewogICAgICAidHlwZSI6ICJJU0JOXzEwIiwKICAgICAgImlk
+        ZW50aWZpZXIiOiAiMDQ3MDQ0MDIxWCIKICAgICB9LAogICAgIHsKICAgICAg
+        InR5cGUiOiAiSVNCTl8xMyIsCiAgICAgICJpZGVudGlmaWVyIjogIjk3ODA0
+        NzA0NDAyMTYiCiAgICAgfQogICAgXSwKICAgICJwYWdlQ291bnQiOiA3NDQs
+        CiAgICAicHJpbnRUeXBlIjogIkJPT0siLAogICAgImNhdGVnb3JpZXMiOiBb
+        CiAgICAgIkNvbXB1dGVycyIKICAgIF0sCiAgICAiY29udGVudFZlcnNpb24i
+        OiAiMS4yLjAuMC5wcmV2aWV3LjEiLAogICAgImltYWdlTGlua3MiOiB7CiAg
+        ICAgInNtYWxsVGh1bWJuYWlsIjogImh0dHA6Ly9ia3MzLmJvb2tzLmdvb2ds
+        ZS5jb20vYm9va3M/aWQ9OGJXOTVLUGFIVlVDJnByaW50c2VjPWZyb250Y292
+        ZXImaW1nPTEmem9vbT01JmVkZ2U9Y3VybCZzb3VyY2U9Z2JzX2FwaSIsCiAg
+        ICAgInRodW1ibmFpbCI6ICJodHRwOi8vYmtzMy5ib29rcy5nb29nbGUuY29t
+        L2Jvb2tzP2lkPThiVzk1S1BhSFZVQyZwcmludHNlYz1mcm9udGNvdmVyJmlt
+        Zz0xJnpvb209MSZlZGdlPWN1cmwmc291cmNlPWdic19hcGkiCiAgICB9LAog
+        ICAgImxhbmd1YWdlIjogImVuIiwKICAgICJwcmV2aWV3TGluayI6ICJodHRw
+        Oi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcz9pZD04Ylc5NUtQYUhWVUMmcHJp
+        bnRzZWM9ZnJvbnRjb3ZlciZkcT1ydWJ5K29uK3JhaWxzJmhsPSZjZD0zJnNv
+        dXJjZT1nYnNfYXBpIiwKICAgICJpbmZvTGluayI6ICJodHRwOi8vYm9va3Mu
+        Z29vZ2xlLmNvbS9ib29rcz9pZD04Ylc5NUtQYUhWVUMmZHE9cnVieStvbity
+        YWlscyZobD0mc291cmNlPWdic19hcGkiLAogICAgImNhbm9uaWNhbFZvbHVt
+        ZUxpbmsiOiAiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3MvYWJvdXQv
+        UnVieV9vbl9SYWlsc19CaWJsZS5odG1sP2hsPSZpZD04Ylc5NUtQYUhWVUMi
+        CiAgIH0sCiAgICJzYWxlSW5mbyI6IHsKICAgICJjb3VudHJ5IjogIlVTIiwK
+        ICAgICJzYWxlYWJpbGl0eSI6ICJGT1JfU0FMRSIsCiAgICAiaXNFYm9vayI6
+        IHRydWUsCiAgICAibGlzdFByaWNlIjogewogICAgICJhbW91bnQiOiAyOS45
+        OSwKICAgICAiY3VycmVuY3lDb2RlIjogIlVTRCIKICAgIH0sCiAgICAicmV0
+        YWlsUHJpY2UiOiB7CiAgICAgImFtb3VudCI6IDI5Ljk5LAogICAgICJjdXJy
+        ZW5jeUNvZGUiOiAiVVNEIgogICAgfSwKICAgICJidXlMaW5rIjogImh0dHA6
+        Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPThiVzk1S1BhSFZVQyZkcT1y
+        dWJ5K29uK3JhaWxzJmhsPSZidXk9JnNvdXJjZT1nYnNfYXBpIgogICB9LAog
+        ICAiYWNjZXNzSW5mbyI6IHsKICAgICJjb3VudHJ5IjogIlVTIiwKICAgICJ2
+        aWV3YWJpbGl0eSI6ICJQQVJUSUFMIiwKICAgICJlbWJlZGRhYmxlIjogdHJ1
+        ZSwKICAgICJwdWJsaWNEb21haW4iOiBmYWxzZSwKICAgICJ0ZXh0VG9TcGVl
+        Y2hQZXJtaXNzaW9uIjogIkFMTE9XRUQiLAogICAgImVwdWIiOiB7CiAgICAg
+        ImlzQXZhaWxhYmxlIjogZmFsc2UKICAgIH0sCiAgICAicGRmIjogewogICAg
+        ICJpc0F2YWlsYWJsZSI6IHRydWUsCiAgICAgImFjc1Rva2VuTGluayI6ICJo
+        dHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9kb3dubG9hZC9SdWJ5X29u
+        X1JhaWxzX0JpYmxlLXNhbXBsZS1wZGYuYWNzbT9pZD04Ylc5NUtQYUhWVUMm
+        Zm9ybWF0PXBkZiZvdXRwdXQ9YWNzNF9mdWxmaWxsbWVudF90b2tlbiZkbF90
+        eXBlPXNhbXBsZSZzb3VyY2U9Z2JzX2FwaSIKICAgIH0sCiAgICAid2ViUmVh
+        ZGVyTGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9yZWFk
+        ZXI/aWQ9OGJXOTVLUGFIVlVDJmhsPSZwcmludHNlYz1mcm9udGNvdmVyJm91
+        dHB1dD1yZWFkZXImc291cmNlPWdic19hcGkiLAogICAgImFjY2Vzc1ZpZXdT
+        dGF0dXMiOiAiU0FNUExFIgogICB9LAogICAic2VhcmNoSW5mbyI6IHsKICAg
+        ICJ0ZXh0U25pcHBldCI6ICJUaGlzIG11c3QtaGF2ZSBib29rIGlzIHlvdXIg
+        YmVzdCBndWlkZSBvbiBob3cgdG8ganVtcCBvbiB0aGUgUm9SIGJhbmR3YWdv
+        buKAlGZyb20gdGhlIGJhc2ljcyBvZiBSdWJ5IHByb2dyYW1taW5nIHRvIGFk
+        dmFuY2VkIHRlY2huaXF1ZXMgZm9yIGV4cGVyaWVuY2VkIFJhaWxzIGRldmVs
+        b3BlcnMuIgogICB9CiAgfSwKICB7CiAgICJraW5kIjogImJvb2tzI3ZvbHVt
+        ZSIsCiAgICJpZCI6ICJCYVdheUlSMEN2a0MiLAogICAiZXRhZyI6ICJITm9u
+        alRKOHFXRSIsCiAgICJzZWxmTGluayI6ICJodHRwczovL3d3dy5nb29nbGVh
+        cGlzLmNvbS9ib29rcy92MS92b2x1bWVzL0JhV2F5SVIwQ3ZrQyIsCiAgICJ2
+        b2x1bWVJbmZvIjogewogICAgInRpdGxlIjogIkJlZ2lubmluZyBSdWJ5IG9u
+        IFJhaWxzIiwKICAgICJhdXRob3JzIjogWwogICAgICJTdGV2ZSBIb2x6bmVy
+        LCBQaC5ELiIKICAgIF0sCiAgICAicHVibGlzaGVyIjogIldyb3giLAogICAg
+        InB1Ymxpc2hlZERhdGUiOiAiMjAwNi0xMS0yOSIsCiAgICAiZGVzY3JpcHRp
+        b24iOiAiUnVieSBvbiBSYWlscyBpcyB0aGUgcmV2b2x1dGlvbmFyeSBvbmxp
+        bmUgcHJvZ3JhbW1pbmcgdG9vbCB0aGF0IG1ha2VzIGNyZWF0aW5nIGZ1bmN0
+        aW9uYWwgZS1jb21tZXJjZSB3ZWIgc2l0ZXMgZmFzdGVyIGFuZCBlYXNpZXIg
+        dGhhbiBldmVyLiBXaXRoIHRoZSBpbnR1aXRpdmUsIHN0cmFpZ2h0Zm9yd2Fy
+        ZCBuYXR1cmUgb2YgUnVieSBhbmQgdGhlIGRldmVsb3BtZW50IHBsYXRmb3Jt
+        IHByb3ZpZGVkIGJ5IFJhaWxzLCB5b3UgY2FuIHB1dCB0b2dldGhlciBmdWxs
+        LWZsZWRnZWQgd2ViIGFwcGxpY2F0aW9ucyBxdWlja2x5LCBldmVuIGlmIHlv
+        dSdyZSBuZXcgdG8gd2ViIHByb2dyYW1taW5nLiBZb3Ugd2lsbCBmaW5kIGEg
+        dGhvcm91Z2ggaW50cm9kdWN0aW9uIHRvIGJvdGggUnVieSBhbmQgUmFpbHMg
+        aW4gdGhpcyBib29rLiBZb3UnbGwgZ2V0IHRoZSBlYXN5IGluc3RydWN0aW9u
+        cyBmb3IgYWNxdWlyaW5nIGFuZCBpbnN0YWxsaW5nIGJvdGg7IHVuZGVyc3Rh
+        bmQgdGhlIG5hdHVyZSBvZiBjb25kaXRpb25hbHMsIGxvb3BzLCBtZXRob2Rz
+        LCBhbmQgYmxvY2tzOyBhbmQgYmVjb21lIGZhbWlsaWFyIHdpdGggUnVieSdz
+        IGNsYXNzZXMgYW5kIG9iamVjdHMuIFlvdSdsbCBsZWFybiB0byBidWlsZCBS
+        YWlscyBhcHBsaWNhdGlvbnMsIGNvbm5lY3QgdG8gZGF0YWJhc2VzLCBwZXJm
+        b3JtIG5lY2Vzc2FyeSB0ZXN0aW5nLCBhbmQgcHV0IHRoZSB3aG9sZSB0aGlu
+        ZyB0b2dldGhlciB0byBjcmVhdGUgcmVhbC13b3JsZCBhcHBsaWNhdGlvbnMg
+        c3VjaCBhcyBzaG9wcGluZyBjYXJ0cyBhbmQgb25saW5lIGNhdGFsb2dzLS1h
+        cHBzIHlvdSBjYW4gYWN0dWFsbHkgdXNlIHJpZ2h0IGF3YXkuIFdoYXQgeW91
+        IHdpbGwgbGVhcm4gZnJvbSB0aGlzIGJvb2sgKiBIb3cgdG8gaW5zdGFsbCBh
+        bmQgdXNlIFJ1YnkgYW5kIFJhaWxzICogT2JqZWN0LW9yaWVudGVkIHByb2dy
+        YW1taW5nIHdpdGggUnVieSAqIFJhaWxzIGZ1bmRhbWVudGFscyBhbmQgaG93
+        IHRvIGNyZWF0ZSBiYXNpYyBvbmxpbmUgYXBwbGljYXRpb25zICogSG93IHRv
+        IHdvcmsgd2l0aCBIVE1MIGNvbnRyb2xzLCB1c2UgbW9kZWxzIGluIFJhaWxz
+        IGFwcGxpY2F0aW9ucywgYW5kIHdvcmsgd2l0aCBzZXNzaW9ucyAqIERldGFp
+        bHMgb24gd29ya2luZyB3aXRoIGRhdGFiYXNlcyBhbmQgY3JlYXRpbmcsIGVk
+        aXRpbmcsIGFuZCBkZWxldGluZyBkYXRhYmFzZSByZWNvcmRzICogTWV0aG9k
+        cyBmb3IgaGFuZGxpbmcgY29va2llcyBhbmQgZmlsdGVycyBhbmQgZm9yIGNh
+        Y2hpbmcgcGFnZXMgKiBIb3cgdG8gY29ubmVjdCBSYWlscyB3aXRoIEFqYXgg
+        V2hvIHRoaXMgYm9vayBpcyBmb3IgVGhpcyBib29rIGlzIGZvciBhbnlvbmUg
+        d2hvIHdhbnRzIHRvIGRldmVsb3Agb25saW5lIGFwcGxpY2F0aW9ucyB1c2lu
+        ZyBSdWJ5IGFuZCBSYWlscy4gQSBiYXNpYyB1bmRlcnN0YW5kaW5nIG9mIHBy
+        b2dyYW1taW5nIGlzIGhlbHBmdWw7IHNvbWUga25vd2xlZGdlIG9mIEhUTUwg
+        aXMgbmVjZXNzYXJ5LiBXcm94IEJlZ2lubmluZyBndWlkZXMgYXJlIGNyYWZ0
+        ZWQgdG8gbWFrZSBsZWFybmluZyBwcm9ncmFtbWluZyBsYW5ndWFnZXMgYW5k
+        IHRlY2hub2xvZ2llcyBlYXNpZXIgdGhhbiB5b3UgdGhpbmssIHByb3ZpZGlu
+        ZyBhIHN0cnVjdHVyZWQsIHR1dG9yaWFsIGZvcm1hdCB0aGF0IHdpbGwgZ3Vp
+        ZGUgeW91IHRocm91Z2ggYWxsIHRoZSB0ZWNobmlxdWVzIGludm9sdmVkLiIs
+        CiAgICAiaW5kdXN0cnlJZGVudGlmaWVycyI6IFsKICAgICB7CiAgICAgICJ0
+        eXBlIjogIklTQk5fMTAiLAogICAgICAiaWRlbnRpZmllciI6ICIwNDcwMDY5
+        MTU1IgogICAgIH0sCiAgICAgewogICAgICAidHlwZSI6ICJJU0JOXzEzIiwK
+        ICAgICAgImlkZW50aWZpZXIiOiAiOTc4MDQ3MDA2OTE1OCIKICAgICB9CiAg
+        ICBdLAogICAgInBhZ2VDb3VudCI6IDM4MCwKICAgICJwcmludFR5cGUiOiAi
+        Qk9PSyIsCiAgICAiY2F0ZWdvcmllcyI6IFsKICAgICAiQ29tcHV0ZXJzIgog
+        ICAgXSwKICAgICJhdmVyYWdlUmF0aW5nIjogMy4wLAogICAgInJhdGluZ3ND
+        b3VudCI6IDUsCiAgICAiY29udGVudFZlcnNpb24iOiAiMi4zLjIuMC5wcmV2
+        aWV3LjEiLAogICAgImltYWdlTGlua3MiOiB7CiAgICAgInNtYWxsVGh1bWJu
+        YWlsIjogImh0dHA6Ly9ia3M5LmJvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9
+        QmFXYXlJUjBDdmtDJnByaW50c2VjPWZyb250Y292ZXImaW1nPTEmem9vbT01
+        JmVkZ2U9Y3VybCZzb3VyY2U9Z2JzX2FwaSIsCiAgICAgInRodW1ibmFpbCI6
+        ICJodHRwOi8vYmtzOS5ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPUJhV2F5
+        SVIwQ3ZrQyZwcmludHNlYz1mcm9udGNvdmVyJmltZz0xJnpvb209MSZlZGdl
+        PWN1cmwmc291cmNlPWdic19hcGkiCiAgICB9LAogICAgImxhbmd1YWdlIjog
+        ImVuIiwKICAgICJwcmV2aWV3TGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xl
+        LmNvbS9ib29rcz9pZD1CYVdheUlSMEN2a0MmcHJpbnRzZWM9ZnJvbnRjb3Zl
+        ciZkcT1ydWJ5K29uK3JhaWxzJmhsPSZjZD00JnNvdXJjZT1nYnNfYXBpIiwK
+        ICAgICJpbmZvTGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29r
+        cz9pZD1CYVdheUlSMEN2a0MmZHE9cnVieStvbityYWlscyZobD0mc291cmNl
+        PWdic19hcGkiLAogICAgImNhbm9uaWNhbFZvbHVtZUxpbmsiOiAiaHR0cDov
+        L2Jvb2tzLmdvb2dsZS5jb20vYm9va3MvYWJvdXQvQmVnaW5uaW5nX1J1Ynlf
+        b25fUmFpbHMuaHRtbD9obD0maWQ9QmFXYXlJUjBDdmtDIgogICB9LAogICAi
+        c2FsZUluZm8iOiB7CiAgICAiY291bnRyeSI6ICJVUyIsCiAgICAic2FsZWFi
+        aWxpdHkiOiAiTk9UX0ZPUl9TQUxFIiwKICAgICJpc0Vib29rIjogZmFsc2UK
+        ICAgfSwKICAgImFjY2Vzc0luZm8iOiB7CiAgICAiY291bnRyeSI6ICJVUyIs
+        CiAgICAidmlld2FiaWxpdHkiOiAiUEFSVElBTCIsCiAgICAiZW1iZWRkYWJs
+        ZSI6IHRydWUsCiAgICAicHVibGljRG9tYWluIjogZmFsc2UsCiAgICAidGV4
+        dFRvU3BlZWNoUGVybWlzc2lvbiI6ICJBTExPV0VEIiwKICAgICJlcHViIjog
+        ewogICAgICJpc0F2YWlsYWJsZSI6IGZhbHNlCiAgICB9LAogICAgInBkZiI6
+        IHsKICAgICAiaXNBdmFpbGFibGUiOiBmYWxzZQogICAgfSwKICAgICJ3ZWJS
+        ZWFkZXJMaW5rIjogImh0dHA6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzL3Jl
+        YWRlcj9pZD1CYVdheUlSMEN2a0MmaGw9JnByaW50c2VjPWZyb250Y292ZXIm
+        b3V0cHV0PXJlYWRlciZzb3VyY2U9Z2JzX2FwaSIsCiAgICAiYWNjZXNzVmll
+        d1N0YXR1cyI6ICJTQU1QTEUiCiAgIH0sCiAgICJzZWFyY2hJbmZvIjogewog
+        ICAgInRleHRTbmlwcGV0IjogIllvdSB3aWxsIGZpbmQgYSB0aG9yb3VnaCBp
+        bnRyb2R1Y3Rpb24gdG8gYm90aCBSdWJ5IGFuZCBSYWlscyBpbiB0aGlzIGJv
+        b2suIgogICB9CiAgfSwKICB7CiAgICJraW5kIjogImJvb2tzI3ZvbHVtZSIs
+        CiAgICJpZCI6ICJKSjdTSElSRGZPY0MiLAogICAiZXRhZyI6ICJnK2FWaUlI
+        NmRKSSIsCiAgICJzZWxmTGluayI6ICJodHRwczovL3d3dy5nb29nbGVhcGlz
+        LmNvbS9ib29rcy92MS92b2x1bWVzL0pKN1NISVJEZk9jQyIsCiAgICJ2b2x1
+        bWVJbmZvIjogewogICAgInRpdGxlIjogIlJ1Ynkgb24gUmFpbHM6IFVwIGFu
+        ZCBSdW5uaW5nIiwKICAgICJzdWJ0aXRsZSI6ICJVcCBhbmQgUnVubmluZyIs
+        CiAgICAiYXV0aG9ycyI6IFsKICAgICAiQnJ1Y2UgQS4gVGF0ZSIsCiAgICAg
+        IkN1cnQgSGliYnMiCiAgICBdLAogICAgInB1Ymxpc2hlciI6ICJPJ1JlaWxs
+        eSBNZWRpYSIsCiAgICAicHVibGlzaGVkRGF0ZSI6ICIyMDA4LTEyLTE3IiwK
+        ICAgICJkZXNjcmlwdGlvbiI6ICJSdWJ5IG9uIFJhaWxzIGlzIHRoZSBzdXBl
+        ci1wcm9kdWN0aXZlIG5ldyB3YXkgdG8gZGV2ZWxvcCBmdWxsLWZlYXR1cmVk
+        IHdlYiBhcHBsaWNhdGlvbnMuIFdpdGggUnVieSBvbiBSYWlscywgcG93ZXJm
+        dWwgd2ViIGFwcGxpY2F0aW9ucyB0aGF0IG9uY2UgdG9vayB3ZWVrcyBvciBt
+        b250aHMgdG8gZGV2ZWxvcCBjYW4gbm93IGJlIHByb2R1Y2VkIGluIGEgbWF0
+        dGVyIG9mIGRheXMuIElmIGl0IHNvdW5kcyB0b28gZ29vZCB0byBiZSB0cnVl
+        LCBpdCBpc24ndC4gSWYgeW91J3JlIGxpa2UgYSBsb3Qgb2Ygd2ViIGRldmVs
+        b3BlcnMsIHlvdSd2ZSBwcm9iYWJseSBjb25zaWRlcmVkIGtpY2tpbmcgdGhl
+        IHRpcmVzIG9uIFJhaWxzIC0gdGhlIGZyYW1ld29yayBvZiBjaG9pY2UgZm9y
+        IHRoZSBuZXcgZ2VuZXJhdGlvbiBvZiBXZWIgMi4wIGRldmVsb3BlcnMuIFJ1
+        Ynkgb24gUmFpbHM6IFVwIGFuZCBSdW5uaW5nIHRha2VzIHlvdSBvdXQgZm9y
+        IGEgdGVzdCBkcml2ZSBhbmQgc2hvd3MgeW91IGp1c3QgaG93IGZhc3QgUnVi
+        eSBvbiBSYWlscyBjYW4gZ28uIFRoaXMgY29tcGFjdCBndWlkZSB0ZWFjaGVz
+        IHlvdSB0aGUgYmFzaWNzIG9mIGluc3RhbGxpbmcgYW5kIHVzaW5nIGJvdGgg
+        dGhlIFJ1Ynkgc2NyaXB0aW5nIGxhbmd1YWdlIGFuZCB0aGUgUmFpbHMgZnJh
+        bWV3b3JrIGZvciB0aGUgcXVpY2sgZGV2ZWxvcG1lbnQgb2Ygd2ViIGFwcGxp
+        Y2F0aW9ucy4gUnVieSBvbiBSYWlsczogVXAgYW5kIFJ1bm5pbmcgY292ZXJz
+        IGp1c3QgYWJvdXQgZXZlcnl0aGluZyB5b3UgbmVlZCAtIGZyb20gbWFraW5n
+        IGEgc2ltcGxlIGRhdGFiYXNlLWJhY2tlZCBhcHBsaWNhdGlvbiB0byBhZGRp
+        bmcgZWxhYm9yYXRlIEFqYXhpYW4gZmVhdHVyZXMgYW5kIGFsbCB0aGUganVp
+        Y3kgYml0cyBpbiBiZXR3ZWVuLiBXaGlsZSBSYWlscyBpcyBwcmFpc2VkIGZv
+        ciBpdHMgc2ltcGxpY2l0eSBhbmQgc3BlZWQgb2YgZGV2ZWxvcG1lbnQsIHRo
+        ZXJlIGFyZSBzdGlsbCBhIGZldyBzdGVwcyB0byBtYXN0ZXIgb24gdGhlIHdh
+        eS4gTW9yZSBhZHZhbmNlZCBtYXRlcmlhbCBoZWxwcyB5b3UgbWFwIGRhdGEg
+        dG8gYW4gaW1wZXJmZWN0IHRhYmxlLCB0cmF2ZXJzZSBjb21wbGV4IHJlbGF0
+        aW9uc2hpcHMsIGFuZCBidWlsZCBjdXN0b20gZmluZGVycy4gQSBzZWN0aW9u
+        IG9uIHdvcmtpbmcgd2l0aCBBamF4IGFuZCBSRVNUIHNob3dzIHlvdSBob3cg
+        dG8gZXhwbG9pdCB0aGUgUmFpbHMgc2VydmljZSBmcmFtZXdvcmtzIHRvIHNl
+        bmQgZW1haWxzLCBpbXBsZW1lbnQgd2ViIHNlcnZpY2VzLCBhbmQgY3JlYXRl
+        IGR5bmFtaWMgdXNlci1jZW50cmljIHdlYiBwYWdlcy4gVGhlIGJvb2sgYWxz
+        byBleHBsYWlucyB0aGUgZXNzZW50aWFscyBvZiBsb2dnaW5nIHRvIGZpbmQg
+        cGVyZm9ybWFuY2UgcHJvYmxlbXMgYW5kIGRlbHZlcyBpbnRvIG90aGVyIHBl
+        cmZvcm1hbmNlLW9wdGltaXppbmcgdGVjaG5pcXVlcy4gQXMgbmV3IHdlYiBk
+        ZXZlbG9wbWVudCBmcmFtZXdvcmtzIGdvLCBSdWJ5IG9uIFJhaWxzIGlzIHRo
+        ZSB0YWxrIG9mIHRoZSB0b3duLiBBbmQgUnVieSBvbiBSYWlsczogVXAgYW5k
+        IFJ1bm5pbmcgY2FuIG1ha2Ugc3VyZSB5b3UncmUgaW4gb24gdGhlIGRpc2N1
+        c3Npb24uIiwKICAgICJpbmR1c3RyeUlkZW50aWZpZXJzIjogWwogICAgIHsK
+        ICAgICAgInR5cGUiOiAiSVNCTl8xMCIsCiAgICAgICJpZGVudGlmaWVyIjog
+        IjA1OTY1NTQ3ODgiCiAgICAgfSwKICAgICB7CiAgICAgICJ0eXBlIjogIklT
+        Qk5fMTMiLAogICAgICAiaWRlbnRpZmllciI6ICI5NzgwNTk2NTU0NzgxIgog
+        ICAgIH0KICAgIF0sCiAgICAicGFnZUNvdW50IjogMTkyLAogICAgInByaW50
+        VHlwZSI6ICJCT09LIiwKICAgICJjYXRlZ29yaWVzIjogWwogICAgICJDb21w
+        dXRlcnMiCiAgICBdLAogICAgImF2ZXJhZ2VSYXRpbmciOiA0LjAsCiAgICAi
+        cmF0aW5nc0NvdW50IjogOCwKICAgICJjb250ZW50VmVyc2lvbiI6ICIwLjEu
+        MC4wLnByZXZpZXcuMyIsCiAgICAiaW1hZ2VMaW5rcyI6IHsKICAgICAic21h
+        bGxUaHVtYm5haWwiOiAiaHR0cDovL2JrczcuYm9va3MuZ29vZ2xlLmNvbS9i
+        b29rcz9pZD1KSjdTSElSRGZPY0MmcHJpbnRzZWM9ZnJvbnRjb3ZlciZpbWc9
+        MSZ6b29tPTUmZWRnZT1jdXJsJnNvdXJjZT1nYnNfYXBpIiwKICAgICAidGh1
+        bWJuYWlsIjogImh0dHA6Ly9ia3M3LmJvb2tzLmdvb2dsZS5jb20vYm9va3M/
+        aWQ9Sko3U0hJUkRmT2NDJnByaW50c2VjPWZyb250Y292ZXImaW1nPTEmem9v
+        bT0xJmVkZ2U9Y3VybCZzb3VyY2U9Z2JzX2FwaSIKICAgIH0sCiAgICAibGFu
+        Z3VhZ2UiOiAiZW4iLAogICAgInByZXZpZXdMaW5rIjogImh0dHA6Ly9ib29r
+        cy5nb29nbGUuY29tL2Jvb2tzP2lkPUpKN1NISVJEZk9jQyZwcmludHNlYz1m
+        cm9udGNvdmVyJmRxPXJ1Ynkrb24rcmFpbHMmaGw9JmNkPTUmc291cmNlPWdi
+        c19hcGkiLAogICAgImluZm9MaW5rIjogImh0dHA6Ly9ib29rcy5nb29nbGUu
+        Y29tL2Jvb2tzP2lkPUpKN1NISVJEZk9jQyZkcT1ydWJ5K29uK3JhaWxzJmhs
+        PSZzb3VyY2U9Z2JzX2FwaSIsCiAgICAiY2Fub25pY2FsVm9sdW1lTGluayI6
+        ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9hYm91dC9SdWJ5X29u
+        X1JhaWxzX1VwX2FuZF9SdW5uaW5nLmh0bWw/aGw9JmlkPUpKN1NISVJEZk9j
+        QyIKICAgfSwKICAgInNhbGVJbmZvIjogewogICAgImNvdW50cnkiOiAiVVMi
+        LAogICAgInNhbGVhYmlsaXR5IjogIkZPUl9TQUxFIiwKICAgICJpc0Vib29r
+        IjogdHJ1ZSwKICAgICJsaXN0UHJpY2UiOiB7CiAgICAgImFtb3VudCI6IDIz
+        Ljk5LAogICAgICJjdXJyZW5jeUNvZGUiOiAiVVNEIgogICAgfSwKICAgICJy
+        ZXRhaWxQcmljZSI6IHsKICAgICAiYW1vdW50IjogMTQuMzksCiAgICAgImN1
+        cnJlbmN5Q29kZSI6ICJVU0QiCiAgICB9LAogICAgImJ1eUxpbmsiOiAiaHR0
+        cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9Sko3U0hJUkRmT2NDJmRx
+        PXJ1Ynkrb24rcmFpbHMmaGw9JmJ1eT0mc291cmNlPWdic19hcGkiCiAgIH0s
+        CiAgICJhY2Nlc3NJbmZvIjogewogICAgImNvdW50cnkiOiAiVVMiLAogICAg
+        InZpZXdhYmlsaXR5IjogIlBBUlRJQUwiLAogICAgImVtYmVkZGFibGUiOiB0
+        cnVlLAogICAgInB1YmxpY0RvbWFpbiI6IGZhbHNlLAogICAgInRleHRUb1Nw
+        ZWVjaFBlcm1pc3Npb24iOiAiQUxMT1dFRCIsCiAgICAiZXB1YiI6IHsKICAg
+        ICAiaXNBdmFpbGFibGUiOiB0cnVlCiAgICB9LAogICAgInBkZiI6IHsKICAg
+        ICAiaXNBdmFpbGFibGUiOiB0cnVlCiAgICB9LAogICAgIndlYlJlYWRlckxp
+        bmsiOiAiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3MvcmVhZGVyP2lk
+        PUpKN1NISVJEZk9jQyZobD0mcHJpbnRzZWM9ZnJvbnRjb3ZlciZvdXRwdXQ9
+        cmVhZGVyJnNvdXJjZT1nYnNfYXBpIiwKICAgICJhY2Nlc3NWaWV3U3RhdHVz
+        IjogIlNBTVBMRSIKICAgfSwKICAgInNlYXJjaEluZm8iOiB7CiAgICAidGV4
+        dFNuaXBwZXQiOiAiVGhpcyBjb21wYWN0IGd1aWRlIHRlYWNoZXMgeW91IHRo
+        ZSBiYXNpY3Mgb2YgaW5zdGFsbGluZyBhbmQgdXNpbmcgYm90aCB0aGUgUnVi
+        eSBzY3JpcHRpbmcgbGFuZ3VhZ2UgYW5kIHRoZSBSYWlscyBmcmFtZXdvcmsg
+        Zm9yIHRoZSBxdWljayBkZXZlbG9wbWVudCBvZiB3ZWIgYXBwbGljYXRpb25z
+        LiIKICAgfQogIH0sCiAgewogICAia2luZCI6ICJib29rcyN2b2x1bWUiLAog
+        ICAiaWQiOiAicFFPUlNRQUFDQUFKIiwKICAgImV0YWciOiAiZjRsaUI3Y1ZY
+        amMiLAogICAic2VsZkxpbmsiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j
+        b20vYm9va3MvdjEvdm9sdW1lcy9wUU9SU1FBQUNBQUoiLAogICAidm9sdW1l
+        SW5mbyI6IHsKICAgICJ0aXRsZSI6ICJBZ2lsZSBXZWIgRGV2ZWxvcG1lbnQg
+        V2l0aCBSYWlscyIsCiAgICAiYXV0aG9ycyI6IFsKICAgICAiU2FtIFJ1Ynki
+        LAogICAgICJEYXZlIFRob21hcyIsCiAgICAgIkRhdmlkIEhlaW5lbWVpZXIg
+        SGFuc3NvbiIsCiAgICAgIkxlb24gQnJlZWR0IgogICAgXSwKICAgICJwdWJs
+        aXNoZXIiOiAiUHJhZ21hdGljIEJvb2tzaGVsZiIsCiAgICAicHVibGlzaGVk
+        RGF0ZSI6ICIyMDExLTA0LTIyIiwKICAgICJkZXNjcmlwdGlvbiI6ICJQcm92
+        aWRlcyBpbmZvcm1hdGlvbiBvbiBjcmVhdGluZyBXZWItYmFzZWQgYXBwbGlj
+        YXRpb25zIHdpdGggUmFpbHMgMyBhbmQgUnVieSAxLjksIGNvdmVyaW5nIHN1
+        Y2ggdG9waWNzIGFzIEhUVFAgYXV0aGVudGljYXRpb24sIHZhbGlkYXRpb24g
+        YW5kIHVuaXQgdGVzdGluZywgY2FydCBjcmVhdGlvbiwgQWpheCwgY2FjaGlu
+        ZywgbWlncmF0aW9ucywgYW5kIHBsdWdpbnMuIiwKICAgICJpbmR1c3RyeUlk
+        ZW50aWZpZXJzIjogWwogICAgIHsKICAgICAgInR5cGUiOiAiSVNCTl8xMCIs
+        CiAgICAgICJpZGVudGlmaWVyIjogIjE5MzQzNTY1NDkiCiAgICAgfSwKICAg
+        ICB7CiAgICAgICJ0eXBlIjogIklTQk5fMTMiLAogICAgICAiaWRlbnRpZmll
+        ciI6ICI5NzgxOTM0MzU2NTQ4IgogICAgIH0KICAgIF0sCiAgICAicGFnZUNv
+        dW50IjogNDUxLAogICAgInByaW50VHlwZSI6ICJCT09LIiwKICAgICJhdmVy
+        YWdlUmF0aW5nIjogNC4wLAogICAgInJhdGluZ3NDb3VudCI6IDI2LAogICAg
+        ImNvbnRlbnRWZXJzaW9uIjogInByZXZpZXctMS4wLjAiLAogICAgImltYWdl
+        TGlua3MiOiB7CiAgICAgInNtYWxsVGh1bWJuYWlsIjogImh0dHA6Ly9ia3M4
+        LmJvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9cFFPUlNRQUFDQUFKJnByaW50
+        c2VjPWZyb250Y292ZXImaW1nPTEmem9vbT01JnNvdXJjZT1nYnNfYXBpIiwK
+        ICAgICAidGh1bWJuYWlsIjogImh0dHA6Ly9ia3M4LmJvb2tzLmdvb2dsZS5j
+        b20vYm9va3M/aWQ9cFFPUlNRQUFDQUFKJnByaW50c2VjPWZyb250Y292ZXIm
+        aW1nPTEmem9vbT0xJnNvdXJjZT1nYnNfYXBpIgogICAgfSwKICAgICJsYW5n
+        dWFnZSI6ICJlbiIsCiAgICAicHJldmlld0xpbmsiOiAiaHR0cDovL2Jvb2tz
+        Lmdvb2dsZS5jb20vYm9va3M/aWQ9cFFPUlNRQUFDQUFKJmRxPXJ1Ynkrb24r
+        cmFpbHMmaGw9JmNkPTYmc291cmNlPWdic19hcGkiLAogICAgImluZm9MaW5r
+        IjogImh0dHA6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPXBRT1JTUUFB
+        Q0FBSiZkcT1ydWJ5K29uK3JhaWxzJmhsPSZzb3VyY2U9Z2JzX2FwaSIsCiAg
+        ICAiY2Fub25pY2FsVm9sdW1lTGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xl
+        LmNvbS9ib29rcy9hYm91dC9BZ2lsZV9XZWJfRGV2ZWxvcG1lbnRfV2l0aF9S
+        YWlscy5odG1sP2hsPSZpZD1wUU9SU1FBQUNBQUoiCiAgIH0sCiAgICJzYWxl
+        SW5mbyI6IHsKICAgICJjb3VudHJ5IjogIlVTIiwKICAgICJzYWxlYWJpbGl0
+        eSI6ICJOT1RfRk9SX1NBTEUiLAogICAgImlzRWJvb2siOiBmYWxzZQogICB9
+        LAogICAiYWNjZXNzSW5mbyI6IHsKICAgICJjb3VudHJ5IjogIlVTIiwKICAg
+        ICJ2aWV3YWJpbGl0eSI6ICJOT19QQUdFUyIsCiAgICAiZW1iZWRkYWJsZSI6
+        IGZhbHNlLAogICAgInB1YmxpY0RvbWFpbiI6IGZhbHNlLAogICAgInRleHRU
+        b1NwZWVjaFBlcm1pc3Npb24iOiAiQUxMT1dFRCIsCiAgICAiZXB1YiI6IHsK
+        ICAgICAiaXNBdmFpbGFibGUiOiBmYWxzZQogICAgfSwKICAgICJwZGYiOiB7
+        CiAgICAgImlzQXZhaWxhYmxlIjogZmFsc2UKICAgIH0sCiAgICAid2ViUmVh
+        ZGVyTGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9yZWFk
+        ZXI/aWQ9cFFPUlNRQUFDQUFKJmhsPSZwcmludHNlYz1mcm9udGNvdmVyJm91
+        dHB1dD1yZWFkZXImc291cmNlPWdic19hcGkiLAogICAgImFjY2Vzc1ZpZXdT
+        dGF0dXMiOiAiTk9ORSIKICAgfSwKICAgInNlYXJjaEluZm8iOiB7CiAgICAi
+        dGV4dFNuaXBwZXQiOiAiU3VtbWFyeTogUHJvdmlkZXMgaW5mb3JtYXRpb24g
+        b24gY3JlYXRpbmcgV2ViLWJhc2VkIGFwcGxpY2F0aW9ucyB3aXRoIFJhaWxz
+        IDMgYW5kIFJ1YnkgMS45LCBjb3ZlcmluZyBzdWNoIHRvcGljcyBhcyBIVFRQ
+        IGF1dGhlbnRpY2F0aW9uLCB2YWxpZGF0aW9uIGFuZCB1bml0IHRlc3Rpbmcs
+        IGNhcnQgY3JlYXRpb24sIEFqYXgsIGNhY2hpbmcsIG1pZ3JhdGlvbnMsIGFu
+        ZCBwbHVnaW5zLiIKICAgfQogIH0sCiAgewogICAia2luZCI6ICJib29rcyN2
+        b2x1bWUiLAogICAiaWQiOiAiME1Fbjhtb0FzWVFDIiwKICAgImV0YWciOiAi
+        U0M3dzdYbGIrWXciLAogICAic2VsZkxpbmsiOiAiaHR0cHM6Ly93d3cuZ29v
+        Z2xlYXBpcy5jb20vYm9va3MvdjEvdm9sdW1lcy8wTUVuOG1vQXNZUUMiLAog
+        ICAidm9sdW1lSW5mbyI6IHsKICAgICJ0aXRsZSI6ICJSYWlscyBTb2x1dGlv
+        bnMiLAogICAgInN1YnRpdGxlIjogIlJ1Ynkgb24gUmFpbHMgTWFkZSBFYXN5
+        IiwKICAgICJhdXRob3JzIjogWwogICAgICJKdXN0aW4gV2lsbGlhbXMiCiAg
+        ICBdLAogICAgInB1Ymxpc2hlciI6ICJmcmllbmRzb2ZFRCIsCiAgICAicHVi
+        bGlzaGVkRGF0ZSI6ICIyMDA3LTAxLTI0IiwKICAgICJkZXNjcmlwdGlvbiI6
+        ICJJZiB5b3UncmUgYSB3ZWIgZGVzaWduZXIgb3IgZGV2ZWxvcGVyIHdobyB0
+        aGlua3MgdGhhdCB0aGUgY29kaW5nIGludm9sdmVkIGluIGRldmVsb3Bpbmcg
+        ZHluYW1pYyB3ZWIgYXBwbGljYXRpb25zIGlzIHRvbyBkaWZmaWN1bHQsIHRo
+        aW5rIGFnYWluLiBUaGlzIGJvb2ssIGFuZCB0aGUgZnJhbWV3b3JrIGl0IGNv
+        dmVycywgaXMgdGhlIHBlcmZlY3Qgc29sdXRpb24gdG8geW91ciBuZWVkcy4g
+        UnVieSBvbiBSYWlscyBwcm92aWRlcyBhbiBlYXN5LXRvLXVzZSBtZXRob2Qg
+        Zm9yIHF1aWNrbHkgZGV2ZWxvcGluZyB3ZWIgYXBwbGljYXRpb25zLCBzaW1w
+        bGlmeWluZyBwb3RlbnRpYWxseSBjb21wbGljYXRlZCBzdWJqZWN0cyBzdWNo
+        IGFzIHdlYiBhcmNoaXRlY3R1cmUsIEphdmFTY3JpcHQsIGFuZCBTUUwvZGF0
+        YWJhc2UgY3JlYXRpb24uIFRoZSBzaW1wbGljaXR5IG9mIFJhaWxzIGJlbGll
+        cyBpdHMgcG93ZXIsIHRob3VnaOKAlHRoaXMgdGVjaG5vbG9neSBpcyB1c2Vk
+        IGJ5IG1ham9yIGNvbXBhbmllcyBzdWNoIGFzIDM3U2lnbmFscyBhbmQgR29v
+        Z2xlLiBUaGUgYm9vayBwcm92aWRlcyBhbiBpbnRyb2R1Y3Rpb24gdG8gUnVi
+        eSBvbiBSYWlscyB3aXRoIHRoZSB3ZWIgZGVzaWduZXIgaW4gbWluZC4gSW5z
+        dGVhZCBvZiBmb2N1c2luZyBvbiB0aGUgaW50cmljYXRlIHN5bnRheCBvZiBl
+        YWNoIG1ldGhvZCwgdGhlIGJvb2sgZm9jdXNlcyBvbiB0aGUgdGFza3MgeW91
+        bGwgd2FudCB0byBwZXJmb3JtIG9uIHlvdXIgd2Vic2l0ZSBhbmQgdGhlbiB3
+        YWxrcyB5b3UgdGhyb3VnaCBob3cgdG8gaW1wbGVtZW50IHRoYXQgZnVuY3Rp
+        b25hbGl0eSB3aXRoIFJhaWxzLiBEZXNpZ24gYW5kIHVzYWJpbGl0eSBhcmUg
+        a2VwdCBpbiBtaW5kIHRocm91Z2hvdXQsIGVuc3VyaW5nIHRoYXQgeW91ciBz
+        aXRlIGJvdGggbG9va3MgYW5kIHdvcmtzIGdyZWF0LiBUaGUgYm9vayBiZWdp
+        bnMgYnkgY292ZXJpbmcgaG93IHRvIHNldCB1cCB5b3VyIGNvbXB1dGVyIGFz
+        IGEgUmFpbHMgZGV2ZWxvcG1lbnQgZW52aXJvbm1lbnQgKGluY2x1ZGluZyB0
+        aGUgTXlTUUwgZGF0YWJhc2UpIGFuZCB0aGVuIGZvbGxvd3Mgd2l0aCBhbiBp
+        bnRyb2R1Y3Rpb24gdG8gUnVieSBhbmQgdGhlIGJhc2ljcyBvZiB0aGUgUmFp
+        bHMgZnJhbWV3b3JrLiBOZXh0LCB5b3UgYXJlIHRha2VuIHRocm91Z2ggc2V2
+        ZXJhbCBwcmFjdGljYWwgZXhhbXBsZXMgdGhhdCB3b3JrIHRvZ2V0aGVyIHRv
+        IGJ1aWxkIHVwIGEgY29tcGxldGUgbW9kZXJuIHdlYiBhcHBsaWNhdGlvbiwg
+        Y292ZXJpbmcgZXNzZW50aWFsIGFuZCB1c2VmdWwgd2Vic2l0ZSBmZWF0dXJl
+        cyBzdWNoIGFzIHVzZXIgbG9naW4sIGFkZGluZyBhbmQgZWRpdGluZyBkYXRh
+        LCBkYXRhIHZhbGlkYXRpb24sIGltYWdlIHVwbG9hZGluZywgYW5kIG11Y2gg
+        bW9yZS4gVGhlIGJvb2sgZXZlbiBjb3ZlcnMgbW9yZS1hZHZhbmNlZCBSYWls
+        cyB0b3BpY3Mgc3VjaCBhcyB0aGUgUmFpbHMgdGVzdCBzdWl0ZSwgcGx1Zy1p
+        bnMgYW5kIGNvbXBvbmVudHMsIGRlYnVnZ2luZyB0ZWNobmlxdWVzLCBhbmQg
+        ZGVwbG95aW5nIHlvdXIgd2ViIGFwcGxpY2F0aW9ucyB1c2luZyBDYXBpc3Ry
+        YW5vLiBUYWJsZSBvZiBDb250ZW50cyBJbnRyb2R1Y3Rpb24gdG8gUnVieSBv
+        biBSYWlscyBJbnN0YWxsaW5nIFJhaWxzIFJ1YnkgZm9yIFJhaWxzIERldmVs
+        b3BlcnMgR2V0dGluZyBTdGFydGVkIHdpdGggUmFpbHMgTW9yZSBBZHZhbmNl
+        ZCBSYWlscyBGb3JtYXR0aW5nIERhdGEgSW50cm9kdWN0aW9uIHRvIEFqYXgg
+        QnJpbmdpbmcgRm9ybXMgdG8gTGlmZSB3aXRoIEFqYXggVXBsb2FkaW5nIEZp
+        bGVzIGFuZCBTZW5kaW5nIEF0dGFjaG1lbnRzIFVzZXIgQXV0aGVudGljYXRp
+        b24gYW5kIFNlc3Npb24gTWFuYWdlbWVudCBDdXN0b21pemluZyBSYWlscyBW
+        aWV3cyBVc2luZyBSYWlscyBQbHVnLWlucyBhbmQgRW5naW5lcyBEZXBsb3lp
+        bmcgd2l0aCBDYXBpc3RyYW5vIiwKICAgICJpbmR1c3RyeUlkZW50aWZpZXJz
+        IjogWwogICAgIHsKICAgICAgInR5cGUiOiAiSVNCTl8xMCIsCiAgICAgICJp
+        ZGVudGlmaWVyIjogIjE0MzAyMDM1NTIiCiAgICAgfSwKICAgICB7CiAgICAg
+        ICJ0eXBlIjogIklTQk5fMTMiLAogICAgICAiaWRlbnRpZmllciI6ICI5Nzgx
+        NDMwMjAzNTUxIgogICAgIH0KICAgIF0sCiAgICAicGFnZUNvdW50IjogMjg4
+        LAogICAgInByaW50VHlwZSI6ICJCT09LIiwKICAgICJjYXRlZ29yaWVzIjog
+        WwogICAgICJDb21wdXRlcnMiCiAgICBdLAogICAgImF2ZXJhZ2VSYXRpbmci
+        OiA0LjAsCiAgICAicmF0aW5nc0NvdW50IjogOSwKICAgICJjb250ZW50VmVy
+        c2lvbiI6ICIxLjEuMy4wLnByZXZpZXcuMyIsCiAgICAiaW1hZ2VMaW5rcyI6
+        IHsKICAgICAic21hbGxUaHVtYm5haWwiOiAiaHR0cDovL2JrczMuYm9va3Mu
+        Z29vZ2xlLmNvbS9ib29rcz9pZD0wTUVuOG1vQXNZUUMmcHJpbnRzZWM9ZnJv
+        bnRjb3ZlciZpbWc9MSZ6b29tPTUmZWRnZT1jdXJsJnNvdXJjZT1nYnNfYXBp
+        IiwKICAgICAidGh1bWJuYWlsIjogImh0dHA6Ly9ia3MzLmJvb2tzLmdvb2ds
+        ZS5jb20vYm9va3M/aWQ9ME1Fbjhtb0FzWVFDJnByaW50c2VjPWZyb250Y292
+        ZXImaW1nPTEmem9vbT0xJmVkZ2U9Y3VybCZzb3VyY2U9Z2JzX2FwaSIKICAg
+        IH0sCiAgICAibGFuZ3VhZ2UiOiAiZW4iLAogICAgInByZXZpZXdMaW5rIjog
+        Imh0dHA6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPTBNRW44bW9Bc1lR
+        QyZwcmludHNlYz1mcm9udGNvdmVyJmRxPXJ1Ynkrb24rcmFpbHMmaGw9JmNk
+        PTcmc291cmNlPWdic19hcGkiLAogICAgImluZm9MaW5rIjogImh0dHA6Ly9i
+        b29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPTBNRW44bW9Bc1lRQyZkcT1ydWJ5
+        K29uK3JhaWxzJmhsPSZzb3VyY2U9Z2JzX2FwaSIsCiAgICAiY2Fub25pY2Fs
+        Vm9sdW1lTGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9h
+        Ym91dC9SYWlsc19Tb2x1dGlvbnMuaHRtbD9obD0maWQ9ME1Fbjhtb0FzWVFD
+        IgogICB9LAogICAic2FsZUluZm8iOiB7CiAgICAiY291bnRyeSI6ICJVUyIs
+        CiAgICAic2FsZWFiaWxpdHkiOiAiRk9SX1NBTEUiLAogICAgImlzRWJvb2si
+        OiB0cnVlLAogICAgImxpc3RQcmljZSI6IHsKICAgICAiYW1vdW50IjogMjcu
+        OTksCiAgICAgImN1cnJlbmN5Q29kZSI6ICJVU0QiCiAgICB9LAogICAgInJl
+        dGFpbFByaWNlIjogewogICAgICJhbW91bnQiOiAxNS4zOSwKICAgICAiY3Vy
+        cmVuY3lDb2RlIjogIlVTRCIKICAgIH0sCiAgICAiYnV5TGluayI6ICJodHRw
+        Oi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcz9pZD0wTUVuOG1vQXNZUUMmZHE9
+        cnVieStvbityYWlscyZobD0mYnV5PSZzb3VyY2U9Z2JzX2FwaSIKICAgfSwK
+        ICAgImFjY2Vzc0luZm8iOiB7CiAgICAiY291bnRyeSI6ICJVUyIsCiAgICAi
+        dmlld2FiaWxpdHkiOiAiUEFSVElBTCIsCiAgICAiZW1iZWRkYWJsZSI6IHRy
+        dWUsCiAgICAicHVibGljRG9tYWluIjogZmFsc2UsCiAgICAidGV4dFRvU3Bl
+        ZWNoUGVybWlzc2lvbiI6ICJBTExPV0VEIiwKICAgICJlcHViIjogewogICAg
+        ICJpc0F2YWlsYWJsZSI6IHRydWUKICAgIH0sCiAgICAicGRmIjogewogICAg
+        ICJpc0F2YWlsYWJsZSI6IHRydWUKICAgIH0sCiAgICAid2ViUmVhZGVyTGlu
+        ayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9yZWFkZXI/aWQ9
+        ME1Fbjhtb0FzWVFDJmhsPSZwcmludHNlYz1mcm9udGNvdmVyJm91dHB1dD1y
+        ZWFkZXImc291cmNlPWdic19hcGkiLAogICAgImFjY2Vzc1ZpZXdTdGF0dXMi
+        OiAiU0FNUExFIgogICB9LAogICAic2VhcmNoSW5mbyI6IHsKICAgICJ0ZXh0
+        U25pcHBldCI6ICJJZiB5b3UmIzM5O3JlIGEgd2ViIGRlc2lnbmVyIG9yIGRl
+        dmVsb3BlciB3aG8gdGhpbmtzIHRoYXQgdGhlIGNvZGluZyBpbnZvbHZlZCBp
+        biBkZXZlbG9waW5nIGR5bmFtaWMgd2ViIGFwcGxpY2F0aW9ucyBpcyB0b28g
+        ZGlmZmljdWx0LCB0aGluayBhZ2Fpbi4gVGhpcyBib29rLCBhbmQgdGhlIGZy
+        YW1ld29yayBpdCBjb3ZlcnMsIGlzIHRoZSBwZXJmZWN0IHNvbHV0aW9uIHRv
+        IHlvdXIgbmVlZHMuIgogICB9CiAgfSwKICB7CiAgICJraW5kIjogImJvb2tz
+        I3ZvbHVtZSIsCiAgICJpZCI6ICJIMXlpM2h0RUFaZ0MiLAogICAiZXRhZyI6
+        ICJCbzAwRVZFUVRIdyIsCiAgICJzZWxmTGluayI6ICJodHRwczovL3d3dy5n
+        b29nbGVhcGlzLmNvbS9ib29rcy92MS92b2x1bWVzL0gxeWkzaHRFQVpnQyIs
+        CiAgICJ2b2x1bWVJbmZvIjogewogICAgInRpdGxlIjogIlByYWN0aWNhbCBS
+        ZXBvcnRpbmcgd2l0aCBSdWJ5IGFuZCBSYWlscyIsCiAgICAiYXV0aG9ycyI6
+        IFsKICAgICAiRGF2aWQgQmVydWJlIgogICAgXSwKICAgICJwdWJsaXNoZXIi
+        OiAiQXByZXNzIiwKICAgICJwdWJsaXNoZWREYXRlIjogIjIwMDgtMDItMDQi
+        LAogICAgImRlc2NyaXB0aW9uIjogIkJ1c2luZXNzIGludGVsbGlnZW5jZSBh
+        bmQgcmVhbOKAk3RpbWUgcmVwb3J0aW5nIG1lY2hhbmlzbXMgcGxheSBhIG1h
+        am9yIHJvbGUgaW4gYW55IG9mIHRvZGF54oCZcyBmb3J3YXJk4oCTbG9va2lu
+        ZyBidXNpbmVzcyBwbGFucy4gV2l0aCBtYW55IG9mIHRoZXNlIHNvbHV0aW9u
+        cyBiZWluZyBtb3ZlZCB0byB0aGUgV2ViLCB0aGUgcG9wdWxhciBSYWlscyBm
+        cmFtZXdvcmsgYW5kIGl0cyB1bmRlcmx5aW5nIFJ1YnkgbGFuZ3VhZ2UgYXJl
+        IHBsYXlpbmcgYSBtYWpvciByb2xlIGFsb25nc2lkZSB3ZWIgc2VydmljZXMg
+        aW4gYnVpbGRpbmcgdGhlIHJlcG9ydGluZyBzb2x1dGlvbnMgb2YgdG9tb3Jy
+        b3cuIFByYWN0aWNhbCBSZXBvcnRpbmcgd2l0aCBSdWJ5IGFuZCBSYWlscyBp
+        cyB0aGUgZmlyc3QgYm9vayB0byBjb21wcmVoZW5zaXZlbHkgaW50cm9kdWNl
+        IHRoaXMgcG9wdWxhciBmcmFtZXdvcmssIGd1aWRpbmcgcmVhZGVycyB0aHJv
+        dWdoIGEgd2lkZeKAk3JhbmdpbmcgYXJyYXkgb2YgZmVhdHVyZXMuIE5vdGUg
+        dGhpcyBpc27igJl0IGEgc3RhaWQgZ3VpZGUgdG8gZ2VuZXJhdGluZyB0cmFk
+        aXRpb25hbCByZXBvcnRzLCBidXQgcmF0aGVyIGl0IHNob3dzIHlvdSBob3cg
+        dGhlIFJ1YnkgbGFuZ3VhZ2UgYW5kIFJhaWxzIGZyYW1ld29yayBjYW4gY3Jl
+        YXRlIHRydWx5IGNvbXBlbGxpbmcgcmVwb3J0aW5nIHNlcnZpY2VzIGJ5IHBs
+        dWdnaW5nIGludG8gcG9wdWxhciB0aGlyZC1wYXJ0eSBhcHBsaWNhdGlvbnMg
+        YW5kIHNlcnZpY2VzIHN1Y2ggYXMgR29vZ2xlIEFkV29yZHMsIFVQUy5jb20s
+        IGlUdW5lcywgYW5kIFNhbGVzRm9yY2UuY29tLiBXaGF0IHlvdeKAmWxsIGxl
+        YXJuIENyZWF0ZSByZXBvcnRpbmcgc29sdXRpb25zIGZvciBib3RoIHRoZSBX
+        ZWIgYW5kIHRoZSBkZXNrdG9wIEludGVncmF0ZSB3aXRoIHBvd2VyZnVsIHRo
+        aXJk4oCTcGFydHkgcmV0YWlsIHNvbHV0aW9ucyBzdWNoIGFzIGVCYXksIGFu
+        ZCBBbWF6b24uY29tIGluIG9yZGVyIHRvIG1vbml0b3IgeW91ciBzYWxlcyBj
+        YW1wYWlnbnMgaW4gcmVhbOKAk3RpbWUgQnVpbGQgYW4gaW52b2ljZSByZXBv
+        cnRpbmcgc3lzdGVtIHVzaW5nIFJhaWxzIGFuZCBQYXlQYWwgTW9uaXRvciB5
+        b3VyIHNhbGVzIHBlcmZvcm1hbmNlIGJ5IHRha2luZyBhZHZhbnRhZ2Ugb2Yg
+        U3VnYXJDUk3igJlzIHdlYiBzZXJ2aWNlIG9mZmVyaW5ncyBXaG8gdGhpcyBi
+        b29rIGlzIGZvciBSdWJ5IGFuZCBSYWlscyBkZXZlbG9wZXJzIHNlZWtpbmcg
+        dG8gY3JlYXRlIGNvbXBlbGxpbmcgYnVzaW5lc3MgaW50ZWxsaWdlbmNlIGFu
+        ZCByZXBvcnRpbmcgc29sdXRpb25zIHVzaW5nIGEgd2lkZSB2YXJpZXR5IG9m
+        IGFwcGxpY2F0aW9ucyBhbmQgc2VydmljZXMuIFRhYmxlIG9mIENvbnRlbnRz
+        IERhdGEgQWNjZXNzIEZ1bmRhbWVudGFscyBDYWxjdWxhdGluZyBTdGF0aXN0
+        aWNzIHdpdGggQWN0aXZlIFJlY29yZCBDcmVhdGluZyBHcmFwaHMgd2l0aCBS
+        dWJ5IENyZWF0aW5nIFJlcG9ydHMgb24gdGhlIERlc2t0b3AgQ29ubmVjdGlu
+        ZyBZb3VyIFJlcG9ydHMgdG8gdGhlIFdvcmxkIFRyYWNraW5nIEF1Y3Rpb25z
+        IHdpdGggZUJheSBUcmFja2luZyBFeHBlbmRpdHVyZXMgd2l0aCBQYXlQYWwg
+        Q3JlYXRpbmcgU2FsZXMgUGVyZm9ybWFuY2UgUmVwb3J0cyB3aXRoIFN1Z2Fy
+        Q1JNIEludmVzdG1lbnQgVHJhY2tpbmcgd2l0aCBGaWRlbGl0eSBDYWxjdWxh
+        dGluZyBDb3N0cyBieSBBbmFseXppbmcgQXBhY2hlIFdlYiBMb2dzLiBUcmFj
+        a2luZyB0aGUgTmV3cyB3aXRoIEdvb2dsZSBOZXdzIENyZWF0aW5nIFJlcG9y
+        dHMgd2l0aCBSdWJ5IGFuZCBNaWNyb3NvZnQgT2ZmaWNlIFRyYWNraW5nIFlv
+        dXIgQWRzIHdpdGggR29vZ2xlIEFkV29yZHMiLAogICAgImluZHVzdHJ5SWRl
+        bnRpZmllcnMiOiBbCiAgICAgewogICAgICAidHlwZSI6ICJJU0JOXzEwIiwK
+        ICAgICAgImlkZW50aWZpZXIiOiAiMTQzMDIwNTMyNiIKICAgICB9LAogICAg
+        IHsKICAgICAgInR5cGUiOiAiSVNCTl8xMyIsCiAgICAgICJpZGVudGlmaWVy
+        IjogIjk3ODE0MzAyMDUzMjYiCiAgICAgfQogICAgXSwKICAgICJwYWdlQ291
+        bnQiOiAzMTIsCiAgICAicHJpbnRUeXBlIjogIkJPT0siLAogICAgImNhdGVn
+        b3JpZXMiOiBbCiAgICAgIkNvbXB1dGVycyIKICAgIF0sCiAgICAiYXZlcmFn
+        ZVJhdGluZyI6IDQuMCwKICAgICJyYXRpbmdzQ291bnQiOiAxLAogICAgImNv
+        bnRlbnRWZXJzaW9uIjogIjAuMC4zLjAucHJldmlldy4zIiwKICAgICJpbWFn
+        ZUxpbmtzIjogewogICAgICJzbWFsbFRodW1ibmFpbCI6ICJodHRwOi8vYmtz
+        NS5ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPUgxeWkzaHRFQVpnQyZwcmlu
+        dHNlYz1mcm9udGNvdmVyJmltZz0xJnpvb209NSZlZGdlPWN1cmwmc291cmNl
+        PWdic19hcGkiLAogICAgICJ0aHVtYm5haWwiOiAiaHR0cDovL2JrczUuYm9v
+        a3MuZ29vZ2xlLmNvbS9ib29rcz9pZD1IMXlpM2h0RUFaZ0MmcHJpbnRzZWM9
+        ZnJvbnRjb3ZlciZpbWc9MSZ6b29tPTEmZWRnZT1jdXJsJnNvdXJjZT1nYnNf
+        YXBpIgogICAgfSwKICAgICJsYW5ndWFnZSI6ICJlbiIsCiAgICAicHJldmll
+        d0xpbmsiOiAiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9SDF5
+        aTNodEVBWmdDJnByaW50c2VjPWZyb250Y292ZXImZHE9cnVieStvbityYWls
+        cyZobD0mY2Q9OCZzb3VyY2U9Z2JzX2FwaSIsCiAgICAiaW5mb0xpbmsiOiAi
+        aHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9SDF5aTNodEVBWmdD
+        JmRxPXJ1Ynkrb24rcmFpbHMmaGw9JnNvdXJjZT1nYnNfYXBpIiwKICAgICJj
+        YW5vbmljYWxWb2x1bWVMaW5rIjogImh0dHA6Ly9ib29rcy5nb29nbGUuY29t
+        L2Jvb2tzL2Fib3V0L1ByYWN0aWNhbF9SZXBvcnRpbmdfd2l0aF9SdWJ5X2Fu
+        ZF9SYWlscy5odG1sP2hsPSZpZD1IMXlpM2h0RUFaZ0MiCiAgIH0sCiAgICJz
+        YWxlSW5mbyI6IHsKICAgICJjb3VudHJ5IjogIlVTIiwKICAgICJzYWxlYWJp
+        bGl0eSI6ICJGT1JfU0FMRSIsCiAgICAiaXNFYm9vayI6IHRydWUsCiAgICAi
+        bGlzdFByaWNlIjogewogICAgICJhbW91bnQiOiAzNC4zOSwKICAgICAiY3Vy
+        cmVuY3lDb2RlIjogIlVTRCIKICAgIH0sCiAgICAicmV0YWlsUHJpY2UiOiB7
+        CiAgICAgImFtb3VudCI6IDE4LjkxLAogICAgICJjdXJyZW5jeUNvZGUiOiAi
+        VVNEIgogICAgfSwKICAgICJidXlMaW5rIjogImh0dHA6Ly9ib29rcy5nb29n
+        bGUuY29tL2Jvb2tzP2lkPUgxeWkzaHRFQVpnQyZkcT1ydWJ5K29uK3JhaWxz
+        JmhsPSZidXk9JnNvdXJjZT1nYnNfYXBpIgogICB9LAogICAiYWNjZXNzSW5m
+        byI6IHsKICAgICJjb3VudHJ5IjogIlVTIiwKICAgICJ2aWV3YWJpbGl0eSI6
+        ICJQQVJUSUFMIiwKICAgICJlbWJlZGRhYmxlIjogdHJ1ZSwKICAgICJwdWJs
+        aWNEb21haW4iOiBmYWxzZSwKICAgICJ0ZXh0VG9TcGVlY2hQZXJtaXNzaW9u
+        IjogIkFMTE9XRUQiLAogICAgImVwdWIiOiB7CiAgICAgImlzQXZhaWxhYmxl
+        IjogdHJ1ZQogICAgfSwKICAgICJwZGYiOiB7CiAgICAgImlzQXZhaWxhYmxl
+        IjogdHJ1ZQogICAgfSwKICAgICJ3ZWJSZWFkZXJMaW5rIjogImh0dHA6Ly9i
+        b29rcy5nb29nbGUuY29tL2Jvb2tzL3JlYWRlcj9pZD1IMXlpM2h0RUFaZ0Mm
+        aGw9JnByaW50c2VjPWZyb250Y292ZXImb3V0cHV0PXJlYWRlciZzb3VyY2U9
+        Z2JzX2FwaSIsCiAgICAiYWNjZXNzVmlld1N0YXR1cyI6ICJTQU1QTEUiCiAg
+        IH0sCiAgICJzZWFyY2hJbmZvIjogewogICAgInRleHRTbmlwcGV0IjogIldo
+        YXQgeW914oCZbGwgbGVhcm4gQ3JlYXRlIHJlcG9ydGluZyBzb2x1dGlvbnMg
+        Zm9yIGJvdGggdGhlIFdlYiBhbmQgdGhlIGRlc2t0b3AgSW50ZWdyYXRlIHdp
+        dGggcG93ZXJmdWwgdGhpcmTigJNwYXJ0eSByZXRhaWwgc29sdXRpb25zIHN1
+        Y2ggYXMgZUJheSwgYW5kIEFtYXpvbi5jb20gaW4gb3JkZXIgdG8gbW9uaXRv
+        ciB5b3VyIHNhbGVzIGNhbXBhaWducyBpbiByZWFs4oCTdGltZSBCdWlsZCBh
+        biBpbnZvaWNlIC4uLiIKICAgfQogIH0sCiAgewogICAia2luZCI6ICJib29r
+        cyN2b2x1bWUiLAogICAiaWQiOiAiNnFCdTdGWWUzVWdDIiwKICAgImV0YWci
+        OiAiQjZXcTFyREgrMzQiLAogICAic2VsZkxpbmsiOiAiaHR0cHM6Ly93d3cu
+        Z29vZ2xlYXBpcy5jb20vYm9va3MvdjEvdm9sdW1lcy82cUJ1N0ZZZTNVZ0Mi
+        LAogICAidm9sdW1lSW5mbyI6IHsKICAgICJ0aXRsZSI6ICJSdWJ5IG9uIFJh
+        aWxzIEZvciBEdW1taWVzIiwKICAgICJhdXRob3JzIjogWwogICAgICJCYXJy
+        eSBCdXJkIgogICAgXSwKICAgICJwdWJsaXNoZXIiOiAiRm9yIER1bW1pZXMi
+        LAogICAgInB1Ymxpc2hlZERhdGUiOiAiMjAxMS0wNS0wOSIsCiAgICAiZGVz
+        Y3JpcHRpb24iOiAiUXVpY2tseSBjcmVhdGUgV2ViIHNpdGVzIHdpdGggdGhp
+        cyBwb3dlZnVsIHRvb2wgVXNlIHRoaXMgZnJlZSBhbmQgZWFzeSBwcm9ncmFt
+        bWluZyBsYW5ndWFnZSBmb3IgZS1jb21tZXJjZSBzaXRlcyBhbmQgYmxvZ3Mg
+        SWYgeW91IG5lZWQgdG8gYnVpbGQgV2ViIGFuZCBkYXRhYmFzZSBhcHBsaWNh
+        dGlvbnMgcXVpY2tseSBidXQgeW91IGRvbid0IGRyZWFtIGluIGNvbXB1dGVy
+        IGNvZGUsIHRha2UgaGVhcnQhIFJ1Ynkgb24gUmFpbHMgd2FzIGNyZWF0ZWQg
+        Zm9yIHlvdSwgYW5kIHRoaXMgYm9vayB3aWxsIGhhdmUgeW91IHVwIGFuZCBy
+        dW5uaW5nIGluIG5vIHRpbWUuIFRoZSBSdWJ5IHNjcmlwdGluZyBsYW5ndWFn
+        ZSBhbmQgdGhlIFJhaWxzIGZyYW1ld29yayBsZXQgeW91IGNyZWF0ZSBmdWxs
+        LWZlYXR1cmVkIFdlYiBhcHBsaWNhdGlvbnMgZmFzdC4gSXQncyBldmVuIGZ1
+        biEgRGlzY292ZXIgaG93IHRvIEluc3RhbGwgYW5kIHJ1biBSdWJ5IGFuZCBS
+        YWlscyBVc2UgdGhlIFJhZFJhaWxzIElERSBDcmVhdGUgYSBibG9nIHdpdGgg
+        UnVieSBDb25uZWN0IHlvdXIgV2ViIHNpdGUgdG8gYSBkYXRhYmFzZSBCdWls
+        ZCBhIHNob3BwaW5nIGNhcnQgRXhwbG9yZSBSdWJ5J3Mgc3ludGF4IiwKICAg
+        ICJpbmR1c3RyeUlkZW50aWZpZXJzIjogWwogICAgIHsKICAgICAgInR5cGUi
+        OiAiSVNCTl8xMCIsCiAgICAgICJpZGVudGlmaWVyIjogIjExMTgwODQ3ODAi
+        CiAgICAgfSwKICAgICB7CiAgICAgICJ0eXBlIjogIklTQk5fMTMiLAogICAg
+        ICAiaWRlbnRpZmllciI6ICI5NzgxMTE4MDg0Nzg2IgogICAgIH0KICAgIF0s
+        CiAgICAicGFnZUNvdW50IjogMzMwLAogICAgInByaW50VHlwZSI6ICJCT09L
+        IiwKICAgICJjYXRlZ29yaWVzIjogWwogICAgICJDb21wdXRlcnMiCiAgICBd
+        LAogICAgImF2ZXJhZ2VSYXRpbmciOiAzLjAsCiAgICAicmF0aW5nc0NvdW50
+        IjogNSwKICAgICJjb250ZW50VmVyc2lvbiI6ICIwLjUuMS4wLnByZXZpZXcu
+        MyIsCiAgICAiaW1hZ2VMaW5rcyI6IHsKICAgICAic21hbGxUaHVtYm5haWwi
+        OiAiaHR0cDovL2JrczcuYm9va3MuZ29vZ2xlLmNvbS9ib29rcz9pZD02cUJ1
+        N0ZZZTNVZ0MmcHJpbnRzZWM9ZnJvbnRjb3ZlciZpbWc9MSZ6b29tPTUmZWRn
+        ZT1jdXJsJnNvdXJjZT1nYnNfYXBpIiwKICAgICAidGh1bWJuYWlsIjogImh0
+        dHA6Ly9ia3M3LmJvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9NnFCdTdGWWUz
+        VWdDJnByaW50c2VjPWZyb250Y292ZXImaW1nPTEmem9vbT0xJmVkZ2U9Y3Vy
+        bCZzb3VyY2U9Z2JzX2FwaSIKICAgIH0sCiAgICAibGFuZ3VhZ2UiOiAiZW4i
+        LAogICAgInByZXZpZXdMaW5rIjogImh0dHA6Ly9ib29rcy5nb29nbGUuY29t
+        L2Jvb2tzP2lkPTZxQnU3RlllM1VnQyZwcmludHNlYz1mcm9udGNvdmVyJmRx
+        PXJ1Ynkrb24rcmFpbHMmaGw9JmNkPTkmc291cmNlPWdic19hcGkiLAogICAg
+        ImluZm9MaW5rIjogImh0dHA6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lk
+        PTZxQnU3RlllM1VnQyZkcT1ydWJ5K29uK3JhaWxzJmhsPSZzb3VyY2U9Z2Jz
+        X2FwaSIsCiAgICAiY2Fub25pY2FsVm9sdW1lTGluayI6ICJodHRwOi8vYm9v
+        a3MuZ29vZ2xlLmNvbS9ib29rcy9hYm91dC9SdWJ5X29uX1JhaWxzX0Zvcl9E
+        dW1taWVzLmh0bWw/aGw9JmlkPTZxQnU3RlllM1VnQyIKICAgfSwKICAgInNh
+        bGVJbmZvIjogewogICAgImNvdW50cnkiOiAiVVMiLAogICAgInNhbGVhYmls
+        aXR5IjogIkZPUl9TQUxFIiwKICAgICJpc0Vib29rIjogdHJ1ZSwKICAgICJs
+        aXN0UHJpY2UiOiB7CiAgICAgImFtb3VudCI6IDIyLjk5LAogICAgICJjdXJy
+        ZW5jeUNvZGUiOiAiVVNEIgogICAgfSwKICAgICJyZXRhaWxQcmljZSI6IHsK
+        ICAgICAiYW1vdW50IjogMjIuOTksCiAgICAgImN1cnJlbmN5Q29kZSI6ICJV
+        U0QiCiAgICB9LAogICAgImJ1eUxpbmsiOiAiaHR0cDovL2Jvb2tzLmdvb2ds
+        ZS5jb20vYm9va3M/aWQ9NnFCdTdGWWUzVWdDJmRxPXJ1Ynkrb24rcmFpbHMm
+        aGw9JmJ1eT0mc291cmNlPWdic19hcGkiCiAgIH0sCiAgICJhY2Nlc3NJbmZv
+        IjogewogICAgImNvdW50cnkiOiAiVVMiLAogICAgInZpZXdhYmlsaXR5Ijog
+        IlBBUlRJQUwiLAogICAgImVtYmVkZGFibGUiOiB0cnVlLAogICAgInB1Ymxp
+        Y0RvbWFpbiI6IGZhbHNlLAogICAgInRleHRUb1NwZWVjaFBlcm1pc3Npb24i
+        OiAiQUxMT1dFRCIsCiAgICAiZXB1YiI6IHsKICAgICAiaXNBdmFpbGFibGUi
+        OiB0cnVlLAogICAgICJhY3NUb2tlbkxpbmsiOiAiaHR0cDovL2Jvb2tzLmdv
+        b2dsZS5jb20vYm9va3MvZG93bmxvYWQvUnVieV9vbl9SYWlsc19Gb3JfRHVt
+        bWllcy1zYW1wbGUtZXB1Yi5hY3NtP2lkPTZxQnU3RlllM1VnQyZmb3JtYXQ9
+        ZXB1YiZvdXRwdXQ9YWNzNF9mdWxmaWxsbWVudF90b2tlbiZkbF90eXBlPXNh
+        bXBsZSZzb3VyY2U9Z2JzX2FwaSIKICAgIH0sCiAgICAicGRmIjogewogICAg
+        ICJpc0F2YWlsYWJsZSI6IHRydWUsCiAgICAgImFjc1Rva2VuTGluayI6ICJo
+        dHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9kb3dubG9hZC9SdWJ5X29u
+        X1JhaWxzX0Zvcl9EdW1taWVzLXNhbXBsZS1wZGYuYWNzbT9pZD02cUJ1N0ZZ
+        ZTNVZ0MmZm9ybWF0PXBkZiZvdXRwdXQ9YWNzNF9mdWxmaWxsbWVudF90b2tl
+        biZkbF90eXBlPXNhbXBsZSZzb3VyY2U9Z2JzX2FwaSIKICAgIH0sCiAgICAi
+        d2ViUmVhZGVyTGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29r
+        cy9yZWFkZXI/aWQ9NnFCdTdGWWUzVWdDJmhsPSZwcmludHNlYz1mcm9udGNv
+        dmVyJm91dHB1dD1yZWFkZXImc291cmNlPWdic19hcGkiLAogICAgImFjY2Vz
+        c1ZpZXdTdGF0dXMiOiAiU0FNUExFIgogICB9LAogICAic2VhcmNoSW5mbyI6
+        IHsKICAgICJ0ZXh0U25pcHBldCI6ICJSdWJ5IG9uIFJhaWxzIHdhcyBjcmVh
+        dGVkIGZvciB5b3UsIGFuZCB0aGlzIGJvb2sgd2lsbCBoYXZlIHlvdSB1cCBh
+        bmQgcnVubmluZyBpbiBubyB0aW1lLiBUaGUgUnVieSBzY3JpcHRpbmcgbGFu
+        Z3VhZ2UgYW5kIHRoZSBSYWlscyBmcmFtZXdvcmsgbGV0IHlvdSBjcmVhdGUg
+        ZnVsbC1mZWF0dXJlZCBXZWIgYXBwbGljYXRpb25zIGZhc3QuIEl0JiMzOTtz
+        IGV2ZW4gZnVuISIKICAgfQogIH0sCiAgewogICAia2luZCI6ICJib29rcyN2
+        b2x1bWUiLAogICAiaWQiOiAibzBKdXhLNV8xZXNDIiwKICAgImV0YWciOiAi
+        cGl6TWlIVDYrS0kiLAogICAic2VsZkxpbmsiOiAiaHR0cHM6Ly93d3cuZ29v
+        Z2xlYXBpcy5jb20vYm9va3MvdjEvdm9sdW1lcy9vMEp1eEs1XzFlc0MiLAog
+        ICAidm9sdW1lSW5mbyI6IHsKICAgICJ0aXRsZSI6ICJCZWdpbm5pbmcgUnVi
+        eSBvbiBSYWlscyBFLUNvbW1lcmNlIiwKICAgICJzdWJ0aXRsZSI6ICJGcm9t
+        IE5vdmljZSB0byBQcm9mZXNzaW9uYWwiLAogICAgImF1dGhvcnMiOiBbCiAg
+        ICAgIkphcmtrbyBMYWluZSIsCiAgICAgIkNocmlzdGlhbiBIZWxsc3RlbiIK
+        ICAgIF0sCiAgICAicHVibGlzaGVyIjogIkFwcmVzcyIsCiAgICAicHVibGlz
+        aGVkRGF0ZSI6ICIyMDA2LTExLTA5IiwKICAgICJkZXNjcmlwdGlvbiI6ICJC
+        ZWdpbm5pbmcgUnVieSBvbiBSYWlscyBFLUNvbW1lcmNlOiBGcm9tIE5vdmlj
+        ZSB0byBQcm9mZXNzaW9uYWwgaXMgdGhlIGZpcnN0IGJvb2sgb2YgaXRzIGtp
+        bmQgdG8gZ3VpZGUgeW91IHRocm91Z2ggcHJvZHVjaW5nIGUtY29tbWVyY2Ug
+        YXBwbGljYXRpb25zIHdpdGggUmFpbHMsIHRoZSBzdGFja2VkIHdlYiBmcmFt
+        ZXdvcmsgdGFraW5nIHRoZSB3b3JsZCBieSBzdG9ybS4gVGhlIGJvb2sgZGl2
+        ZXMgcmlnaHQgaW50byB0aGUgcHJvY2VzcyBvZiBjcmVhdGluZyBhIHByb2R1
+        Y3Rpb24tbGV2ZWwgd2ViIGFwcGxpY2F0aW9uIHVzaW5nIGFnaWxlIG1ldGhv
+        ZG9sb2dpZXMgYW5kIHRlc3QtZHJpdmVuIGRldmVsb3BtZW50IGNvbWJpbmVk
+        IHdpdGggUmFpbHMgYmVzdCBwcmFjdGljZXMuIFlvdeKAmWxsIHRha2UgYWR2
+        YW50YWdlIG9mIHRoZSBsYXRlc3QgY3JvcCBvZiBSYWlscyBwbHVnLWlucyBh
+        bmQgaGVscGVycyB0aGF0IHdpbGwgcmFkaWNhbGx5IGltcHJvdmUgeW91ciBw
+        cm9ncmFtbWluZyBzY2hlZHVsZS4gWW914oCZbGwgYWxzbyBjcmVhdGUgYSBy
+        ZWFsIGFwcGxpY2F0aW9uIHN0ZXAtYnktc3RlcCwgcGx1cyB0aGUgYm9vayBp
+        cyBkcml2ZW4gYnkgcmVhbC13b3JsZCBjYXNlcyB0aHJvdWdob3V0LiBZb3Ug
+        d2lsbCBiZWdpbiBieSBsZWFybmluZyBob3cgdG8gaW5zdGFsbCBSYWlscyBh
+        bmQgcXVpY2tseSBjcmVhdGUgYSBwcm9kdWN0IGNhdGFsb2cgaW50ZXJmYWNl
+        ZCB3aXRoIHlvdXIgY2hvaWNlIG9mIGRhdGFiYXNlIHRlY2hub2xvZ2llcy4g
+        VGhlbiB5b3XigJlsbCBkaXNjb3ZlciBob3cgdG8gYnVpbGQgbW9kZXJuLCBB
+        amF4LXBvd2VyZWQgc2hvcHBpbmcgY2FydHMgYW5kIGFkZCB1c2VmdWwgZmVh
+        dHVyZXMgbGlrZSBjdXN0b21lciBmZWVkYmFjayBtb2R1bGVzLiBOZXh0IHlv
+        deKAmWxsIGxlYXJuIGhvdyB0byBpbnRlZ3JhdGUgeW91ciBhcHBsaWNhdGlv
+        biB3aXRoIG9wZW4gc291cmNlIHBhY2thZ2VzIGxpa2UgdGhlIEZlcnJldCBm
+        dWxsLXRleHQgc2VhcmNoIGVuZ2luZSwgYW5kIGhvdyB0byBpbnRlcmZhY2Ug
+        d2l0aCBiYWNrLWVuZCBlbGVjdHJvbmljIHBheW1lbnQgc3lzdGVtcy4gWW91
+        4oCZbGwgYWxzbyBsZWFybiBob3cgdG8gbWFrZSB5b3VyIGFwcGxpY2F0aW9u
+        IHdvcmsgZmxhd2xlc3NseSB3aXRoIGV4aXN0aW5nIHByb2R1Y3Rpb24gc3lz
+        dGVtcyB1c2luZyB3ZWIgc2VydmljZXMsIGFuZCB0aGVuIHVsdGltYXRlbHkg
+        ZGVwbG95IGFuZCB0dW5lIHlvdXIgYXBwbGljYXRpb24gZm9yIHByb2R1Y3Rp
+        b24gdXNlLiIsCiAgICAiaW5kdXN0cnlJZGVudGlmaWVycyI6IFsKICAgICB7
+        CiAgICAgICJ0eXBlIjogIklTQk5fMTAiLAogICAgICAiaWRlbnRpZmllciI6
+        ICIxNDMwMjAyNzY5IgogICAgIH0sCiAgICAgewogICAgICAidHlwZSI6ICJJ
+        U0JOXzEzIiwKICAgICAgImlkZW50aWZpZXIiOiAiOTc4MTQzMDIwMjc2OSIK
+        ICAgICB9CiAgICBdLAogICAgInBhZ2VDb3VudCI6IDQ0OCwKICAgICJwcmlu
+        dFR5cGUiOiAiQk9PSyIsCiAgICAiY2F0ZWdvcmllcyI6IFsKICAgICAiQ29t
+        cHV0ZXJzIgogICAgXSwKICAgICJhdmVyYWdlUmF0aW5nIjogMy41LAogICAg
+        InJhdGluZ3NDb3VudCI6IDEwLAogICAgImNvbnRlbnRWZXJzaW9uIjogIjEu
+        MS41LjAucHJldmlldy4zIiwKICAgICJpbWFnZUxpbmtzIjogewogICAgICJz
+        bWFsbFRodW1ibmFpbCI6ICJodHRwOi8vYmtzMi5ib29rcy5nb29nbGUuY29t
+        L2Jvb2tzP2lkPW8wSnV4SzVfMWVzQyZwcmludHNlYz1mcm9udGNvdmVyJmlt
+        Zz0xJnpvb209NSZlZGdlPWN1cmwmc291cmNlPWdic19hcGkiLAogICAgICJ0
+        aHVtYm5haWwiOiAiaHR0cDovL2JrczIuYm9va3MuZ29vZ2xlLmNvbS9ib29r
+        cz9pZD1vMEp1eEs1XzFlc0MmcHJpbnRzZWM9ZnJvbnRjb3ZlciZpbWc9MSZ6
+        b29tPTEmZWRnZT1jdXJsJnNvdXJjZT1nYnNfYXBpIgogICAgfSwKICAgICJs
+        YW5ndWFnZSI6ICJlbiIsCiAgICAicHJldmlld0xpbmsiOiAiaHR0cDovL2Jv
+        b2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9bzBKdXhLNV8xZXNDJnByaW50c2Vj
+        PWZyb250Y292ZXImZHE9cnVieStvbityYWlscyZobD0mY2Q9MTAmc291cmNl
+        PWdic19hcGkiLAogICAgImluZm9MaW5rIjogImh0dHA6Ly9ib29rcy5nb29n
+        bGUuY29tL2Jvb2tzP2lkPW8wSnV4SzVfMWVzQyZkcT1ydWJ5K29uK3JhaWxz
+        JmhsPSZzb3VyY2U9Z2JzX2FwaSIsCiAgICAiY2Fub25pY2FsVm9sdW1lTGlu
+        ayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9hYm91dC9CZWdp
+        bm5pbmdfUnVieV9vbl9SYWlsc19FX0NvbW1lcmNlLmh0bWw/aGw9JmlkPW8w
+        SnV4SzVfMWVzQyIKICAgfSwKICAgInNhbGVJbmZvIjogewogICAgImNvdW50
+        cnkiOiAiVVMiLAogICAgInNhbGVhYmlsaXR5IjogIkZPUl9TQUxFIiwKICAg
+        ICJpc0Vib29rIjogdHJ1ZSwKICAgICJsaXN0UHJpY2UiOiB7CiAgICAgImFt
+        b3VudCI6IDI3Ljk5LAogICAgICJjdXJyZW5jeUNvZGUiOiAiVVNEIgogICAg
+        fSwKICAgICJyZXRhaWxQcmljZSI6IHsKICAgICAiYW1vdW50IjogMTUuMzks
+        CiAgICAgImN1cnJlbmN5Q29kZSI6ICJVU0QiCiAgICB9LAogICAgImJ1eUxp
+        bmsiOiAiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9bzBKdXhL
+        NV8xZXNDJmRxPXJ1Ynkrb24rcmFpbHMmaGw9JmJ1eT0mc291cmNlPWdic19h
+        cGkiCiAgIH0sCiAgICJhY2Nlc3NJbmZvIjogewogICAgImNvdW50cnkiOiAi
+        VVMiLAogICAgInZpZXdhYmlsaXR5IjogIlBBUlRJQUwiLAogICAgImVtYmVk
+        ZGFibGUiOiB0cnVlLAogICAgInB1YmxpY0RvbWFpbiI6IGZhbHNlLAogICAg
+        InRleHRUb1NwZWVjaFBlcm1pc3Npb24iOiAiQUxMT1dFRCIsCiAgICAiZXB1
+        YiI6IHsKICAgICAiaXNBdmFpbGFibGUiOiB0cnVlCiAgICB9LAogICAgInBk
+        ZiI6IHsKICAgICAiaXNBdmFpbGFibGUiOiB0cnVlCiAgICB9LAogICAgIndl
+        YlJlYWRlckxpbmsiOiAiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3Mv
+        cmVhZGVyP2lkPW8wSnV4SzVfMWVzQyZobD0mcHJpbnRzZWM9ZnJvbnRjb3Zl
+        ciZvdXRwdXQ9cmVhZGVyJnNvdXJjZT1nYnNfYXBpIiwKICAgICJhY2Nlc3NW
+        aWV3U3RhdHVzIjogIlNBTVBMRSIKICAgfSwKICAgInNlYXJjaEluZm8iOiB7
+        CiAgICAidGV4dFNuaXBwZXQiOiAiQmVnaW5uaW5nIFJ1Ynkgb24gUmFpbHMg
+        RS1Db21tZXJjZTogRnJvbSBOb3ZpY2UgdG8gUHJvZmVzc2lvbmFsIGlzIHRo
+        ZSBmaXJzdCBib29rIG9mIGl0cyBraW5kIHRvIGd1aWRlIHlvdSB0aHJvdWdo
+        IHByb2R1Y2luZyBlLWNvbW1lcmNlIGFwcGxpY2F0aW9ucyB3aXRoIFJhaWxz
+        LCB0aGUgc3RhY2tlZCB3ZWIgZnJhbWV3b3JrIHRha2luZyB0aGUgd29ybGQg
+        Ynkgc3Rvcm0uIgogICB9CiAgfQogXQp9Cg==
+    http_version: 
+  recorded_at: Sun, 05 May 2013 17:05:30 GMT
+recorded_with: VCR 2.4.0

@@ -4,7 +4,9 @@ defaults: &defaults
   application_version: 1.0.0
   country: US
   default_query: ruby on rails
+  #maximum 40 (google books API limitation)
   per_page: 10
+  cache_ttl: 60
 
 development:
   <<: *defaults

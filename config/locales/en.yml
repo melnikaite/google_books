@@ -1,7 +1,7 @@
 en:
   books:
-    google_books: Google Books
-    query: Books found by query
-    title: Title
-    author: Author
-    thumbnail: Thumbnail
+    google_books: 'Google Books'
+    total: 'Results: about %{total}'
+    title: 'Title'
+    author: 'Author'
+    thumbnail: 'Thumbnail'

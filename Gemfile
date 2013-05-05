@@ -9,6 +9,8 @@ gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
 gem 'yettings'
 gem 'will_paginate'
+gem 'redis'
+gem 'marshal-structure'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -23,4 +25,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'ruby-prof'
+  gem 'vcr'
+  gem 'webmock'
 end

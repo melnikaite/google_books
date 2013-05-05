@@ -1,12 +1,21 @@
 require 'spec_helper'
+require 'benchmark'
 
-describe BooksController do
+describe BooksController, :vcr do
   describe 'GET index' do
-    let(:book) { FactoryGirl.create(:book) }
-
     it 'assigns all books as @books' do
       get :index
-      assigns(:books).should eq([book])
+      assigns(:books).should be_a(Array)
+    end
+  end
+
+  context 'performance' do
+    it 'takes time' do
+      Benchmark.realtime{
+        5000.times do
+          get :index
+        end
+      }.should < 60
     end
   end
 end

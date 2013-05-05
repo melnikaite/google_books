@@ -6,7 +6,7 @@
   = f.text_field :query, :class => 'search-query', :value => @query
   = f.submit :search, :class => 'btn'
 
-%h5= "#{t('books.query')}: #{@query}"
+%h5= t('books.total', :total => @total)
 
 %table.table.table-striped.table-bordered.table-hover
   %thead
@@ -17,8 +17,8 @@
   %tbody
     - @books.each do |book|
       %tr
-        %td= book.volumeInfo.title
-        %td= book.volumeInfo.authors.join(', ')
-        %td= image_tag book.volumeInfo.imageLinks.thumbnail
+        %td= book['volumeInfo']['title']
+        %td= book['volumeInfo']['authors'].join(', ') if book['volumeInfo']['authors']
+        %td= image_tag book['volumeInfo']['imageLinks']['thumbnail'] if book['volumeInfo']['imageLinks']
 
 = will_paginate @books
