@@ -1,9 +1,6 @@
 require 'spec_helper'
 
 describe Book do
-  it { should allow_mass_assignment_of :author }
-  it { should allow_mass_assignment_of :thumbnail }
-  it { should allow_mass_assignment_of :title }
   context 'search', :vcr do
     subject { Book.search(Yetting.default_query) }
     let (:volume) { subject.first.first }

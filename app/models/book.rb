@@ -1,7 +1,6 @@
 require 'google/api_client'
 
 class Book < ActiveRecord::Base
-  attr_accessible :title, :author, :thumbnail
   def self.search(query, page = 1, remote_ip = nil)
     if result = $redis.get("#{query}:#{page}")
       result = Marshal.load(result)
