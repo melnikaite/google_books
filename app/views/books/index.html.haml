@@ -3,7 +3,7 @@
 = form_for 'search',  :method => :get,
                       :url => {:action => :index},
                       :html => {:class => 'search-form'} do |f|
-  = f.text_field :query, :class => 'search-query', :value => @query
+  = f.text_field :query, :class => 'search-query', :value => @query, :name => :query
   = f.submit :search, :class => 'btn'
 
 %h5= t('books.total', :total => @total)
