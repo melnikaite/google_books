@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'benchmark'
 
-describe BooksController, :vcr do
+describe BooksController, :vcr => { :cassette_name => 'Book' } do
   describe 'GET index' do
     it 'assigns all books as @books' do
       get :index
@@ -9,7 +9,7 @@ describe BooksController, :vcr do
     end
   end
 
-  context 'performance' do
+  describe 'performance' do
     it 'takes time' do
       Benchmark.realtime{
         5000.times do

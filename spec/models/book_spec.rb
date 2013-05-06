@@ -1,12 +1,16 @@
 require 'spec_helper'
 
 describe Book do
-  context 'search', :vcr do
-    subject { Book.search(Yetting.default_query) }
+  context 'search', :vcr => { :cassette_name => 'Book' } do
+    subject { Book.search_and_paginate(Yetting.default_query) }
     let (:volume) { subject.first.first }
 
     it 'return array' do
       should be_a(Array)
+    end
+
+    it 'return array with 2 items' do
+      subject.length.should == 2
     end
 
     it 'has list of items' do
@@ -14,19 +18,30 @@ describe Book do
     end
 
     it 'has total items' do
-      subject.last.should > 0
+      #value saved in cassette
+      subject.last.should == 771
     end
 
     it 'item has title' do
-      volume['volumeInfo']['title'].should be_a(String)
+      #value saved in cassette
+      title = "Head First Rails"
+      volume['volumeInfo']['title'].should == title
     end
 
     it 'item has authors' do
-      volume['volumeInfo']['authors'].should be_a(Array)
+      #value saved in cassette
+      authors = ["David Griffiths"]
+      volume['volumeInfo']['authors'].should == authors
     end
 
     it 'item has thumbnail' do
-      volume['volumeInfo']['imageLinks']['thumbnail'].should be_a(String)
+      #value saved in cassette
+      thumbnail = "http://bks3.books.google.com/books?id=jMCO096qlRsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      volume['volumeInfo']['imageLinks']['thumbnail'].should == thumbnail
+    end
+
+    it 'list of items have pagination attributes' do
+      subject.first.per_page.should == Yetting.per_page
     end
   end
 end
