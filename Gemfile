@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg'
 gem 'jquery-rails'
-gem 'capistrano'
 gem 'google-api-client'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
@@ -20,7 +19,6 @@ end
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.0'
-  gem 'factory_girl_rails'
 end
 
 group :test do
